@@ -15,7 +15,7 @@
     static BTTPlayer *player;
 
     dispatch_once(&once, ^ {
-        player = [[BTTPlayer alloc] initWithName:@"Test Testers"];
+        player = [[BTTPlayer alloc] initWithName:@"Test Testers" credits:1000];
     });
 
     return player;

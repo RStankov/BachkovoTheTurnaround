@@ -11,11 +11,12 @@
 @implementation BTTPlayer
 
 
-- (instancetype)initWithName: (NSString *) name {
+- (instancetype)initWithName: (NSString *) name credits: (NSInteger)credits {
     self = [self init];
 
     if (self) {
-        _name = name;
+        _name    = name;
+        _credits = credits;
     }
 
     return self;
