@@ -14,4 +14,7 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSArray *ships;
 
+
+- (instancetype)initWithName: (NSString *) name;
+
 @end

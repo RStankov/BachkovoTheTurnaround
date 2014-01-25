@@ -11,5 +11,14 @@
 @implementation BTTPlayer
 
 
+- (instancetype)initWithName: (NSString *) name {
+    self = [self init];
+
+    if (self) {
+        _name = name;
+    }
+
+    return self;
+}
 
 @end
