@@ -10,7 +10,7 @@
 #import "BTTMapScene.h"
 #import "BTTMap.h"
 
-@interface BTTMapViewController ()<UIScrollViewDelegate>
+@interface BTTMapViewController ()
 
 @property (nonatomic, strong) BTTMapScene *scene;
 
@@ -43,12 +43,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-}
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    CGPoint position = scrollView.contentOffset;
-
-    [self.scene setScrollPosition:position];
 }
 
 @end

@@ -13,6 +13,4 @@
 
 - (instancetype)initWithMap:(BTTMap *)map size:(CGSize) size;
 
-- (void)setScrollPosition:(CGPoint)point;
-
 @end

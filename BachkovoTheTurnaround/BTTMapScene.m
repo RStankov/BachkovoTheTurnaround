@@ -76,10 +76,6 @@
     return CGPointMake((0.5 + x) * self.map.tileSize, self.frame.size.height - (0.5 + y) * self.map.tileSize);
 }
 
-- (void) setScrollPosition:(CGPoint)point {
-    self.scrollPoint = CGPointMake(point.x * -1, point.y);
-}
-
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
     CGPoint point = [touch locationInNode:self.mapNode];
