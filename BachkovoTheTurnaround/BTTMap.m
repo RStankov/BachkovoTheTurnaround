@@ -112,25 +112,25 @@
 
 	// Top
 	NSIndexPath *p = [NSIndexPath indexPathForItem:indexPath.item inSection:indexPath.section - 1];
-	if ([self isValidTileCoord:p] && ![self isWallAtTileCoord:p]) {
+	if ([self isValidTileCoord:p] && [self canVisitIndexPath:p]) {
 		[tmp addObject:p];
 	}
 
 	// Left
 	p = [NSIndexPath indexPathForItem:indexPath.item - 1 inSection:indexPath.section];
-	if ([self isValidTileCoord:p] && ![self isWallAtTileCoord:p]) {
+	if ([self isValidTileCoord:p] && [self canVisitIndexPath:p]) {
 		[tmp addObject:p];
 	}
 
 	// Bottom
 	p = [NSIndexPath indexPathForItem:indexPath.item inSection:indexPath.section + 1];
-	if ([self isValidTileCoord:p] && ![self isWallAtTileCoord:p]) {
+	if ([self isValidTileCoord:p] && [self canVisitIndexPath:p]) {
 		[tmp addObject:p];
 	}
 
 	// Right
 	p = [NSIndexPath indexPathForItem:indexPath.item + 1 inSection:indexPath.section];
-	if ([self isValidTileCoord:p] && ![self isWallAtTileCoord:p]) {
+	if ([self isValidTileCoord:p] && [self canVisitIndexPath:p]) {
 		[tmp addObject:p];
 	}
 
@@ -157,10 +157,10 @@
     return YES;
 }
 
--(BOOL)isWallAtTileCoord:(NSIndexPath *)path {
+-(BOOL)canVisitIndexPath:(NSIndexPath *)path {
     NSString *label = [self labelForIndexPath:path];
 
-    return ![label isEqualToString:@"a"] && ![label isEqualToString:@"d"];
+    return [label isEqualToString:@"a"] || [label isEqualToString:@"d"];
 }
 
 @end
