@@ -6,7 +6,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BachkovoTheTurnaround/BTTMyCity.h"
@@ -15,8 +15,38 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "14"
             endingLineNumber = "14"
-            landmarkName = "-buildBuilding:"
+            landmarkName = "-heroVisit:"
             landmarkType = "4">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[BTTMyCity buildingsCompleted]"
+                  moduleName = "BachkovoTheTurnaround"
+                  urlString = "file:///Users/wizard/Desktop/iOS/BachkovoTheTurnaround/BachkovoTheTurnaround/BTTMyCity.h"
+                  timestampString = "412345214.539984"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[BTTMyCity setBuildingsCompleted:]"
+                  moduleName = "BachkovoTheTurnaround"
+                  urlString = "file:///Users/wizard/Desktop/iOS/BachkovoTheTurnaround/BachkovoTheTurnaround/BTTMyCity.h"
+                  timestampString = "412345214.540268"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -33,6 +63,22 @@
             endingLineNumber = "14"
             landmarkName = "@interface BTTMechGarrisonBuilding"
             landmarkType = "2">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BachkovoTheTurnaround/BTTMyCity.m"
+            timestampString = "412346351.912413"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "-completeBuilding:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

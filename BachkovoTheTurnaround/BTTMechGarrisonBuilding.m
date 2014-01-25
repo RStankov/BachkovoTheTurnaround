@@ -27,7 +27,7 @@
 }
 
 
--(SKShapeNode *) render {
+-(SKShapeNode *) render:(SKNode *)frame {
     SKShapeNode* mechBuilding = [SKShapeNode node];
     UIBezierPath* topLeftBezierPath = [[UIBezierPath alloc] init];
     [topLeftBezierPath moveToPoint:CGPointMake(0.0, 0.0)];
@@ -38,7 +38,7 @@
     mechBuilding.fillColor = [UIColor redColor];
     mechBuilding.strokeColor = [UIColor redColor];
     mechBuilding.antialiased = NO;
-    
+    mechBuilding.position = CGPointMake(CGRectGetMidX(*frame), CGRectGetMidY(*frame));
     return mechBuilding;
 }
 

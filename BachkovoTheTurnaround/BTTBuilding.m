@@ -15,7 +15,7 @@
     return nil;
 }
 
-- (SKNode *) render {
+- (SKNode *) render:(CGRect *)frame {
     NSAssert(NO, @"You must override this method.");
     return nil;
 }

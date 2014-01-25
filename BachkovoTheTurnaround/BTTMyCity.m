@@ -8,7 +8,7 @@
 
 #import "BTTMyCity.h"
 #import "BTTBuilding.h"
-
+#import "BTTMechGarrisonBuilding.h"
 @implementation BTTMyCity
 
 - (id) initWithSize: (CGSize)size {
@@ -45,8 +45,9 @@
            }
        }
        
-       
-       [self addChild:myLabel];
+        BTTMechGarrisonBuilding *mechBuilding = [[BTTMechGarrisonBuilding alloc] init];
+        [self completeBuilding:mechBuilding ];
+        [self addChild:myLabel];
     }
     return self;
 }
@@ -56,8 +57,11 @@
 }
 
 - (void) completeBuilding: (BTTBuilding *) building {
+    NSLog(@"Building...");
     [self.buildingsCompleted addObject:building];
-    [building render];
+    SKNode *stageBuilding = [building render];
+    NSLog(@"%@", NSStringFromCGRect(stageBuilding.frame));
+    [self addChild:stageBuilding];
 }
 
 @end
