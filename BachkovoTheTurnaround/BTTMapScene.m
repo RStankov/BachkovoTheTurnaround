@@ -32,12 +32,6 @@
 
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
 
-        SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"HelveticaLight"];
-
-        myLabel.text = @"World map";
-        myLabel.fontSize = 10;
-        myLabel.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height - myLabel.fontSize);
-
         SKNode *mapNode = [[SKNode alloc] init];
 
         self.mapNode = mapNode;
@@ -62,8 +56,6 @@
         self.battleship.position = [self pointForTop:0 left:0];
 
         [self.mapNode addChild:self.battleship];
-
-        [self addChild:myLabel];
     }
 
     return self;
