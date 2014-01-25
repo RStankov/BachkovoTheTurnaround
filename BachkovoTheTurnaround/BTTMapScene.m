@@ -30,8 +30,8 @@
 
         self.mapNode = mapNode;
 
-        for (NSInteger i = 0; i<map.horizontalTileCount; i++) {
-            for (NSInteger j = 0; j<map.verticalTilesCount; j++) {
+        for (NSInteger i = 0; i<map.verticalTilesCount; i++) {
+            for (NSInteger j = 0; j<map.horizontalTileCount; j++) {
                 SKSpriteNode *sprite = [map nodeForIndexPath:[NSIndexPath indexPathForItem:i inSection:j]];
                 sprite.position = [self pointForTop:i left:j];
                 [mapNode addChild:sprite];
@@ -47,7 +47,7 @@
         ship.colorBlendFactor = 0.3;
 
         self.battleship = ship;
-        self.battleship.position = [self pointForTop:0 left:0];
+        self.battleship.position = [self pointForTop:4 left:5];
 
         [self.mapNode addChild:self.battleship];
     }
