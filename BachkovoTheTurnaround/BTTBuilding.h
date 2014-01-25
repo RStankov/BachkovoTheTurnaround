@@ -11,10 +11,9 @@
 @interface BTTBuilding : SKSpriteNode
 
 @property bool *isBuild;
-@property(nonatomic, copy) NSString *name;
 
-+ (NSString *) name;
++(NSString *) name;
 
--(instancetype) initWithName: (NSString *) name;
+-(SKNode *) render;
 
 @end

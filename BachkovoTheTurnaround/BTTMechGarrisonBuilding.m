@@ -26,4 +26,8 @@
     return [[BTTUnit alloc] init];
 }
 
+-(SKNode *) render {
+    return [[SKNode alloc] init];
+}
+
 @end

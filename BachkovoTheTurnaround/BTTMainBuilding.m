@@ -21,4 +21,8 @@
     return name;
 }
 
+-(SKNode *) render {
+    return [[SKNode alloc] init];
+}
+
 @end
