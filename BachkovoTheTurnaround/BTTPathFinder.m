@@ -50,7 +50,23 @@
 
 @end
 
+@interface BTTPathFinder ()
+
+@property (nonatomic, strong) id<BTTPathFinderDataSource> dataSource;
+
+@end
+
 @implementation BTTPathFinder
+
+- (instancetype)initWithDataSource:(id<BTTPathFinderDataSource>)dataSource {
+    self = [self init];
+
+    if (self) {
+        self.dataSource = dataSource;
+    }
+
+    return self;
+}
 
 - (NSArray *)shortestPathFrom:(NSIndexPath *)startIndex to:(NSIndexPath *)destinationIndex {
     if ([startIndex isEqual:destinationIndex]) {
@@ -85,7 +101,7 @@
         }
 
         // Get the adjacent position of the current step
-        for (NSIndexPath *v in [self walkableAdjacentTilesCoordForTileCoord:currentStep.indexPath]) {
+        for (NSIndexPath *v in [self.dataSource availablePositionsAround:currentStep.indexPath]) {
             BTTPathFinderStep *step = [[BTTPathFinderStep alloc] initWithIndexPath:v];
             
             // Check if the step isn't already in the closed set
@@ -141,46 +157,6 @@
     }
 
     [steps insertObject:step atIndex:i];
-}
-
-- (NSArray *)walkableAdjacentTilesCoordForTileCoord:(NSIndexPath *)tileCoord {
-	NSMutableArray *tmp = [NSMutableArray arrayWithCapacity:4];
-	
-	// Top
-	NSIndexPath *p = [NSIndexPath indexPathForItem:tileCoord.item inSection:tileCoord.section - 1];
-	if ([self isValidTileCoord:p] && ![self isWallAtTileCoord:p]) {
-		[tmp addObject:p];
-	}
-	
-	// Left
-	p = [NSIndexPath indexPathForItem:tileCoord.item - 1 inSection:tileCoord.section];
-	if ([self isValidTileCoord:p] && ![self isWallAtTileCoord:p]) {
-		[tmp addObject:p];
-	}
-	
-	// Bottom
-	p = [NSIndexPath indexPathForItem:tileCoord.item inSection:tileCoord.section + 1];
-	if ([self isValidTileCoord:p] && ![self isWallAtTileCoord:p]) {
-		[tmp addObject:p];
-	}
-	
-	// Right
-	p = [NSIndexPath indexPathForItem:tileCoord.item + 1 inSection:tileCoord.section];
-	if ([self isValidTileCoord:p] && ![self isWallAtTileCoord:p]) {
-		[tmp addObject:p];
-	}
-    
-	return [NSArray arrayWithArray:tmp];
-}
-
-- (BOOL)isValidTileCoord:(NSIndexPath *)tileCoord {
-    int width = 100;
-    int height = 100;
-    return tileCoord.item > 0 || tileCoord.section > 0 || tileCoord.item <= width || tileCoord.section <= height;
-}
-
--(BOOL)isWallAtTileCoord:(NSIndexPath *)path {
-    return NO;
 }
 
 @end

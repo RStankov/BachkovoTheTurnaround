@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <SpriteKit/SpriteKit.h>
+#import "BTTPathFinder.h"
 
-@interface BTTMap : NSObject
+@interface BTTMap : NSObject <BTTPathFinderDataSource>
 
 @property (nonatomic) NSInteger verticalTilesCount;
 @property (nonatomic) NSInteger horizontalTileCount;

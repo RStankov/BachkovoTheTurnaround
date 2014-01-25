@@ -8,8 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol BTTPathFinderDataSource;
+
 @interface BTTPathFinder : NSObject
 
 - (NSArray *)shortestPathFrom:(NSIndexPath *)startIndex to:(NSIndexPath *)destinationIndex;
 
+- (instancetype)initWithDataSource:(id<BTTPathFinderDataSource>)dataSource;
+
+@end
+
+@protocol BTTPathFinderDataSource <NSObject>
+
+- (NSArray *)availablePositionsAround:(NSIndexPath *)indexPath;
+    
 @end

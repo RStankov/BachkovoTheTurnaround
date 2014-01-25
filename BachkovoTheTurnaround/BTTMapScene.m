@@ -94,7 +94,7 @@
     int x = floor(point.x / 45);
     int y = floor((self.size.height - point.y) / 45);
 
-    NSArray *steps = [[[BTTPathFinder alloc] init] shortestPathFrom:[NSIndexPath indexPathForItem:_currentX inSection:_currentY] to:[NSIndexPath indexPathForItem:x inSection:y]];
+    NSArray *steps = [[[BTTPathFinder alloc] initWithDataSource:self.map] shortestPathFrom:[NSIndexPath indexPathForItem:_currentX inSection:_currentY] to:[NSIndexPath indexPathForItem:x inSection:y]];
 
     NSMutableArray *array = [NSMutableArray array];
 
