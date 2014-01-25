@@ -7,7 +7,7 @@
 //
 
 #import "BTTBattleViewController.h"
-#import "BTTMapScene.h"
+#import "BTTBattleScene.h"
 
 @interface BTTBattleViewController ()
 
@@ -30,7 +30,7 @@
     
     // Create and configure the scene.
     // SKScene * scene = [BTTMyCity sceneWithSize:skView.bounds.size];
-    SKScene * scene = [BTTMapScene sceneWithSize:skView.bounds.size];
+    SKScene * scene = [BTTBattleScene sceneWithSize:skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
     
     // Present the scene.
