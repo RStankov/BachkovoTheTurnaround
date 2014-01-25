@@ -27,19 +27,13 @@
 }
 
 
--(SKShapeNode *) render:(SKNode *) parent {
-    SKShapeNode* mechBuilding = [SKShapeNode node];
-    UIBezierPath* topLeftBezierPath = [[UIBezierPath alloc] init];
-    [topLeftBezierPath moveToPoint:CGPointMake(0.0, 0.0)];
-    [topLeftBezierPath addLineToPoint:CGPointMake(0.0, 50.0)];
-    [topLeftBezierPath addLineToPoint:CGPointMake(50.0, 100.0)];
-    mechBuilding.path = topLeftBezierPath.CGPath;
-    mechBuilding.lineWidth = 5.0;
-    mechBuilding.fillColor = [UIColor redColor];
-    mechBuilding.strokeColor = [UIColor redColor];
-    mechBuilding.antialiased = NO;
-    mechBuilding.position = CGPointMake(CGRectGetMidX(parent.frame), CGRectGetMidY(parent.frame) - 50);
-    return mechBuilding;
+-(SKSpriteNode *) render:(SKNode *) parent {
+    SKSpriteNode *sprite = [[SKSpriteNode alloc] initWithImageNamed:@"square"];
+    sprite.color = [SKColor colorWithRed:(50.0) green:(1.0 * (arc4random() % 74)) / 74 blue:(1.0)/40.0 alpha:2.0];
+    sprite.colorBlendFactor = 0.3;
+    sprite.position = CGPointMake(CGRectGetMidX(self.frame) + 100, CGRectGetMidY(self.frame) + 100);
+    
+    return sprite;
 }
 
 @end

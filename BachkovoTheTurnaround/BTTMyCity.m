@@ -44,7 +44,7 @@
                [self addChild:sprite];
            }
         }
-        
+        [self addChild: [self fireButtonNode]];
         [self addChild:myLabel];
     }
     return self;
@@ -58,6 +58,28 @@
     [self.buildingsCompleted addObject:building];
     SKNode * rendered = [building render:self];
     [self addChild:rendered];
+}
+
+- (SKSpriteNode *)fireButtonNode
+{
+    SKSpriteNode *fireNode = [SKSpriteNode spriteNodeWithImageNamed:@"download"];
+    fireNode.position = CGPointMake(CGRectGetMaxX(self.frame), CGRectGetMidY(self.frame) + 50);
+    fireNode.name = @"fireButtonNode";//how the node is identified later
+    fireNode.zPosition = 1.0;
+
+    return fireNode;
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [touches anyObject];
+    CGPoint location = [touch locationInNode:self];
+    SKNode *node = [self nodeAtPoint:location];
+    
+    //if fire button touched, bring the rain
+    if ([node.name isEqualToString:@"fireButtonNode"]) {
+        NSLog(@"Building....");
+    }
 }
 
 @end
