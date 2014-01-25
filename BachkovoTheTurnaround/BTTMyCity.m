@@ -14,15 +14,11 @@
 -(id)initWithSize:(CGSize)size {
     if(self = [super initWithSize:size]) {
         self.backgroundColor = [SKColor colorWithRed:0.10 green:0.5 blue:0.10 alpha:0.5];
-        //Should render building
-        SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
-        SKNode *mainBuilding = [[BTTBuilding alloc] init];
-        myLabel.text = @"Main building is here";
-        myLabel.fontSize = 10;
+        SKNode *mainBuilding = [[BTTBuilding alloc] initWithName:@"Main"];
+
         mainBuilding.position = CGPointMake(CGRectGetMidX(self.frame),
                                        CGRectGetMidY(self.frame));
         
-        //[self addChild:myLabel];
         [self addChild:mainBuilding];
     }
     return self;

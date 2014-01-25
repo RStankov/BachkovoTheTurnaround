@@ -10,7 +10,7 @@
 
 @implementation BTTBuilding
 
-- (id)init {
+- (instancetype)initWithName:(NSString *)name {
     if(self = [super init]) {
         SKShapeNode* topLeft = [SKShapeNode node];
         UIBezierPath* topLeftBezierPath = [[UIBezierPath alloc] init];

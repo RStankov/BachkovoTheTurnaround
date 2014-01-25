@@ -12,4 +12,5 @@
 
 @property bool *isBuild;
 
+-(instancetype) initWithName: (NSString *) name;
 @end
