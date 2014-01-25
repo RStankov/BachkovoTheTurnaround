@@ -10,4 +10,15 @@
 
 @implementation BTTWorld
 
++ (BTTPlayer *)player {
+    static dispatch_once_t once;
+    static BTTPlayer *player;
+
+    dispatch_once(&once, ^ {
+        player = [[BTTPlayer alloc] initWithName:@"Test Testers"];
+    });
+
+    return player;
+}
+
 @end

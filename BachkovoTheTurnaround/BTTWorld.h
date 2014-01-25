@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BTTPlayer.h"
 
 @interface BTTWorld : NSObject
+
++ (BTTPlayer *)player;
 
 @end
