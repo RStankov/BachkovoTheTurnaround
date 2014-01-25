@@ -1,21 +1,21 @@
 //
-//  BTTMechGarrisonBuilding.m
+//  BTTMainBuilding.m
 //  BachkovoTheTurnaround
 //
-//  Created by Stefan Slaveykov on 25/01/14.
+//  Created by Genadi Samokovarov on 1/25/14.
 //  Copyright (c) 2014 Radoslav Stankov. All rights reserved.
 //
 
-#import "BTTMechGarrisonBuilding.h"
+#import "BTTMainBuilding.h"
 
-@implementation BTTMechGarrisonBuilding
+@implementation BTTMainBuilding
 
 + (NSString *) name {
     static dispatch_once_t once;
     static NSString *name;
     
     dispatch_once(&once, ^ {
-        name = @"Mech Garrison";
+        name = @"Main Building";
     });
     
     return name;

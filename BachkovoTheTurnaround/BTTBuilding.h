@@ -13,6 +13,8 @@
 @property bool *isBuild;
 @property(nonatomic, copy) NSString *name;
 
++ (NSString *) name;
+
 -(instancetype) initWithName: (NSString *) name;
 
 @end

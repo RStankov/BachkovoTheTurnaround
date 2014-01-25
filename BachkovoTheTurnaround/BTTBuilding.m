@@ -10,6 +10,17 @@
 
 @implementation BTTBuilding
 
++ (NSString *) name {
+    static dispatch_once_t once;
+    static NSString *name;
+    
+    dispatch_once(&once, ^ {
+        name = @"Use a subclass";
+    });
+    
+    return name;
+}
+
 - (instancetype)initWithName:(NSString *)name {
     if(self = [super init]) {
         SKShapeNode* topLeft = [SKShapeNode node];
