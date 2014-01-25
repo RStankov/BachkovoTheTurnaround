@@ -81,9 +81,13 @@
     NSIndexPath *newIndex = [self indexPathForPoint:point];
     NSIndexPath *currentPath = [self indexPathForPoint:self.battleship.position];
 
-    [self.battleship removeAllActions];
-
     NSArray *steps = [self.pathFinder shortestPathFrom:currentPath to:newIndex];
+
+    if (steps.count == 0) {
+        return;
+    }
+
+    [self.battleship removeAllActions];
 
     NSMutableArray *array = [NSMutableArray array];
 
