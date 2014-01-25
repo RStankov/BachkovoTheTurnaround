@@ -57,12 +57,6 @@
             ReferencedContainer = "container:BachkovoTheTurnaround.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <CommandLineArguments>
-         <CommandLineArgument
-            argument = "RUN_CITY=1"
-            isEnabled = "YES">
-         </CommandLineArgument>
-      </CommandLineArguments>
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "RUN_CITY"

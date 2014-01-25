@@ -10,8 +10,6 @@
 
 @interface BTTBuilding : SKSpriteNode
 
-@property bool *isBuild;
-
 + (NSString *) name;
 
 - (SKNode *) render: (SKNode *) parent;

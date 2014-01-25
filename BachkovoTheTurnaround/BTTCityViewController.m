@@ -7,8 +7,7 @@
 //
 
 #import "BTTCityViewController.h"
-#import "BTTMyScene.h"
-#import "BTTMyCity.h"
+#import "BTTCity.h"
 #import "BTTMainBuilding.h"
 #import "BTTMechGarrisonBuilding.h"
 
@@ -22,7 +21,7 @@
     skView.showsNodeCount = YES;
     
     // Create and configure the scene.
-    BTTMyCity * city = [BTTMyCity sceneWithSize:skView.bounds.size];
+    BTTCity * city = [BTTCity sceneWithSize:skView.bounds.size];
     city.scaleMode = SKSceneScaleModeAspectFill;
     
     // Present the scene.

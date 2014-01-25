@@ -22,4 +22,8 @@
     return self;
 }
 
+- (NSArray *)army {
+    return @[@LIGHT_MECH, @RECON_MECH];
+}
+
 @end

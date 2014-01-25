@@ -7,7 +7,7 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
-#import "BTTMap.h";
+#import "BTTMap.h"
 
 @interface BTTMapScene : SKScene
 
