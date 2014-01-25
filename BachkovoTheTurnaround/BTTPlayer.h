@@ -12,7 +12,7 @@
 
 @property (nonatomic) NSInteger credits;
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSArray *ships;
+@property (nonatomic, strong) NSMutableArray *army;
 
 
 - (instancetype)initWithName: (NSString *) name credits: (NSInteger)credits;

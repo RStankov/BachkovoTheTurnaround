@@ -9,7 +9,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BachkovoTheTurnaround/BTTMyCity.h"
+            filePath = "BachkovoTheTurnaround/BTTCity.h"
             timestampString = "412331472.892421"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -71,12 +71,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BachkovoTheTurnaround/BTTMyCity.m"
-            timestampString = "412358171.096625"
+            filePath = "BachkovoTheTurnaround/BTTCity.m"
+            timestampString = "412360562.204338"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106">
+            startingLineNumber = "110"
+            endingLineNumber = "110">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -85,12 +85,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BachkovoTheTurnaround/BTTMyCity.m"
-            timestampString = "412356754.591343"
+            filePath = "BachkovoTheTurnaround/BTTCity.m"
+            timestampString = "412360562.204338"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "-heroVisit:"
             landmarkType = "5">
          </BreakpointContent>

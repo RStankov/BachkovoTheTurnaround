@@ -6,11 +6,15 @@
 //  Copyright (c) 2014 Radoslav Stankov. All rights reserved.
 //
 
-#import "BTTMyCity.h"
+#import "BTTCity.h"
 #import "BTTBuilding.h"
 #import "BTTMainBuilding.h"
 #import "BTTMechGarrisonBuilding.h"
-@implementation BTTMyCity
+#import "BTTPlayer.h"
+#import "BTTReconMech.h"
+#import "BTTLightMech.h"
+
+@implementation BTTCity
 
 - (id) initWithSize: (CGSize)size {
     if (self = [super initWithSize:size]) {
@@ -45,14 +49,22 @@
                [self addChild:sprite];
            }
         }
-        [self addChild: [self fireButtonNode]];
+        BTTMainBuilding *main = [[BTTMainBuilding alloc] init];
+        BTTMechGarrisonBuilding *mech = [[BTTMechGarrisonBuilding alloc] init];
+        [self completeBuilding:main];
+        [self completeBuilding:mech];
+
         [self addChild:myLabel];
     }
     return self;
 }
 
-- (void) heroVisit: (SKTexture *) character {
-    // Whatever this will do.
+- (void) heroVisit: (BTTPlayer *) character {
+    BTTLightMech *lightMech = [[BTTLightMech alloc] init];
+    BTTReconMech *reconMech = [[BTTReconMech alloc] init];
+    
+    [character.army addObject:lightMech];
+    [character.army addObject:reconMech];
 }
 
 - (void) completeBuilding: (BTTBuilding *) building {

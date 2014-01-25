@@ -9,7 +9,7 @@
 #import <SpriteKit/SpriteKit.h>
 #import "BTTBuilding.h"
 
-@interface BTTMyCity : SKScene
+@interface BTTCity : SKScene
 
 - (void) heroVisit: (SKTexture *) character;
 - (void) completeBuilding: (BTTBuilding *) building;

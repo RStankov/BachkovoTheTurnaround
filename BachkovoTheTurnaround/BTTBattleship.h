@@ -14,6 +14,7 @@
 @property (nonatomic) NSInteger attack;
 @property (nonatomic) NSInteger defence;
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic) NSMutableArray *army;
 
 - (instancetype) initWithPlayer:(BTTPlayer *)player name:(NSString *)name;
 
