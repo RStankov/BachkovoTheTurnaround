@@ -10,6 +10,7 @@
 
 @implementation BTTMechGarrisonBuilding
 
+
 + (NSString *) name {
     static dispatch_once_t once;
     static NSString *name;
@@ -19,6 +20,10 @@
     });
     
     return name;
+}
+
+-(BTTUnit *)buyUnit:(BTTUnit *)unit{
+    return [[BTTUnit alloc] init];
 }
 
 @end
