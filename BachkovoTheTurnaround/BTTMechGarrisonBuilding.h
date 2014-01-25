@@ -13,4 +13,5 @@
 @property(nonatomic, assign) NSMutableArray *units;
 
 -(void) buyUnit:(BTTUnit *)unit;
+-(SKNode *) render;
 @end
