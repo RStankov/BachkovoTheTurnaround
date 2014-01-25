@@ -17,6 +17,7 @@
 		648E29ED1893B01D00499DC2 /* BTTBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 648E29EC1893B01D00499DC2 /* BTTBuilding.m */; };
 		923200721893C94800E2F943 /* BTTMainBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 923200711893C94800E2F943 /* BTTMainBuilding.m */; };
 		E1E4CE551893D03F0046217C /* BTTBattleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E4CE541893D03F0046217C /* BTTBattleScene.m */; };
+		F0280C3B18942CEB0094BBFA /* BTTPathFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = F0280C3A18942CEB0094BBFA /* BTTPathFinder.m */; };
 		F059C4661893B8B20072B24A /* BTTWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = F059C4651893B8B20072B24A /* BTTWorld.m */; };
 		F059C4691893BD010072B24A /* BTTMapScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F059C4681893BD010072B24A /* BTTMapScene.m */; };
 		F059C46C1893C7AD0072B24A /* BTTBattleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F059C46B1893C7AD0072B24A /* BTTBattleViewController.m */; };
@@ -72,6 +73,8 @@
 		92F3E4671893DCCB00C8F654 /* BTTBuilding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTTBuilding.h; sourceTree = "<group>"; };
 		E1E4CE531893D03F0046217C /* BTTBattleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTBattleScene.h; sourceTree = "<group>"; };
 		E1E4CE541893D03F0046217C /* BTTBattleScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTBattleScene.m; sourceTree = "<group>"; };
+		F0280C3918942CEB0094BBFA /* BTTPathFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTPathFinder.h; sourceTree = "<group>"; };
+		F0280C3A18942CEB0094BBFA /* BTTPathFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTPathFinder.m; sourceTree = "<group>"; };
 		F059C4641893B8B20072B24A /* BTTWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTWorld.h; sourceTree = "<group>"; };
 		F059C4651893B8B20072B24A /* BTTWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTWorld.m; sourceTree = "<group>"; };
 		F059C4671893BD010072B24A /* BTTMapScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTMapScene.h; sourceTree = "<group>"; };
@@ -231,6 +234,8 @@
 				F0A9652E18931775007184D7 /* Spaceship.png */,
 				F0A9653018931775007184D7 /* Images.xcassets */,
 				F0A9651A18931775007184D7 /* Supporting Files */,
+				F0280C3918942CEB0094BBFA /* BTTPathFinder.h */,
+				F0280C3A18942CEB0094BBFA /* BTTPathFinder.m */,
 			);
 			path = BachkovoTheTurnaround;
 			sourceTree = "<group>";
@@ -366,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				640B83821893C6C900FA9B65 /* BTTUnit.m in Sources */,
+				F0280C3B18942CEB0094BBFA /* BTTPathFinder.m in Sources */,
 				F059C46F1893CB2F0072B24A /* BTTMapViewController.m in Sources */,
 				F09F86A91893B53800F6EC30 /* BTTPlayer.m in Sources */,
 				F0A9652018931775007184D7 /* main.m in Sources */,

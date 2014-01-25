@@ -7,6 +7,7 @@
 //
 
 #import "BTTMapScene.h"
+#import "BTTPathFinder.h"
 
 @interface BTTMapScene ()
 
@@ -14,6 +15,8 @@
 @property (nonatomic, strong) SKNode *mapNode;
 @property (nonatomic, strong) BTTMap *map;
 @property (nonatomic, strong) SKSpriteNode *battleship;
+@property (nonatomic) NSInteger currentX;
+@property (nonatomic) NSInteger currentY;
 
 @end
 
@@ -21,47 +24,50 @@
 
 - (instancetype)initWithMap:(BTTMap *)map size:(CGSize) size {
     self = [self initWithSize:size];
-    
+
     if (self) {
         self.map = map;
 
+        _currentX = 0;
+        _currentY = 0;
+
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
-        
+
         SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"HelveticaLight"];
-        
+
         myLabel.text = @"World map";
         myLabel.fontSize = 10;
         myLabel.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height - myLabel.fontSize);
-        
+
         SKNode *mapNode = [[SKNode alloc] init];
 
         self.mapNode = mapNode;
-        
+
         for(NSInteger i=0; i<map.horizontalTileCount; i++) {
             for(NSInteger j=0; j<map.verticalTilesCount; j++) {
                 SKSpriteNode *sprite = [map tileNodeForTop:i left:j];
-
-                sprite.position = CGPointMake((0.5 + i) * map.tileSize, self.frame.size.height - (0.5 + j) * map.tileSize);
-                [mapNode addChild:sprite];
+                sprite.position = [self pointForTop:i left:j];
+                [mapNote addChild:sprite];
             }
         }
-        
+
         [self addChild:mapNode];
-        
-        
+
+
         SKSpriteNode *ship = [[SKSpriteNode alloc] initWithImageNamed:@"square"];
         ship.color = [SKColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
         ship.colorBlendFactor = 0.3;
-        
+
         self.battleship = ship;
-        
+        self.battleship.position = [self pointForTop:0 left:0];
+
         [self addChild:myLabel];
     }
-    
+
     return self;
 }
 
-- (CGPoint)pointForTop:(NSInteger)x Left:(NSInteger)y {
+- (CGPoint)pointForTop:(NSInteger)x left:(NSInteger)y {
     return CGPointMake((0.5 + x) * self.map.tileSize, self.frame.size.height - (0.5 + y) * self.map.tileSize);
 }
 
@@ -72,11 +78,24 @@
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
     CGPoint point = [touch locationInNode:self.mapNode];
-    
+
     int x = floor(point.x/45);
     int y = floor((self.size.height - point.y)/45);
-    
-    self.battleship.position = [self pointForTop:x Left:y];
+
+
+    NSArray *steps = [[[BTTPathFinder alloc] init] moveTowardFrom:[NSIndexPath indexPathForItem:_currentX inSection:_currentY] to:[NSIndexPath indexPathForItem:x inSection:y]];
+    NSMutableArray *array = [NSMutableArray array];
+
+    for (NSIndexPath *idx in steps) {
+      [array addObject:[SKAction moveTo:[self pointForTop:idx.item left:idx.section] duration:0.2]];
+    }
+
+   SKAction *action = [SKAction sequence:array];
+
+    _currentY = y;
+    _currentX = x;
+
+   [self.battleship runAction:action];
 }
 
 -(void)update:(CFTimeInterval)currentTime {
