@@ -10,4 +10,8 @@
 
 @interface BTTUnit : SKNode
 
+@property(nonatomic) NSInteger health;
+@property(nonatomic) NSInteger attack;
+@property(nonatomic) NSInteger defense;
+
 @end

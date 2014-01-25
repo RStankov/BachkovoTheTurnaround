@@ -22,9 +22,10 @@
     return name;
 }
 
--(BTTUnit *)buyUnit:(BTTUnit *)unit{
-    return [[BTTUnit alloc] init];
+-(void)buyUnit:(BTTUnit *)unit{
+    //return [[BTTUnit alloc] init];
 }
+
 
 -(SKShapeNode *) render {
     SKShapeNode* mechBuilding = [SKShapeNode node];
