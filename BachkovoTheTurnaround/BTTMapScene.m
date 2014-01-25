@@ -29,19 +29,19 @@
         myLabel.fontSize = 10;
         myLabel.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height - myLabel.fontSize);
         
-        SKNode *mapNote = [[SKNode alloc] init];
+        SKNode *mapNode = [[SKNode alloc] init];
         
-        self.map = mapNote;
+        self.map = mapNode;
         
         for(NSInteger i=0; i<map.horizontalTileCount; i++) {
             for(NSInteger j=0; j<map.verticalTilesCount; j++) {
                 SKSpriteNode *sprite = [map tileNodeForTop:i left:j];
                 sprite.position = CGPointMake((0.5 + i) * map.tileSize, self.frame.size.height - (0.5 + j) * map.tileSize);
-                [mapNote addChild:sprite];
+                [mapNode addChild:sprite];
             }
         }
         
-        [self addChild:mapNote];
+        [self addChild:mapNode];
         [self addChild:myLabel];
     }
     
