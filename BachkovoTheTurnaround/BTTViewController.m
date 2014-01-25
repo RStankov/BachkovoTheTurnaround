@@ -8,6 +8,7 @@
 
 #import "BTTViewController.h"
 #import "BTTMyScene.h"
+#import "BTTMyCity.h"
 
 @implementation BTTViewController
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		648E29EA1893A69100499DC2 /* BTTMyCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 648E29E91893A69100499DC2 /* BTTMyCity.m */; };
+		648E29ED1893B01D00499DC2 /* BTTBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 648E29EC1893B01D00499DC2 /* BTTBuilding.m */; };
 		F0A9651218931775007184D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A9651118931775007184D7 /* Foundation.framework */; };
 		F0A9651418931775007184D7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A9651318931775007184D7 /* CoreGraphics.framework */; };
 		F0A9651618931775007184D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A9651518931775007184D7 /* UIKit.framework */; };
@@ -37,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		648E29E81893A69100499DC2 /* BTTMyCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTMyCity.h; sourceTree = "<group>"; };
+		648E29E91893A69100499DC2 /* BTTMyCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTMyCity.m; sourceTree = "<group>"; };
+		648E29EB1893B01D00499DC2 /* BTTBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTBuilding.h; sourceTree = "<group>"; };
+		648E29EC1893B01D00499DC2 /* BTTBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTBuilding.m; sourceTree = "<group>"; };
 		F0A9650E18931775007184D7 /* BachkovoTheTurnaround.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BachkovoTheTurnaround.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0A9651118931775007184D7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F0A9651318931775007184D7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -128,6 +134,10 @@
 				F0A9652918931775007184D7 /* BTTViewController.m */,
 				F0A9652B18931775007184D7 /* BTTMyScene.h */,
 				F0A9652C18931775007184D7 /* BTTMyScene.m */,
+				648E29E81893A69100499DC2 /* BTTMyCity.h */,
+				648E29E91893A69100499DC2 /* BTTMyCity.m */,
+				648E29EB1893B01D00499DC2 /* BTTBuilding.h */,
+				648E29EC1893B01D00499DC2 /* BTTBuilding.m */,
 				F0A9652E18931775007184D7 /* Spaceship.png */,
 				F0A9653018931775007184D7 /* Images.xcassets */,
 				F0A9651A18931775007184D7 /* Supporting Files */,
@@ -266,6 +276,8 @@
 				F0A9652A18931775007184D7 /* BTTViewController.m in Sources */,
 				F0A9652D18931775007184D7 /* BTTMyScene.m in Sources */,
 				F0A9652018931775007184D7 /* main.m in Sources */,
+				648E29EA1893A69100499DC2 /* BTTMyCity.m in Sources */,
+				648E29ED1893B01D00499DC2 /* BTTBuilding.m in Sources */,
 				F0A9652418931775007184D7 /* BTTAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,6 +491,7 @@
 				F0A9654918931776007184D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0A9654A18931776007184D7 /* Build configuration list for PBXNativeTarget "BachkovoTheTurnaroundTests" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +500,7 @@
 				F0A9654C18931776007184D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
