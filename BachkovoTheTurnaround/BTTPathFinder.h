@@ -10,6 +10,6 @@
 
 @interface BTTPathFinder : NSObject
 
-- (NSArray *)moveTowardFrom:(NSIndexPath *)fromTileCoor to:(NSIndexPath *)toTileCoord;
+- (NSArray *)shortestPathFrom:(NSIndexPath *)startIndex to:(NSIndexPath *)destinationIndex;
 
 @end

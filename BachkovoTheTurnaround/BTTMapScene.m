@@ -48,18 +48,18 @@
                 [mapNode addChild:sprite];
             }
         }
-        
+
         self.anchorPoint = CGPointMake(0.5, 0.5);
 
         [self addChild:mapNode];
-        
+
         SKSpriteNode *ship = [[SKSpriteNode alloc] initWithImageNamed:@"square"];
         ship.color = [SKColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
         ship.colorBlendFactor = 0.3;
-        
+
         self.battleship = ship;
         self.battleship.position = [self pointForTop:0 left:0];
-        
+
         [self.mapNode addChild:self.battleship];
 
         [self addChild:myLabel];
@@ -94,10 +94,8 @@
     int x = floor(point.x / 45);
     int y = floor((self.size.height - point.y) / 45);
 
-    NSArray *steps = [[[BTTPathFinder alloc] init] moveTowardFrom:[NSIndexPath indexPathForItem:_currentX
-                                                                                      inSection:_currentY]
-                                                               to:[NSIndexPath indexPathForItem:x
-                                                                                      inSection:y]];
+    NSArray *steps = [[[BTTPathFinder alloc] init] shortestPathFrom:[NSIndexPath indexPathForItem:_currentX inSection:_currentY] to:[NSIndexPath indexPathForItem:x inSection:y]];
+
     NSMutableArray *array = [NSMutableArray array];
 
     for (NSIndexPath *idx in steps) {
@@ -108,7 +106,7 @@
 
     _currentY = y;
     _currentX = x;
-    
+
     [self.battleship runAction:action];
 }
 
