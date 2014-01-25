@@ -59,7 +59,7 @@
 - (void) completeBuilding: (BTTBuilding *) building {
     NSLog(@"Building...");
     [self.buildingsCompleted addObject:building];
-    SKNode *stageBuilding = [building render];
+    SKNode *stageBuilding = [building render:self];
     NSLog(@"%@", NSStringFromCGRect(stageBuilding.frame));
     [self addChild:stageBuilding];
 }

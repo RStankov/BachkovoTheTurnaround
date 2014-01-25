@@ -12,7 +12,7 @@
 @interface BTTMechGarrisonBuilding : BTTBuilding
 @property(nonatomic, assign) NSMutableArray *availableUnits;
 
--(void) buyUnit:(BTTUnit *)unit;
+-(void) buyUnit: (BTTUnit *)unit;
 -(NSArray *) availableUnits;
--(SKNode *) render;
+-(SKNode *) render: (SKNode *)parent;
 @end

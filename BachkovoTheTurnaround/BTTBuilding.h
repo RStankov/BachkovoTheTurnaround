@@ -14,6 +14,6 @@
 
 + (NSString *) name;
 
-- (SKNode *) render:(CGRect *)frame;
+- (SKNode *) render: (SKNode *) parent;
 
 @end
