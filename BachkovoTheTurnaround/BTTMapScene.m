@@ -23,23 +23,21 @@
 - (instancetype) initWithMap:(BTTMap *)map size:(CGSize) size {
     if (self = [self initWithSize:size]) {
         self.map = map;
-
         self.pathFinder = [[BTTPathFinder alloc] initWithDataSource:map];
+        self.anchorPoint = CGPointMake(0.5, 0.5);
 
-        self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
-
-        SKNode *mapNode = [[SKNode alloc] init];
+        SKNode *mapNode = [[SKSpriteNode alloc] initWithImageNamed:@"WorldMap-40x30.jpg"];
 
         self.mapNode = mapNode;
 
-        for (NSInteger i = 0; i<map.horizontalTileCount; i++) {
-            for (NSInteger j = 0; j<map.verticalTilesCount; j++) {
+        for (NSInteger i = 0; i < map.horizontalTileCount; i++) {
+            for (NSInteger j = 0; j < map.verticalTilesCount; j++) {
                 SKSpriteNode *sprite = [map tileNodeForTop:i left:j];
                 sprite.position = [self pointForTop:i left:j];
                 [mapNode addChild:sprite];
             }
         }
-
+        
         self.anchorPoint = CGPointMake(0.5, 0.5);
 
         [self addChild:mapNode];
