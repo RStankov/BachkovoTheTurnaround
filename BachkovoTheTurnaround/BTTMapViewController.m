@@ -28,12 +28,9 @@
     // Create and configure the scene.
 
     BTTMap *map = [[BTTMap alloc] init];
-    map.tileSize = 44;
+    map.tileSize = 45;
     map.horizontalTileCount = 30;
-    map.verticalTilesCount = 30;
-
-    NSLog(@"..........");
-    NSLog(@"%@", NSStringFromCGRect(self.view.frame));
+    map.verticalTilesCount = 40;
 
     BTTMapScene * scene = [[BTTMapScene alloc] initWithMap:map size:skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
@@ -46,6 +43,7 @@
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:skView.frame];
     scrollView.delegate = self;
     scrollView.contentSize = map.size;
+    scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
     scrollView.hidden = YES;
 
     [skView addSubview:scrollView];

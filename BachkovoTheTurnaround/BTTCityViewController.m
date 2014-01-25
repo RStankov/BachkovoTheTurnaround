@@ -24,9 +24,6 @@
     // Create and configure the scene.
     BTTMyCity * city = [BTTMyCity sceneWithSize:skView.bounds.size];
     city.scaleMode = SKSceneScaleModeAspectFill;
-
-    [city completeBuilding:[[BTTMainBuilding alloc] init]];
-    [city completeBuilding:[[BTTMechGarrisonBuilding alloc] init]];
     
     // Present the scene.
     [skView presentScene:city];
