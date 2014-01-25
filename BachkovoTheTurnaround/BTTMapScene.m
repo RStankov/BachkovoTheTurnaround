@@ -30,14 +30,14 @@
 
         self.mapNode = mapNode;
 
-        for (NSInteger i = 0; i < map.horizontalTileCount; i++) {
-            for (NSInteger j = 0; j < map.verticalTilesCount; j++) {
-                SKSpriteNode *sprite = [map tileNodeForTop:i left:j];
+        for (NSInteger i = 0; i<map.horizontalTileCount; i++) {
+            for (NSInteger j = 0; j<map.verticalTilesCount; j++) {
+                SKSpriteNode *sprite = [map nodeForIndexPath:[NSIndexPath indexPathForItem:i inSection:j]];
                 sprite.position = [self pointForTop:i left:j];
                 [mapNode addChild:sprite];
             }
         }
-        
+
         self.anchorPoint = CGPointMake(0.5, 0.5);
 
         [self addChild:mapNode];

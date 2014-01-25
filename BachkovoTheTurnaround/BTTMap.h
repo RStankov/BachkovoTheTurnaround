@@ -18,6 +18,6 @@
 
 - (CGSize)size;
 
-- (SKSpriteNode *)tileNodeForTop:(NSInteger)i left:(NSInteger)j;
+- (SKSpriteNode *)nodeForIndexPath:(NSIndexPath *)indexPath;
 
 @end
