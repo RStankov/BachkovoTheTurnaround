@@ -7,6 +7,7 @@
 //
 
 #import "BTTMyCity.h"
+#import "BTTBuilding.h"
 
 @implementation BTTMyCity
 
@@ -15,13 +16,14 @@
         self.backgroundColor = [SKColor colorWithRed:0.10 green:0.5 blue:0.10 alpha:0.5];
         //Should render building
         SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
-        
+        SKNode *mainBuilding = [[BTTBuilding alloc] init];
         myLabel.text = @"Main building is here";
         myLabel.fontSize = 10;
-        myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
+        mainBuilding.position = CGPointMake(CGRectGetMidX(self.frame),
                                        CGRectGetMidY(self.frame));
         
-        [self addChild:myLabel];
+        //[self addChild:myLabel];
+        [self addChild:mainBuilding];
     }
     return self;
 }

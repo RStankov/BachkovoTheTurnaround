@@ -8,7 +8,7 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface BTTBuilding : SKNode
+@interface BTTBuilding : SKSpriteNode
 
 @property bool *isBuild;
 
