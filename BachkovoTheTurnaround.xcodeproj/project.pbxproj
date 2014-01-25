@@ -232,10 +232,10 @@
 				F05B17A71893ED4A0046F0F8 /* BTTMap.h */,
 				F05B17A81893ED4A0046F0F8 /* BTTMap.m */,
 				F0A9652E18931775007184D7 /* Spaceship.png */,
-				F0A9653018931775007184D7 /* Images.xcassets */,
-				F0A9651A18931775007184D7 /* Supporting Files */,
 				F0280C3918942CEB0094BBFA /* BTTPathFinder.h */,
 				F0280C3A18942CEB0094BBFA /* BTTPathFinder.m */,
+				F0A9653018931775007184D7 /* Images.xcassets */,
+				F0A9651A18931775007184D7 /* Supporting Files */,
 			);
 			path = BachkovoTheTurnaround;
 			sourceTree = "<group>";

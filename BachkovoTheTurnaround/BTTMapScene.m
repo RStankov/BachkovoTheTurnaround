@@ -47,7 +47,7 @@
             for(NSInteger j=0; j<map.verticalTilesCount; j++) {
                 SKSpriteNode *sprite = [map tileNodeForTop:i left:j];
                 sprite.position = [self pointForTop:i left:j];
-                [mapNote addChild:sprite];
+                [mapNode addChild:sprite];
             }
         }
 
@@ -60,6 +60,8 @@
 
         self.battleship = ship;
         self.battleship.position = [self pointForTop:0 left:0];
+
+        [self.mapNode addChild:self.battleship];
 
         [self addChild:myLabel];
     }

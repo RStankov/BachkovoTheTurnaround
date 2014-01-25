@@ -7,7 +7,6 @@
 //
 
 #import "BTTCityViewController.h"
-#import "BTTMyScene.h"
 #import "BTTCity.h"
 #import "BTTMainBuilding.h"
 #import "BTTMechGarrisonBuilding.h"
