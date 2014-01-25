@@ -31,10 +31,10 @@
     SKShapeNode* mechBuilding = [SKShapeNode node];
     UIBezierPath* topLeftBezierPath = [[UIBezierPath alloc] init];
     [topLeftBezierPath moveToPoint:CGPointMake(0.0, 0.0)];
-    [topLeftBezierPath addLineToPoint:CGPointMake(0.0, 100.0)];
-    [topLeftBezierPath addLineToPoint:CGPointMake(100.0, 100.0)];
+    [topLeftBezierPath addLineToPoint:CGPointMake(0.0, 50.0)];
+    [topLeftBezierPath addLineToPoint:CGPointMake(50.0, 100.0)];
     mechBuilding.path = topLeftBezierPath.CGPath;
-    mechBuilding.lineWidth = 10.0;
+    mechBuilding.lineWidth = 5.0;
     mechBuilding.fillColor = [UIColor redColor];
     mechBuilding.strokeColor = [UIColor redColor];
     mechBuilding.antialiased = NO;

@@ -44,9 +44,16 @@
                [self addChild:sprite];
            }
        }
-       
         BTTMechGarrisonBuilding *mechBuilding = [[BTTMechGarrisonBuilding alloc] init];
         [self completeBuilding:mechBuilding ];
+        
+        BTTBuilding *building;
+        
+        for(building in self.buildingsCompleted){
+            SKNode *stageBuilding = [building render:self];
+            NSLog(@"%@", NSStringFromCGRect(stageBuilding.frame));
+            [self addChild:stageBuilding];
+        }
         [self addChild:myLabel];
     }
     return self;
@@ -57,11 +64,9 @@
 }
 
 - (void) completeBuilding: (BTTBuilding *) building {
-    NSLog(@"Building...");
     [self.buildingsCompleted addObject:building];
-    SKNode *stageBuilding = [building render:self];
-    NSLog(@"%@", NSStringFromCGRect(stageBuilding.frame));
-    [self addChild:stageBuilding];
+    //SKNode *stageBuilding = [building render:self];
+    //[self addChild:stageBuilding];
 }
 
 @end
