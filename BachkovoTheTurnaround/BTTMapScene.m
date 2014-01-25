@@ -11,7 +11,6 @@
 
 @interface BTTMapScene ()
 
-@property (nonatomic) CGPoint scrollPoint;
 @property (nonatomic, strong) SKNode *mapNode;
 @property (nonatomic, strong) BTTMap *map;
 @property (nonatomic, strong) SKSpriteNode *battleship;
@@ -98,7 +97,6 @@
 }
 
 - (void) update:(CFTimeInterval)currentTime {
-    self.mapNode.position = self.scrollPoint;
 }
 
 @end
