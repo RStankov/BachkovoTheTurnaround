@@ -7,9 +7,11 @@
 //
 
 #import "BTTBattleScene.h"
+#import "BTTArmyBar.h"
 
 @interface BTTBattleScene() {
-    SKSpriteNode *enemiesBar;
+    BTTArmyBar *enemyArmyBar;
+    BTTArmyBar *ourArmyBar;
 }
 
 @end
@@ -27,39 +29,29 @@
         myLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) + 80);
         [self addChild:myLabel];
         
-        CGSize barSize = self.frame.size;
-        barSize.height = 40;
         
+        enemyArmyBar = [[BTTArmyBar alloc] initWithSlotsCount:6 units:@[]];
+        enemyArmyBar.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height - enemyArmyBar.size.height / 2);
+        [self addChild: enemyArmyBar];
         
-        enemiesBar = [[SKSpriteNode alloc] initWithColor:[UIColor greenColor] size:barSize];
-        enemiesBar.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height - barSize.height / 2);
-        [self addChild:enemiesBar];
+        ourArmyBar = [[BTTArmyBar alloc] initWithSlotsCount:6 units:@[]];
+        ourArmyBar.position = CGPointMake(CGRectGetMidX(self.frame), ourArmyBar.size.height / 2);
+        [self addChild: ourArmyBar];
         
-        
-        int cellsCount = 6;
-        int cellRightMargin = 2;
-        
-        CGSize cellDimensions = CGSizeMake((barSize.width - ((cellsCount - 1)) * cellRightMargin) / cellsCount, barSize.height);
-        CGPoint cellPosition = CGPointMake(-barSize.width / 2 + cellDimensions.width / 2, 0);
-        
-        for (int i=0; i<cellsCount; i++) {
-            SKSpriteNode *cell = [[SKSpriteNode alloc] initWithColor:[UIColor redColor] size:cellDimensions];
-            cell.position = cellPosition;
-            cell.name = [NSString stringWithFormat:@"enemy cell - %d", i];
-            
-            [enemiesBar addChild:cell];
-            
-            cellPosition.x += cellDimensions.width + cellRightMargin;
-        }
     }
     return self;
 }
 
 -(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
-    CGPoint loc = [touch locationInNode:enemiesBar];
     
-    SKNode *touchedCell = [enemiesBar nodeAtPoint:loc];
-    NSLog(@"tapped on enemey - %@", touchedCell.name);
+    CGPoint loc = [touch locationInNode:self];
+    if([enemyArmyBar containsPoint:loc]) {
+        NSLog(@"attack enemy !!!");
+        
+        SKNode *touchedCell = [enemyArmyBar nodeAtPoint: [self convertPoint:loc toNode:enemyArmyBar]];
+        NSLog(@"tapped on enemey - %@", touchedCell.name);
+    }
+    
 }
 @end
