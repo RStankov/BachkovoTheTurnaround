@@ -10,4 +10,8 @@
 
 @implementation BTTMechGarrisonBuilding
 
+-(BTTUnit *)buyUnit:(BTTUnit *)unit{
+    return [[BTTUnit alloc] init];
+}
+
 @end
