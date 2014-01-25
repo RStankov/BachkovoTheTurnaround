@@ -8,6 +8,13 @@
 
 #import "BTTMapScene.h"
 
+@interface BTTMapScene ()
+
+@property (nonatomic) CGPoint scrollPoint;
+@property (nonatomic, strong) SKNode *map;
+
+@end
+
 @implementation BTTMapScene
 
 -(id)initWithSize:(CGSize)size {    
@@ -22,7 +29,10 @@
         
         NSLog(@"%f", myLabel.position.y);
         
-
+        
+        SKNode *map = [[SKNode alloc] init];
+        
+        self.map = map;
        
         NSInteger size = 44;
         for(NSInteger i=0; i<30; i++) {
@@ -31,7 +41,7 @@
                 
                 sprite.position = CGPointMake(22 + size * i, CGRectGetMidY(self.frame) + 68 - size * j);
                 
-                NSLog(@"%@", NSStringFromCGSize(sprite.size));
+            NSLog(@"%@", NSStringFromCGSize(sprite.size));
                 
                 sprite.color = [SKColor colorWithRed:(1.0 * i)/30.0 green:(1.0 * (arc4random() % 74)) / 74 blue:(1.0*j)/40.0 alpha:2.0];
                 sprite.colorBlendFactor = 0.3;
@@ -44,14 +54,19 @@
                 
                 [sprite addChild:label];
                 
-                [self addChild:sprite];
+                [map addChild:sprite];
             }
         }
         
-        
+        [self addChild:map];
         [self addChild:myLabel];
     }
     return self;
+}
+
+- (void)setScrollPosition:(CGPoint)point {
+    self.scrollPoint = CGPointMake(point.x * -1, point.y);
+        NSLog(@"%@", NSStringFromCGPoint(self.scrollPoint));
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -59,7 +74,7 @@
 }
 
 -(void)update:(CFTimeInterval)currentTime {
-    /* Called before each frame is rendered */
+    self.map.position = self.scrollPoint;
 }
 
 @end

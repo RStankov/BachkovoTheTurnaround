@@ -10,4 +10,6 @@
 
 @interface BTTMapScene : SKScene
 
+- (void)setScrollPosition:(CGPoint)point;
+
 @end
