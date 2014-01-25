@@ -27,20 +27,16 @@
         
         myLabel.text = @"World map";
         myLabel.fontSize = 10;
-        myLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) + 80);
-        myLabel.position = CGPointMake(CGRectGetMidX(self.frame), 320 - 10);
+        myLabel.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height - myLabel.fontSize);
         
         SKNode *mapNote = [[SKNode alloc] init];
         
         self.map = mapNote;
         
-        NSLog(@"%@", NSStringFromCGSize(size));
-       
         for(NSInteger i=0; i<map.horizontalTileCount; i++) {
             for(NSInteger j=0; j<map.verticalTilesCount; j++) {
                 SKSpriteNode *sprite = [map tileNodeForTop:i left:j];
-                sprite.position = CGPointMake(map.tileSize/2 + map.tileSize * i, self.frame.size.height - map.tileSize/2 - map.tileSize * j);
-                NSLog(@"%@", NSStringFromCGPoint(sprite.position));
+                sprite.position = CGPointMake((0.5 + i) * map.tileSize, self.frame.size.height - (0.5 + j) * map.tileSize);
                 [mapNote addChild:sprite];
             }
         }
@@ -54,7 +50,6 @@
 
 - (void)setScrollPosition:(CGPoint)point {
     self.scrollPoint = CGPointMake(point.x * -1, point.y);
-//        NSLog(@"%@", NSStringFromCGPoint(self.scrollPoint));
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
