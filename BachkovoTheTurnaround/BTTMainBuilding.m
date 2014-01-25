@@ -21,7 +21,7 @@
     return name;
 }
 
--(SKNode *) render {
+-(SKNode *) render: (SKNode *) parent {
     return [[SKNode alloc] init];
 }
 
