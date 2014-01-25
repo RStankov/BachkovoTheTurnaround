@@ -6,16 +6,18 @@
 //  Copyright (c) 2014 Radoslav Stankov. All rights reserved.
 //
 
-#import "BTTViewController.h"
+#import "BTTCityViewController.h"
 #import "BTTMyScene.h"
 #import "BTTMyCity.h"
 
-@implementation BTTViewController
+@implementation BTTCityViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
+    self.view = [[SKView alloc] initWithFrame:self.view.frame];
+    
     // Configure the view.
     SKView * skView = (SKView *)self.view;
     skView.showsFPS = YES;

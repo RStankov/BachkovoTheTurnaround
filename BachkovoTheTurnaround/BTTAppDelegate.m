@@ -7,12 +7,25 @@
 //
 
 #import "BTTAppDelegate.h"
+#import "BTTCityViewController.h"
+#import "BTTBattleViewController.h"
+#import "BTTMapViewController.h"
 
 @implementation BTTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    
+    UIViewController *cv = [[BTTMapViewController alloc] init];
+
+    if (NSProcessInfo.processInfo.environment[@"RUN_CITY"]) {
+        cv = [[BTTCityViewController alloc] init];
+    } else if (NSProcessInfo.processInfo.environment[@"RUN_BATTLE"]) {
+        cv = [[BTTBattleViewController alloc] init];
+    }
+
+    self.window.rootViewController = cv;
+
     return YES;
 }
 							
