@@ -65,7 +65,7 @@
 {
     SKSpriteNode *fireNode = [SKSpriteNode spriteNodeWithImageNamed:@"download"];
     fireNode.position = CGPointMake(CGRectGetMaxX(self.frame), CGRectGetMidY(self.frame) + 50);
-    fireNode.name = @"createBuilding";//how the node is identified later
+    fireNode.name = @"createBuilding";
     fireNode.zPosition = 1.0;
 
     return fireNode;
@@ -86,5 +86,6 @@
         [self completeBuilding:mech];
     }
 }
+
 
 @end
