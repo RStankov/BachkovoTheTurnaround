@@ -14,7 +14,7 @@
 -(id)initWithSize:(CGSize)size {
     if(self = [super initWithSize:size]) {
         self.backgroundColor = [SKColor colorWithRed:0.10 green:0.5 blue:0.10 alpha:0.5];
-        SKNode *mainBuilding = [[BTTBuilding alloc] initWithName:@"Main"];
+        SKNode *mainBuilding = [[BTTBuilding alloc] init];
 
         mainBuilding.position = CGPointMake(CGRectGetMidX(self.frame),
                                        CGRectGetMidY(self.frame));
@@ -29,7 +29,7 @@
 }
 
 -(BTTBuilding *) buildBuilding:(BTTBuilding *) building{
-    building.isBuild = true;
+    [self.buildingsCompleted addObject:building];
     return building;
 }
 

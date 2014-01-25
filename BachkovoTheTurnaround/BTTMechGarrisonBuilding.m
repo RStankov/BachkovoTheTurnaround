@@ -26,8 +26,19 @@
     return [[BTTUnit alloc] init];
 }
 
--(SKNode *) render {
-    return [[SKNode alloc] init];
+-(SKShapeNode *) render {
+    SKShapeNode* mechBuilding = [SKShapeNode node];
+    UIBezierPath* topLeftBezierPath = [[UIBezierPath alloc] init];
+    [topLeftBezierPath moveToPoint:CGPointMake(0.0, 0.0)];
+    [topLeftBezierPath addLineToPoint:CGPointMake(0.0, 100.0)];
+    [topLeftBezierPath addLineToPoint:CGPointMake(100.0, 100.0)];
+    mechBuilding.path = topLeftBezierPath.CGPath;
+    mechBuilding.lineWidth = 10.0;
+    mechBuilding.fillColor = [UIColor redColor];
+    mechBuilding.strokeColor = [UIColor redColor];
+    mechBuilding.antialiased = NO;
+    
+    return mechBuilding;
 }
 
 @end
