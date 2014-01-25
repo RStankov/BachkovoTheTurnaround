@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		640B837F1893C2BB00FA9B65 /* BTTMechGarrisonBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 640B837E1893C2BB00FA9B65 /* BTTMechGarrisonBuilding.m */; };
+		640B83821893C6C900FA9B65 /* BTTUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 640B83811893C6C900FA9B65 /* BTTUnit.m */; };
 		648E29EA1893A69100499DC2 /* BTTMyCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 648E29E91893A69100499DC2 /* BTTMyCity.m */; };
 		648E29ED1893B01D00499DC2 /* BTTBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 648E29EC1893B01D00499DC2 /* BTTBuilding.m */; };
 		F059C4661893B8B20072B24A /* BTTWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = F059C4651893B8B20072B24A /* BTTWorld.m */; };
@@ -45,6 +46,8 @@
 /* Begin PBXFileReference section */
 		640B837D1893C2BB00FA9B65 /* BTTMechGarrisonBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTMechGarrisonBuilding.h; sourceTree = "<group>"; };
 		640B837E1893C2BB00FA9B65 /* BTTMechGarrisonBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTMechGarrisonBuilding.m; sourceTree = "<group>"; };
+		640B83801893C6C900FA9B65 /* BTTUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTUnit.h; sourceTree = "<group>"; };
+		640B83811893C6C900FA9B65 /* BTTUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTUnit.m; sourceTree = "<group>"; };
 		648E29E81893A69100499DC2 /* BTTMyCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTMyCity.h; sourceTree = "<group>"; };
 		648E29E91893A69100499DC2 /* BTTMyCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTMyCity.m; sourceTree = "<group>"; };
 		648E29EB1893B01D00499DC2 /* BTTBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTBuilding.h; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 				648E29E91893A69100499DC2 /* BTTMyCity.m */,
 				648E29EB1893B01D00499DC2 /* BTTBuilding.h */,
 				640B837D1893C2BB00FA9B65 /* BTTMechGarrisonBuilding.h */,
+				640B83801893C6C900FA9B65 /* BTTUnit.h */,
+				640B83811893C6C900FA9B65 /* BTTUnit.m */,
 				640B837E1893C2BB00FA9B65 /* BTTMechGarrisonBuilding.m */,
 				648E29EC1893B01D00499DC2 /* BTTBuilding.m */,
 				F0A9652E18931775007184D7 /* Spaceship.png */,
@@ -294,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0A9652A18931775007184D7 /* BTTViewController.m in Sources */,
+				640B83821893C6C900FA9B65 /* BTTUnit.m in Sources */,
 				F0A9652D18931775007184D7 /* BTTMyScene.m in Sources */,
 				F09F86A91893B53800F6EC30 /* BTTPlayer.m in Sources */,
 				F0A9652018931775007184D7 /* main.m in Sources */,

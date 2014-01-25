@@ -7,8 +7,10 @@
 //
 
 #import "BTTBuilding.h"
+#import "BTTUnit.h"
 
 @interface BTTMechGarrisonBuilding : BTTBuilding
 @property(nonatomic, assign) NSMutableArray *units;
 
+-(void) buyUnit:(BTTUnit *)unit;
 @end
