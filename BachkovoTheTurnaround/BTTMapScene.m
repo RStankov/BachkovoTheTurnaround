@@ -13,7 +13,7 @@
 
 @property (nonatomic, strong) SKNode *mapNode;
 @property (nonatomic, strong) BTTMap *map;
-@property (nonatomic, strong) SKSpriteNode *battleship;
+@property (nonatomic, strong) SKSpriteNode *playerNode;
 @property (nonatomic, strong) BTTPathFinder *pathFinder;
 
 @end
@@ -21,49 +21,40 @@
 @implementation BTTMapScene
 
 - (instancetype) initWithMap:(BTTMap *)map size:(CGSize) size {
-    if (self = [self initWithSize:size]) {
+    self = [self initWithSize:size];
+
+    if (self) {
         self.map = map;
         self.pathFinder = [[BTTPathFinder alloc] initWithDataSource:map];
         self.anchorPoint = CGPointMake(0.5, 0.5);
 
-        SKNode *mapNode = [[SKSpriteNode alloc] initWithImageNamed:@"WorldMap-40x30.jpg"];
-
-        self.mapNode = mapNode;
+        self.mapNode = [[SKSpriteNode alloc] initWithImageNamed:@"WorldMap-40x30.jpg"];
 
         for (NSInteger i = 0; i<map.verticalTilesCount; i++) {
             for (NSInteger j = 0; j<map.horizontalTileCount; j++) {
                 SKSpriteNode *sprite = [map nodeForIndexPath:[NSIndexPath indexPathForItem:i inSection:j]];
                 sprite.position = [self pointForTop:i left:j];
-                [mapNode addChild:sprite];
+                [self.mapNode addChild:sprite];
             }
         }
 
-        self.anchorPoint = CGPointMake(0.5, 0.5);
+        [self addChild:self.mapNode];
 
-        [self addChild:mapNode];
+        self.playerNode = [[SKSpriteNode alloc] initWithImageNamed:@"square"];
+        self.playerNode.position = [self pointForTop:4 left:5];
+        self.playerNode.color = [SKColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
+        self.playerNode.colorBlendFactor = 0.3;
 
-        SKSpriteNode *ship = [[SKSpriteNode alloc] initWithImageNamed:@"square"];
-        ship.color = [SKColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
-        ship.colorBlendFactor = 0.3;
-
-        self.battleship = ship;
-        self.battleship.position = [self pointForTop:4 left:5];
-
-        [self.mapNode addChild:self.battleship];
+        [self.mapNode addChild:self.playerNode];
     }
 
     return self;
 }
 
-- (void) centerOnNode: (SKNode *) node
+- (void)didSimulatePhysics
 {
-    CGPoint cameraPositionInScene = [node.scene convertPoint:node.position fromNode:node.parent];
-    node.parent.position = CGPointMake(node.parent.position.x - cameraPositionInScene.x,                                       node.parent.position.y - cameraPositionInScene.y);
-}
-
-- (void) didSimulatePhysics
-{
-    [self centerOnNode: self.battleship];
+    CGPoint cameraPositionInScene = [self convertPoint:self.playerNode.position fromNode:self.mapNode];
+    self.mapNode.position = CGPointMake(self.mapNode.position.x - cameraPositionInScene.x, self.mapNode.position.y - cameraPositionInScene.y);
 }
 
 - (CGPoint) pointForTop:(NSInteger)x left:(NSInteger)y {
@@ -79,7 +70,7 @@
     CGPoint point = [touch locationInNode:self.mapNode];
 
     NSIndexPath *newIndex = [self indexPathForPoint:point];
-    NSIndexPath *currentPath = [self indexPathForPoint:self.battleship.position];
+    NSIndexPath *currentPath = [self indexPathForPoint:self.playerNode.position];
 
     NSArray *steps = [self.pathFinder shortestPathFrom:currentPath to:newIndex];
 
@@ -87,7 +78,7 @@
         return;
     }
 
-    [self.battleship removeAllActions];
+    [self.playerNode removeAllActions];
 
     NSMutableArray *array = [NSMutableArray array];
 
@@ -95,7 +86,7 @@
         [array addObject:[SKAction moveTo:[self pointForTop:idx.item left:idx.section] duration:0.2]];
     }
 
-    [self.battleship runAction:[SKAction sequence:array]];
+    [self.playerNode runAction:[SKAction sequence:array]];
 }
 
 - (void) update:(CFTimeInterval)currentTime {
