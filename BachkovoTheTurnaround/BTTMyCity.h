@@ -7,11 +7,12 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "BTTBuilding.h"
 
 @interface BTTMyCity : SKScene
 
--(void)heroVisit: (SKTexture *)character;
--(SKSpriteNode *)buildBuilding: (SKNode *)buildingType;
+- (void) heroVisit: (SKTexture *) character;
+- (void) completeBuilding: (BTTBuilding *) building;
 
 @property(nonatomic, assign) NSMutableArray *buildingsCompleted;
 

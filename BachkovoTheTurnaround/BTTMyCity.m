@@ -11,7 +11,7 @@
 
 @implementation BTTMyCity
 
--(id)initWithSize:(CGSize)size {
+- (id)initWithSize: (CGSize)size {
     if (self = [super initWithSize:size]) {
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
        
@@ -41,26 +41,23 @@
                label.fontSize = 10;
                label.position = CGPointMake(0, 0);
                
-               //[sprite addChild:label];
-               
                [self addChild:sprite];
            }
        }
        
        
        [self addChild:myLabel];
-    }
+
     return self;
 }
 
--(NSMutableArray *) buildingsCompleted {
-    return self.buildingsCompleted;
+- (void) heroVisit: (SKTexture *) character {
+    // Whatever this will do.
 }
 
--(BTTBuilding *) buildBuilding:(BTTBuilding *) building{
+- (void) completeBuilding: (BTTBuilding *) building {
     [self.buildingsCompleted addObject:building];
-    return building;
+    [building render];
 }
-
 
 @end

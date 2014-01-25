@@ -12,9 +12,8 @@
 
 @property bool *isBuild;
 
-+(NSString *) name;
++ (NSString *) name;
 
--(SKNode *) render;
-
+- (SKNode *) render;
 
 @end

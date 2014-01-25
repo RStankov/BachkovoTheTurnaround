@@ -10,21 +10,14 @@
 
 @implementation BTTBuilding
 
-+(NSString *) name {
-    static dispatch_once_t once;
-    static NSString *name;
-    
-    dispatch_once(&once, ^ {
-        name = @"Use a subclass";
-    });
-    
-    return name;
++ (NSString *) name {
+    NSAssert(NO, @"You must override this method.");
+    return nil;
 }
 
-
--(SKNode *) render {
-    return [[SKNode alloc] init];
+- (SKNode *) render {
+    NSAssert(NO, @"You must override this method.");
+    return nil;
 }
-
 
 @end
