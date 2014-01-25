@@ -8,6 +8,7 @@
 
 #import "BTTMyCity.h"
 #import "BTTBuilding.h"
+#import "BTTMainBuilding.h"
 #import "BTTMechGarrisonBuilding.h"
 @implementation BTTMyCity
 
@@ -64,7 +65,7 @@
 {
     SKSpriteNode *fireNode = [SKSpriteNode spriteNodeWithImageNamed:@"download"];
     fireNode.position = CGPointMake(CGRectGetMaxX(self.frame), CGRectGetMidY(self.frame) + 50);
-    fireNode.name = @"fireButtonNode";//how the node is identified later
+    fireNode.name = @"createBuilding";//how the node is identified later
     fireNode.zPosition = 1.0;
 
     return fireNode;
@@ -77,8 +78,12 @@
     SKNode *node = [self nodeAtPoint:location];
     
     //if fire button touched, bring the rain
-    if ([node.name isEqualToString:@"fireButtonNode"]) {
+    if ([node.name isEqualToString:@"createBuilding"]) {
         NSLog(@"Building....");
+        BTTMainBuilding *main = [[BTTMainBuilding alloc] init];
+        BTTMechGarrisonBuilding *mech = [[BTTMechGarrisonBuilding alloc] init];
+        [self completeBuilding:main];
+        [self completeBuilding:mech];
     }
 }
 
