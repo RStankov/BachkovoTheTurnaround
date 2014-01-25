@@ -13,11 +13,11 @@
 -(id)initWithSize:(CGSize)size {
     if(self = [super initWithSize:size]) {
         self.backgroundColor = [SKColor colorWithRed:0.10 green:0.5 blue:0.10 alpha:0.5];
-        
+        //Should render building
         SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         
-        myLabel.text = @"Hello from my city!";
-        myLabel.fontSize = 30;
+        myLabel.text = @"Main building is here";
+        myLabel.fontSize = 10;
         myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
                                        CGRectGetMidY(self.frame));
         
@@ -25,5 +25,14 @@
     }
     return self;
 }
+
+-(NSMutableArray *) buildingsCompleted {
+    return self.buildingsCompleted;
+}
+
+-(void) buildBuilding {
+
+}
+
 
 @end

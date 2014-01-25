@@ -10,4 +10,12 @@
 
 @implementation BTTBuilding
 
+- (id)init {
+    if(self = [super init]) {
+        self.isBuild = true;
+    }
+    
+    return self;
+}
+
 @end

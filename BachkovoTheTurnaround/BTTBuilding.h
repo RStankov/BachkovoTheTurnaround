@@ -10,4 +10,6 @@
 
 @interface BTTBuilding : SKNode
 
+@property bool *isBuild;
+
 @end
