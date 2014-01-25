@@ -11,6 +11,8 @@
 @interface BTTMyCity : SKScene
 
 -(void)heroVisit: (SKTexture *)character;
+-(SKNode *)buildBuilding: (SKNode *)buildingType;
+
 @property(nonatomic, assign) NSMutableArray *buildingsCompleted;
 
 @end

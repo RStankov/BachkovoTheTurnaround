@@ -28,8 +28,8 @@
     return self.buildingsCompleted;
 }
 
--(void) buildBuilding {
-
+-(void) buildBuilding:(BTTBuilding *) buildingType{
+    buildingType.isBuild = true;
 }
 
 

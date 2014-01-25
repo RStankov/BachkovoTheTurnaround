@@ -33,6 +33,7 @@
         bottomRight.strokeColor = [UIColor greenColor];
         bottomRight.antialiased = NO;
         [self addChild:bottomRight];
+        self.name = name;
     }
     
     return self;
