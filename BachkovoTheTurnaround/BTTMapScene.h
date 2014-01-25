@@ -7,8 +7,11 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "BTTMap.h";
 
 @interface BTTMapScene : SKScene
+
+- (instancetype)initWithMap:(BTTMap *)map size:(CGSize) size;
 
 - (void)setScrollPosition:(CGPoint)point;
 

@@ -15,16 +15,11 @@
 
 @implementation BTTBattleViewController
 
-- (void)viewDidLoad
+- (void)viewWillLayoutSubviews
 {
-    [super viewDidLoad];
-    
-    NSLog(@"....................");
- 
-    self.view = [[SKView alloc] initWithFrame:self.view.frame];
-
     // Configure the view.
     SKView * skView = (SKView *)self.view;
+    
     skView.showsFPS = YES;
     skView.showsNodeCount = YES;
     

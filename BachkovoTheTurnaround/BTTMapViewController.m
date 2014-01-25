@@ -8,6 +8,7 @@
 
 #import "BTTMapViewController.h"
 #import "BTTMapScene.h"
+#import "BTTMap.h"
 
 @interface BTTMapViewController ()<UIScrollViewDelegate>
 
@@ -17,33 +18,35 @@
 
 @implementation BTTMapViewController
 
-- (void)viewDidLoad
+- (void)viewWillLayoutSubviews
 {
-    [super viewDidLoad];
-    
-    self.view = [[SKView alloc] initWithFrame:self.view.frame];
-    
     // Configure the view.
     SKView * skView = (SKView *)self.view;
     skView.showsFPS = YES;
     skView.showsNodeCount = YES;
-    
+
     // Create and configure the scene.
-    // SKScene * scene = [BTTMyCity sceneWithSize:skView.bounds.size];
-    BTTMapScene * scene = [BTTMapScene sceneWithSize:skView.bounds.size];
+
+    BTTMap *map = [[BTTMap alloc] init];
+    map.tileSize = 44;
+    map.horizontalTileCount = 30;
+    map.verticalTilesCount = 30;
+
+    NSLog(@"..........");
+    NSLog(@"%@", NSStringFromCGRect(self.view.frame));
+
+    BTTMapScene * scene = [[BTTMapScene alloc] initWithMap:map size:skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
-    
+
     self.scene = scene;
-    
+
     // Present the scene.
     [skView presentScene:scene];
 
-
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:skView.frame];
     scrollView.delegate = self;
-    scrollView.contentSize = CGSizeMake(30*44, 49*44);
+    scrollView.contentSize = map.size;
     scrollView.hidden = YES;
-    
 
     [skView addSubview:scrollView];
     [skView addGestureRecognizer:scrollView.panGestureRecognizer];
@@ -57,7 +60,7 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGPoint position = scrollView.contentOffset;
-    
+
     [self.scene setScrollPosition:position];
 
 }

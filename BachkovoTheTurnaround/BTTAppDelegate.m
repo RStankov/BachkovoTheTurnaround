@@ -15,17 +15,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  
+    UIViewController *cv = nil;
     
-    UIViewController *cv = [[BTTMapViewController alloc] init];
-
     if (NSProcessInfo.processInfo.environment[@"RUN_CITY"]) {
-        cv = [[BTTCityViewController alloc] init];
+        cv = [self.window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"CityVC"];
     } else if (NSProcessInfo.processInfo.environment[@"RUN_BATTLE"]) {
-        cv = [[BTTBattleViewController alloc] init];
+        cv = [self.window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"BattleVC"];
+    } else {
+        cv = [self.window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"MapVC"];
     }
 
     self.window.rootViewController = cv;
-
+    
     return YES;
 }
 							

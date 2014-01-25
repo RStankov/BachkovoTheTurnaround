@@ -17,8 +17,10 @@
 
 @implementation BTTMapScene
 
--(id)initWithSize:(CGSize)size {    
-    if (self = [super initWithSize:size]) {
+- (instancetype)initWithMap:(BTTMap *)map size:(CGSize) size {
+    self = [self initWithSize:size];
+    
+    if (self) {
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
         
         SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"HelveticaLight"];
@@ -26,47 +28,33 @@
         myLabel.text = @"World map";
         myLabel.fontSize = 10;
         myLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) + 80);
+        myLabel.position = CGPointMake(CGRectGetMidX(self.frame), 320 - 10);
         
-        NSLog(@"%f", myLabel.position.y);
+        SKNode *mapNote = [[SKNode alloc] init];
         
+        self.map = mapNote;
         
-        SKNode *map = [[SKNode alloc] init];
-        
-        self.map = map;
+        NSLog(@"%@", NSStringFromCGSize(size));
        
-        NSInteger size = 44;
-        for(NSInteger i=0; i<30; i++) {
-            for(NSInteger j=0; j<40; j++) {
-                SKSpriteNode *sprite = [[SKSpriteNode alloc] initWithImageNamed:@"square"];
-                
-                sprite.position = CGPointMake(22 + size * i, CGRectGetMidY(self.frame) + 68 - size * j);
-                
-            NSLog(@"%@", NSStringFromCGSize(sprite.size));
-                
-                sprite.color = [SKColor colorWithRed:(1.0 * i)/30.0 green:(1.0 * (arc4random() % 74)) / 74 blue:(1.0*j)/40.0 alpha:2.0];
-                sprite.colorBlendFactor = 0.3;
-            
-                SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"HelveticaLight"];
-                
-                label.text = [NSString stringWithFormat:@"%dx%d", i, j];
-                label.fontSize = 10;
-                label.position = CGPointMake(0, 0);
-                
-                [sprite addChild:label];
-                
-                [map addChild:sprite];
+        for(NSInteger i=0; i<map.horizontalTileCount; i++) {
+            for(NSInteger j=0; j<map.verticalTilesCount; j++) {
+                SKSpriteNode *sprite = [map tileNodeForTop:i left:j];
+                sprite.position = CGPointMake(map.tileSize/2 + map.tileSize * i, self.frame.size.height - map.tileSize/2 - map.tileSize * j);
+                NSLog(@"%@", NSStringFromCGPoint(sprite.position));
+                [mapNote addChild:sprite];
             }
         }
         
-        [self addChild:map];
+        [self addChild:mapNote];
         [self addChild:myLabel];
     }
+    
     return self;
 }
 
 - (void)setScrollPosition:(CGPoint)point {
     self.scrollPoint = CGPointMake(point.x * -1, point.y);
-        NSLog(@"%@", NSStringFromCGPoint(self.scrollPoint));
+//        NSLog(@"%@", NSStringFromCGPoint(self.scrollPoint));
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {

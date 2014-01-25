@@ -14,12 +14,8 @@
 
 @implementation BTTCityViewController
 
-- (void)viewDidLoad
+- (void)viewWillLayoutSubviews
 {
-    [super viewDidLoad];
-
-    self.view = [[SKView alloc] initWithFrame:self.view.frame];
-    
     // Configure the view.
     SKView * skView = (SKView *)self.view;
     skView.showsFPS = YES;

@@ -20,6 +20,7 @@
 		F059C4691893BD010072B24A /* BTTMapScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F059C4681893BD010072B24A /* BTTMapScene.m */; };
 		F059C46C1893C7AD0072B24A /* BTTBattleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F059C46B1893C7AD0072B24A /* BTTBattleViewController.m */; };
 		F059C46F1893CB2F0072B24A /* BTTMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F059C46E1893CB2F0072B24A /* BTTMapViewController.m */; };
+		F05B17A91893ED4A0046F0F8 /* BTTMap.m in Sources */ = {isa = PBXBuildFile; fileRef = F05B17A81893ED4A0046F0F8 /* BTTMap.m */; };
 		F07919E21893D4F600E2DE8E /* square@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F07919E11893D4F600E2DE8E /* square@2x.png */; };
 		F09F86A91893B53800F6EC30 /* BTTPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F09F86A81893B53800F6EC30 /* BTTPlayer.m */; };
 		F09F86AC1893B6A100F6EC30 /* BTTBattleship.m in Sources */ = {isa = PBXBuildFile; fileRef = F09F86AB1893B6A100F6EC30 /* BTTBattleship.m */; };
@@ -78,6 +79,8 @@
 		F059C46B1893C7AD0072B24A /* BTTBattleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTBattleViewController.m; sourceTree = "<group>"; };
 		F059C46D1893CB2F0072B24A /* BTTMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTMapViewController.h; sourceTree = "<group>"; };
 		F059C46E1893CB2F0072B24A /* BTTMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTMapViewController.m; sourceTree = "<group>"; };
+		F05B17A71893ED4A0046F0F8 /* BTTMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTMap.h; sourceTree = "<group>"; };
+		F05B17A81893ED4A0046F0F8 /* BTTMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTMap.m; sourceTree = "<group>"; };
 		F07919E11893D4F600E2DE8E /* square@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "square@2x.png"; sourceTree = "<group>"; };
 		F09F86A71893B53800F6EC30 /* BTTPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTPlayer.h; sourceTree = "<group>"; };
 		F09F86A81893B53800F6EC30 /* BTTPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTPlayer.m; sourceTree = "<group>"; };
@@ -220,6 +223,8 @@
 				640B83CA1893CE5800FA9B65 /* BTTCityViewController.m */,
 				E1E4CE531893D03F0046217C /* BTTBattleScene.h */,
 				E1E4CE541893D03F0046217C /* BTTBattleScene.m */,
+				F05B17A71893ED4A0046F0F8 /* BTTMap.h */,
+				F05B17A81893ED4A0046F0F8 /* BTTMap.m */,
 			);
 			path = BachkovoTheTurnaround;
 			sourceTree = "<group>";
@@ -371,6 +376,7 @@
 				F059C4691893BD010072B24A /* BTTMapScene.m in Sources */,
 				F0A9652418931775007184D7 /* BTTAppDelegate.m in Sources */,
 				F059C46C1893C7AD0072B24A /* BTTBattleViewController.m in Sources */,
+				F05B17A91893ED4A0046F0F8 /* BTTMap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
