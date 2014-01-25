@@ -37,7 +37,6 @@
 		F0A9652018931775007184D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0A9651F18931775007184D7 /* main.m */; };
 		F0A9652418931775007184D7 /* BTTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0A9652318931775007184D7 /* BTTAppDelegate.m */; };
 		F0A9652718931775007184D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0A9652518931775007184D7 /* Main.storyboard */; };
-		F0A9652F18931775007184D7 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = F0A9652E18931775007184D7 /* Spaceship.png */; };
 		F0A9653118931775007184D7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0A9653018931775007184D7 /* Images.xcassets */; };
 		F0A9653818931776007184D7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A9653718931776007184D7 /* XCTest.framework */; };
 		F0A9653918931776007184D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A9651118931775007184D7 /* Foundation.framework */; };
@@ -110,7 +109,6 @@
 		F0A9652218931775007184D7 /* BTTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTTAppDelegate.h; sourceTree = "<group>"; };
 		F0A9652318931775007184D7 /* BTTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTTAppDelegate.m; sourceTree = "<group>"; };
 		F0A9652618931775007184D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F0A9652E18931775007184D7 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		F0A9653018931775007184D7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F0A9653618931776007184D7 /* BachkovoTheTurnaroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BachkovoTheTurnaroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0A9653718931776007184D7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -243,7 +241,6 @@
 				F05B17A81893ED4A0046F0F8 /* BTTMap.m */,
 				E1A0B296189412E5006CA1BB /* BTTArmyBar.h */,
 				E1A0B297189412E5006CA1BB /* BTTArmyBar.m */,
-				F0A9652E18931775007184D7 /* Spaceship.png */,
 				F0280C3918942CEB0094BBFA /* BTTPathFinder.h */,
 				F0280C3A18942CEB0094BBFA /* BTTPathFinder.m */,
 				9210FFBC189452380016BD00 /* WorldMap-40x30.jpg */,
@@ -362,7 +359,6 @@
 				F0A9651E18931775007184D7 /* InfoPlist.strings in Resources */,
 				F0A9653118931775007184D7 /* Images.xcassets in Resources */,
 				9210FFBD189452380016BD00 /* WorldMap-40x30.jpg in Resources */,
-				F0A9652F18931775007184D7 /* Spaceship.png in Resources */,
 				F0A9652718931775007184D7 /* Main.storyboard in Resources */,
 				640B83CE18940CE700FA9B65 /* download@2x.png in Resources */,
 				F07919E21893D4F600E2DE8E /* square@2x.png in Resources */,
