@@ -40,9 +40,4 @@
     [skView presentScene:scene];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-}
-
 @end
