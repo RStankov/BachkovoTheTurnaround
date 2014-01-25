@@ -51,8 +51,8 @@
         }
         BTTMainBuilding *main = [[BTTMainBuilding alloc] init];
         BTTMechGarrisonBuilding *mech = [[BTTMechGarrisonBuilding alloc] init];
-        [self completeBuilding:main];
-        [self completeBuilding:mech];
+        [self addBuilding:main];
+        [self addBuilding:mech];
         
         BTTPlayer *playa = [[BTTPlayer alloc] init];
         [self heroVisit:playa];
@@ -65,8 +65,8 @@
     NSLog(@"%@", character.army);
 }
 
-- (void) completeBuilding: (BTTBuilding *) building {
-    [self.buildingsCompleted addObject:building];
+- (void) addBuilding: (BTTBuilding *) building {
+    [self.buildings addObject:building];
     SKNode * rendered = [building render:self];
     [self addChild:rendered];
 }
@@ -92,8 +92,8 @@
         NSLog(@"Building....");
         BTTMainBuilding *main = [[BTTMainBuilding alloc] init];
         BTTMechGarrisonBuilding *mech = [[BTTMechGarrisonBuilding alloc] init];
-        [self completeBuilding:main];
-        [self completeBuilding:mech];
+        [self addBuilding:main];
+        [self addBuilding:mech];
     }
 }
 

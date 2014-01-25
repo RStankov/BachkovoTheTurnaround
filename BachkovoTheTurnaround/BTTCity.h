@@ -13,8 +13,8 @@
 @interface BTTCity : SKScene
 
 - (void) heroVisit: (BTTPlayer *) character;
-- (void) completeBuilding: (BTTBuilding *) building;
+- (void) addBuilding: (BTTBuilding *) building;
 
-@property(nonatomic, assign) NSMutableArray *buildingsCompleted;
+@property(nonatomic, assign) NSMutableArray *buildings;
 
 @end

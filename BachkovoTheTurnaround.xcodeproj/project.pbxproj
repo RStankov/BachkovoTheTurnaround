@@ -196,9 +196,9 @@
 		F0A9651918931775007184D7 /* BachkovoTheTurnaround */ = {
 			isa = PBXGroup;
 			children = (
+				F0A9652518931775007184D7 /* Main.storyboard */,
 				F0A9652218931775007184D7 /* BTTAppDelegate.h */,
 				F0A9652318931775007184D7 /* BTTAppDelegate.m */,
-				F0A9652518931775007184D7 /* Main.storyboard */,
 				F0A9652B18931775007184D7 /* BTTMyScene.h */,
 				F0A9652C18931775007184D7 /* BTTMyScene.m */,
 				648E29E81893A69100499DC2 /* BTTCity.h */,
@@ -211,9 +211,6 @@
 				640B837E1893C2BB00FA9B65 /* BTTMechGarrisonBuilding.m */,
 				92F3E4671893DCCB00C8F654 /* BTTBuilding.h */,
 				648E29EC1893B01D00499DC2 /* BTTBuilding.m */,
-				F0A9652E18931775007184D7 /* Spaceship.png */,
-				F0A9653018931775007184D7 /* Images.xcassets */,
-				F0A9651A18931775007184D7 /* Supporting Files */,
 				F09F86A71893B53800F6EC30 /* BTTPlayer.h */,
 				F09F86A81893B53800F6EC30 /* BTTPlayer.m */,
 				640B83831893C85C00FA9B65 /* BTTLightMech.h */,
@@ -236,6 +233,9 @@
 				E1E4CE541893D03F0046217C /* BTTBattleScene.m */,
 				F05B17A71893ED4A0046F0F8 /* BTTMap.h */,
 				F05B17A81893ED4A0046F0F8 /* BTTMap.m */,
+				F0A9652E18931775007184D7 /* Spaceship.png */,
+				F0A9653018931775007184D7 /* Images.xcassets */,
+				F0A9651A18931775007184D7 /* Supporting Files */,
 			);
 			path = BachkovoTheTurnaround;
 			sourceTree = "<group>";
