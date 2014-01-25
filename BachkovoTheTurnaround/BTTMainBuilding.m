@@ -21,8 +21,21 @@
     return name;
 }
 
--(SKNode *) render: (SKNode *) parent {
-    return [[SKNode alloc] init];
+-(SKShapeNode *) render:(SKNode *) parent {
+    SKShapeNode* mechBuilding = [SKShapeNode node];
+    UIBezierPath* topLeftBezierPath = [[UIBezierPath alloc] init];
+    [topLeftBezierPath moveToPoint:CGPointMake(0.0, 0.0)];
+    [topLeftBezierPath addLineToPoint:CGPointMake(0.0, 50.0)];
+    [topLeftBezierPath addLineToPoint:CGPointMake(25.0, 100.0)];
+    [topLeftBezierPath addLineToPoint:CGPointMake(25.0, 100.0)];
+
+    mechBuilding.path = topLeftBezierPath.CGPath;
+    mechBuilding.lineWidth = 5.0;
+    mechBuilding.fillColor = [UIColor redColor];
+    mechBuilding.strokeColor = [UIColor redColor];
+    mechBuilding.antialiased = NO;
+    mechBuilding.position = CGPointMake(CGRectGetMidX(parent.frame), CGRectGetMidY(parent.frame));
+    return mechBuilding;
 }
 
 @end

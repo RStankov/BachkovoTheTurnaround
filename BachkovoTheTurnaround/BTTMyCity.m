@@ -43,13 +43,8 @@
                
                [self addChild:sprite];
            }
-       }
-        BTTMechGarrisonBuilding *mechBuilding = [[BTTMechGarrisonBuilding alloc] init];
-        [self completeBuilding:mechBuilding ];
-        
-        for(BTTBuilding *building in self.buildingsCompleted) {
-            [self completeBuilding:building];
         }
+        
         [self addChild:myLabel];
     }
     return self;

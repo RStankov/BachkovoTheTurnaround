@@ -37,7 +37,6 @@
     
     // Present the scene.
     [skView presentScene:scene];
-    
 
 
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:skView.frame];

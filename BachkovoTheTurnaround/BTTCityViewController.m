@@ -9,6 +9,8 @@
 #import "BTTCityViewController.h"
 #import "BTTMyScene.h"
 #import "BTTMyCity.h"
+#import "BTTMainBuilding.h"
+#import "BTTMechGarrisonBuilding.h"
 
 @implementation BTTCityViewController
 
@@ -24,11 +26,14 @@
     skView.showsNodeCount = YES;
     
     // Create and configure the scene.
-    SKScene * scene = [BTTMyCity sceneWithSize:skView.bounds.size];
-    scene.scaleMode = SKSceneScaleModeAspectFill;
+    BTTMyCity * city = [BTTMyCity sceneWithSize:skView.bounds.size];
+    city.scaleMode = SKSceneScaleModeAspectFill;
+
+    [city completeBuilding:[[BTTMainBuilding alloc] init]];
+    [city completeBuilding:[[BTTMechGarrisonBuilding alloc] init]];
     
     // Present the scene.
-    [skView presentScene:scene];
+    [skView presentScene:city];
 }
 
 - (BOOL)shouldAutorotate

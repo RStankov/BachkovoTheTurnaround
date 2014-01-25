@@ -38,7 +38,7 @@
     mechBuilding.fillColor = [UIColor redColor];
     mechBuilding.strokeColor = [UIColor redColor];
     mechBuilding.antialiased = NO;
-    mechBuilding.position = CGPointMake(CGRectGetMidX(parent.frame), CGRectGetMidY(parent.frame));
+    mechBuilding.position = CGPointMake(CGRectGetMidX(parent.frame), CGRectGetMidY(parent.frame) - 50);
     return mechBuilding;
 }
 
