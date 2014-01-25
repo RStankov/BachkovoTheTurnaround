@@ -15,8 +15,8 @@
 @property (nonatomic, strong) SKNode *mapNode;
 @property (nonatomic, strong) BTTMap *map;
 @property (nonatomic, strong) SKSpriteNode *battleship;
-@property (nonatomic) NSInteger currentX;
-@property (nonatomic) NSInteger currentY;
+@property (nonatomic, strong) BTTPathFinder *pathFinder;
+@property (nonatomic, strong) NSIndexPath *selectedIndex;
 
 @end
 
@@ -26,8 +26,9 @@
     if (self = [self initWithSize:size]) {
         self.map = map;
 
-        _currentX = 0;
-        _currentY = 0;
+        self.pathFinder = [[BTTPathFinder alloc] initWithDataSource:map];
+
+        self.selectedIndex = [NSIndexPath indexPathForItem:0 inSection:0];
 
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
 
@@ -91,10 +92,9 @@
     UITouch *touch = [touches anyObject];
     CGPoint point = [touch locationInNode:self.mapNode];
 
-    int x = floor(point.x / 45);
-    int y = floor((self.size.height - point.y) / 45);
+    NSIndexPath *newIndex = [NSIndexPath indexPathForItem:floor(point.x / 45) inSection:floor((self.size.height - point.y) / 45)];
 
-    NSArray *steps = [[[BTTPathFinder alloc] initWithDataSource:self.map] shortestPathFrom:[NSIndexPath indexPathForItem:_currentX inSection:_currentY] to:[NSIndexPath indexPathForItem:x inSection:y]];
+    NSArray *steps = [self.pathFinder shortestPathFrom:self.selectedIndex to:newIndex];
 
     NSMutableArray *array = [NSMutableArray array];
 
@@ -104,8 +104,7 @@
 
     SKAction *action = [SKAction sequence:array];
 
-    _currentY = y;
-    _currentX = x;
+    self.selectedIndex = newIndex;
 
     [self.battleship runAction:action];
 }
