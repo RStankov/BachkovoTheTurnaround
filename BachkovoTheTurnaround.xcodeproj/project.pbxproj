@@ -11,6 +11,7 @@
 		640B83821893C6C900FA9B65 /* BTTUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 640B83811893C6C900FA9B65 /* BTTUnit.m */; };
 		640B83851893C85C00FA9B65 /* BTTLightMech.m in Sources */ = {isa = PBXBuildFile; fileRef = 640B83841893C85C00FA9B65 /* BTTLightMech.m */; };
 		640B83881893C86B00FA9B65 /* BTTReconMech.m in Sources */ = {isa = PBXBuildFile; fileRef = 640B83871893C86B00FA9B65 /* BTTReconMech.m */; };
+		640B83CB1893CE5800FA9B65 /* BTTCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 640B83CA1893CE5800FA9B65 /* BTTCityViewController.m */; };
 		648E29EA1893A69100499DC2 /* BTTMyCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 648E29E91893A69100499DC2 /* BTTMyCity.m */; };
 		648E29ED1893B01D00499DC2 /* BTTBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 648E29EC1893B01D00499DC2 /* BTTBuilding.m */; };
 		923200721893C94800E2F943 /* BTTMainBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 923200711893C94800E2F943 /* BTTMainBuilding.m */; };
@@ -28,7 +29,6 @@
 		F0A9652018931775007184D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0A9651F18931775007184D7 /* main.m */; };
 		F0A9652418931775007184D7 /* BTTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0A9652318931775007184D7 /* BTTAppDelegate.m */; };
 		F0A9652718931775007184D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0A9652518931775007184D7 /* Main.storyboard */; };
-		F0A9652A18931775007184D7 /* BTTCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0A9652918931775007184D7 /* BTTCityViewController.m */; };
 		F0A9652D18931775007184D7 /* BTTMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F0A9652C18931775007184D7 /* BTTMyScene.m */; };
 		F0A9652F18931775007184D7 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = F0A9652E18931775007184D7 /* Spaceship.png */; };
 		F0A9653118931775007184D7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0A9653018931775007184D7 /* Images.xcassets */; };
@@ -58,6 +58,8 @@
 		640B83841893C85C00FA9B65 /* BTTLightMech.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTLightMech.m; sourceTree = "<group>"; };
 		640B83861893C86B00FA9B65 /* BTTReconMech.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTReconMech.h; sourceTree = "<group>"; };
 		640B83871893C86B00FA9B65 /* BTTReconMech.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTReconMech.m; sourceTree = "<group>"; };
+		640B83C91893CE5800FA9B65 /* BTTCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTCityViewController.h; sourceTree = "<group>"; };
+		640B83CA1893CE5800FA9B65 /* BTTCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTCityViewController.m; sourceTree = "<group>"; };
 		648E29E81893A69100499DC2 /* BTTMyCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTMyCity.h; sourceTree = "<group>"; };
 		648E29E91893A69100499DC2 /* BTTMyCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTMyCity.m; sourceTree = "<group>"; };
 		648E29EB1893B01D00499DC2 /* BTTBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTBuilding.h; sourceTree = "<group>"; };
@@ -88,8 +90,6 @@
 		F0A9652218931775007184D7 /* BTTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTTAppDelegate.h; sourceTree = "<group>"; };
 		F0A9652318931775007184D7 /* BTTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTTAppDelegate.m; sourceTree = "<group>"; };
 		F0A9652618931775007184D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F0A9652818931775007184D7 /* BTTCityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTTCityViewController.h; sourceTree = "<group>"; };
-		F0A9652918931775007184D7 /* BTTCityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTTCityViewController.m; sourceTree = "<group>"; };
 		F0A9652B18931775007184D7 /* BTTMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTTMyScene.h; sourceTree = "<group>"; };
 		F0A9652C18931775007184D7 /* BTTMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTTMyScene.m; sourceTree = "<group>"; };
 		F0A9652E18931775007184D7 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
@@ -163,8 +163,6 @@
 				F0A9652218931775007184D7 /* BTTAppDelegate.h */,
 				F0A9652318931775007184D7 /* BTTAppDelegate.m */,
 				F0A9652518931775007184D7 /* Main.storyboard */,
-				F0A9652818931775007184D7 /* BTTCityViewController.h */,
-				F0A9652918931775007184D7 /* BTTCityViewController.m */,
 				F0A9652B18931775007184D7 /* BTTMyScene.h */,
 				F0A9652C18931775007184D7 /* BTTMyScene.m */,
 				648E29E81893A69100499DC2 /* BTTMyCity.h */,
@@ -197,6 +195,8 @@
 				F059C46B1893C7AD0072B24A /* BTTBattleViewController.m */,
 				F059C46D1893CB2F0072B24A /* BTTMapViewController.h */,
 				F059C46E1893CB2F0072B24A /* BTTMapViewController.m */,
+				640B83C91893CE5800FA9B65 /* BTTCityViewController.h */,
+				640B83CA1893CE5800FA9B65 /* BTTCityViewController.m */,
 			);
 			path = BachkovoTheTurnaround;
 			sourceTree = "<group>";
@@ -329,10 +329,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0A9652A18931775007184D7 /* BTTViewController.m in Sources */,
 				640B83821893C6C900FA9B65 /* BTTUnit.m in Sources */,
 				F059C46F1893CB2F0072B24A /* BTTMapViewController.m in Sources */,
-				F0A9652A18931775007184D7 /* BTTCityViewController.m in Sources */,
 				F0A9652D18931775007184D7 /* BTTMyScene.m in Sources */,
 				F09F86A91893B53800F6EC30 /* BTTPlayer.m in Sources */,
 				F0A9652018931775007184D7 /* main.m in Sources */,
@@ -341,6 +339,7 @@
 				F059C4661893B8B20072B24A /* BTTWorld.m in Sources */,
 				F09F86AC1893B6A100F6EC30 /* BTTBattleship.m in Sources */,
 				640B83851893C85C00FA9B65 /* BTTLightMech.m in Sources */,
+				640B83CB1893CE5800FA9B65 /* BTTCityViewController.m in Sources */,
 				648E29EA1893A69100499DC2 /* BTTMyCity.m in Sources */,
 				923200721893C94800E2F943 /* BTTMainBuilding.m in Sources */,
 				648E29ED1893B01D00499DC2 /* BTTBuilding.m in Sources */,
