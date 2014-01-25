@@ -53,18 +53,16 @@
         BTTMechGarrisonBuilding *mech = [[BTTMechGarrisonBuilding alloc] init];
         [self completeBuilding:main];
         [self completeBuilding:mech];
-
+        
+        BTTPlayer *playa = [[BTTPlayer alloc] init];
+        [self heroVisit:playa];
         [self addChild:myLabel];
     }
     return self;
 }
 
 - (void) heroVisit: (BTTPlayer *) character {
-    BTTLightMech *lightMech = [[BTTLightMech alloc] init];
-    BTTReconMech *reconMech = [[BTTReconMech alloc] init];
-    
-    [character.army addObject:lightMech];
-    [character.army addObject:reconMech];
+    NSLog(@"%@", character.army);
 }
 
 - (void) completeBuilding: (BTTBuilding *) building {

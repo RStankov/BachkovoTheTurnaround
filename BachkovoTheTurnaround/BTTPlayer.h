@@ -12,9 +12,11 @@
 
 @property (nonatomic) NSInteger credits;
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSMutableArray *army;
 
+#define LIGHT_MECH 1
+#define RECON_MECH 2
 
 - (instancetype)initWithName: (NSString *) name credits: (NSInteger)credits;
 
+- (NSArray *)army;
 @end
