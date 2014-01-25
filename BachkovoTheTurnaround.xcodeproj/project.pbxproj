@@ -33,7 +33,6 @@
 		F0A9652018931775007184D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0A9651F18931775007184D7 /* main.m */; };
 		F0A9652418931775007184D7 /* BTTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0A9652318931775007184D7 /* BTTAppDelegate.m */; };
 		F0A9652718931775007184D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0A9652518931775007184D7 /* Main.storyboard */; };
-		F0A9652D18931775007184D7 /* BTTMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F0A9652C18931775007184D7 /* BTTMyScene.m */; };
 		F0A9652F18931775007184D7 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = F0A9652E18931775007184D7 /* Spaceship.png */; };
 		F0A9653118931775007184D7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0A9653018931775007184D7 /* Images.xcassets */; };
 		F0A9653818931776007184D7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A9653718931776007184D7 /* XCTest.framework */; };
@@ -100,8 +99,6 @@
 		F0A9652218931775007184D7 /* BTTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTTAppDelegate.h; sourceTree = "<group>"; };
 		F0A9652318931775007184D7 /* BTTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTTAppDelegate.m; sourceTree = "<group>"; };
 		F0A9652618931775007184D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F0A9652B18931775007184D7 /* BTTMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTTMyScene.h; sourceTree = "<group>"; };
-		F0A9652C18931775007184D7 /* BTTMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTTMyScene.m; sourceTree = "<group>"; };
 		F0A9652E18931775007184D7 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		F0A9653018931775007184D7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F0A9653618931776007184D7 /* BachkovoTheTurnaroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BachkovoTheTurnaroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,8 +196,6 @@
 				F0A9652518931775007184D7 /* Main.storyboard */,
 				F0A9652218931775007184D7 /* BTTAppDelegate.h */,
 				F0A9652318931775007184D7 /* BTTAppDelegate.m */,
-				F0A9652B18931775007184D7 /* BTTMyScene.h */,
-				F0A9652C18931775007184D7 /* BTTMyScene.m */,
 				648E29E81893A69100499DC2 /* BTTCity.h */,
 				648E29E91893A69100499DC2 /* BTTCity.m */,
 				640B83801893C6C900FA9B65 /* BTTUnit.h */,
@@ -372,7 +367,6 @@
 			files = (
 				640B83821893C6C900FA9B65 /* BTTUnit.m in Sources */,
 				F059C46F1893CB2F0072B24A /* BTTMapViewController.m in Sources */,
-				F0A9652D18931775007184D7 /* BTTMyScene.m in Sources */,
 				F09F86A91893B53800F6EC30 /* BTTPlayer.m in Sources */,
 				F0A9652018931775007184D7 /* main.m in Sources */,
 				640B837F1893C2BB00FA9B65 /* BTTMechGarrisonBuilding.m in Sources */,

@@ -16,7 +16,7 @@
 
 @implementation BTTBattleScene
 
--(id)initWithSize:(CGSize)size {
+- (id) initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
         
@@ -30,11 +30,9 @@
         CGSize barSize = self.frame.size;
         barSize.height = 40;
         
-        
         enemiesBar = [[SKSpriteNode alloc] initWithColor:[UIColor greenColor] size:barSize];
         enemiesBar.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height - barSize.height / 2);
         [self addChild:enemiesBar];
-        
         
         int cellsCount = 6;
         int cellRightMargin = 2;
@@ -55,11 +53,12 @@
     return self;
 }
 
--(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
     CGPoint loc = [touch locationInNode:enemiesBar];
     
     SKNode *touchedCell = [enemiesBar nodeAtPoint:loc];
     NSLog(@"tapped on enemey - %@", touchedCell.name);
 }
+
 @end
