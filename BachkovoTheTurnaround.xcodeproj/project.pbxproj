@@ -17,6 +17,8 @@
 		648E29EA1893A69100499DC2 /* BTTCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 648E29E91893A69100499DC2 /* BTTCity.m */; };
 		648E29ED1893B01D00499DC2 /* BTTBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 648E29EC1893B01D00499DC2 /* BTTBuilding.m */; };
 		923200721893C94800E2F943 /* BTTMainBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 923200711893C94800E2F943 /* BTTMainBuilding.m */; };
+		E1915C7A1894A768005AF224 /* world_debug@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1915C781894A768005AF224 /* world_debug@2x.png */; };
+		E1915C7B1894A768005AF224 /* world@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1915C791894A768005AF224 /* world@2x.png */; };
 		E1A0B298189412E5006CA1BB /* BTTArmyBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A0B297189412E5006CA1BB /* BTTArmyBar.m */; };
 		E1E4CE551893D03F0046217C /* BTTBattleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E4CE541893D03F0046217C /* BTTBattleScene.m */; };
 		F0280C3B18942CEB0094BBFA /* BTTPathFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = F0280C3A18942CEB0094BBFA /* BTTPathFinder.m */; };
@@ -42,8 +44,6 @@
 		F0A9653A18931776007184D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A9651518931775007184D7 /* UIKit.framework */; };
 		F0A9654218931776007184D7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0A9654018931776007184D7 /* InfoPlist.strings */; };
 		F0A9654418931776007184D7 /* BachkovoTheTurnaroundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F0A9654318931776007184D7 /* BachkovoTheTurnaroundTests.m */; };
-		F0D43BE41894780B00F1C733 /* world_debug@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0D43BE21894780B00F1C733 /* world_debug@2x.png */; };
-		F0D43BE51894780B00F1C733 /* world@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0D43BE31894780B00F1C733 /* world@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +76,8 @@
 		923200701893C94800E2F943 /* BTTMainBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTMainBuilding.h; sourceTree = "<group>"; };
 		923200711893C94800E2F943 /* BTTMainBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTMainBuilding.m; sourceTree = "<group>"; };
 		92F3E4671893DCCB00C8F654 /* BTTBuilding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTTBuilding.h; sourceTree = "<group>"; };
+		E1915C781894A768005AF224 /* world_debug@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "world_debug@2x.png"; sourceTree = "<group>"; };
+		E1915C791894A768005AF224 /* world@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "world@2x.png"; sourceTree = "<group>"; };
 		E1A0B296189412E5006CA1BB /* BTTArmyBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTArmyBar.h; sourceTree = "<group>"; };
 		E1A0B297189412E5006CA1BB /* BTTArmyBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTArmyBar.m; sourceTree = "<group>"; };
 		E1E4CE531893D03F0046217C /* BTTBattleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTBattleScene.h; sourceTree = "<group>"; };
@@ -115,8 +117,6 @@
 		F0A9653F18931776007184D7 /* BachkovoTheTurnaroundTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BachkovoTheTurnaroundTests-Info.plist"; sourceTree = "<group>"; };
 		F0A9654118931776007184D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F0A9654318931776007184D7 /* BachkovoTheTurnaroundTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BachkovoTheTurnaroundTests.m; sourceTree = "<group>"; };
-		F0D43BE21894780B00F1C733 /* world_debug@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "world_debug@2x.png"; sourceTree = "<group>"; };
-		F0D43BE31894780B00F1C733 /* world@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "world@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,8 +164,8 @@
 		F07919DE1893D3A100E2DE8E /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				F0D43BE21894780B00F1C733 /* world_debug@2x.png */,
-				F0D43BE31894780B00F1C733 /* world@2x.png */,
+				E1915C781894A768005AF224 /* world_debug@2x.png */,
+				E1915C791894A768005AF224 /* world@2x.png */,
 				F07919E11893D4F600E2DE8E /* square@2x.png */,
 			);
 			name = Map;
@@ -364,8 +364,8 @@
 				F0A9652718931775007184D7 /* Main.storyboard in Resources */,
 				640B83CE18940CE700FA9B65 /* download@2x.png in Resources */,
 				F07919E21893D4F600E2DE8E /* square@2x.png in Resources */,
-				F0D43BE41894780B00F1C733 /* world_debug@2x.png in Resources */,
-				F0D43BE51894780B00F1C733 /* world@2x.png in Resources */,
+				E1915C7A1894A768005AF224 /* world_debug@2x.png in Resources */,
+				E1915C7B1894A768005AF224 /* world@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -61,7 +61,7 @@
          <EnvironmentVariable
             key = "RUN_BATTLE"
             value = "1"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </EnvironmentVariable>
       </EnvironmentVariables>
       <AdditionalOptions>
