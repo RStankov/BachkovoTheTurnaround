@@ -14,6 +14,8 @@
 		640B83CB1893CE5800FA9B65 /* BTTCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 640B83CA1893CE5800FA9B65 /* BTTCityViewController.m */; };
 		640B83CE18940CE700FA9B65 /* download@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 640B83CD18940CE700FA9B65 /* download@2x.png */; };
 		640BC66D1894EBC4006BAB76 /* BTTMapCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 640BC66C1894EBC4006BAB76 /* BTTMapCity.m */; };
+		640BC67018950C73006BAB76 /* city@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 640BC66E18950C73006BAB76 /* city@2x.png */; };
+		640BC67118950C73006BAB76 /* leave_city@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 640BC66F18950C73006BAB76 /* leave_city@2x.png */; };
 		642C89621894390600ACA99C /* BTTPurchanseScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 642C89611894390600ACA99C /* BTTPurchanseScene.m */; };
 		648E29EA1893A69100499DC2 /* BTTCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 648E29E91893A69100499DC2 /* BTTCity.m */; };
 		648E29ED1893B01D00499DC2 /* BTTBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 648E29EC1893B01D00499DC2 /* BTTBuilding.m */; };
@@ -90,6 +92,8 @@
 		640B83CD18940CE700FA9B65 /* download@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "download@2x.png"; sourceTree = "<group>"; };
 		640BC66B1894EBC4006BAB76 /* BTTMapCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTMapCity.h; sourceTree = "<group>"; };
 		640BC66C1894EBC4006BAB76 /* BTTMapCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTMapCity.m; sourceTree = "<group>"; };
+		640BC66E18950C73006BAB76 /* city@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "city@2x.png"; sourceTree = "<group>"; };
+		640BC66F18950C73006BAB76 /* leave_city@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leave_city@2x.png"; sourceTree = "<group>"; };
 		642C89601894390600ACA99C /* BTTPurchanseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTPurchanseScene.h; sourceTree = "<group>"; };
 		642C89611894390600ACA99C /* BTTPurchanseScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTPurchanseScene.m; sourceTree = "<group>"; };
 		648E29E81893A69100499DC2 /* BTTCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTCity.h; sourceTree = "<group>"; };
@@ -194,6 +198,8 @@
 			isa = PBXGroup;
 			children = (
 				640B83CD18940CE700FA9B65 /* download@2x.png */,
+				640BC66E18950C73006BAB76 /* city@2x.png */,
+				640BC66F18950C73006BAB76 /* leave_city@2x.png */,
 			);
 			name = City;
 			sourceTree = "<group>";
@@ -451,6 +457,7 @@
 				F0A9651E18931775007184D7 /* InfoPlist.strings in Resources */,
 				F0301D101894E6EE00E92163 /* unit_2@2x.png in Resources */,
 				F041D46F1894B63200F2B026 /* map_tile_tap.sks in Resources */,
+				640BC67118950C73006BAB76 /* leave_city@2x.png in Resources */,
 				F0A9653118931775007184D7 /* Images.xcassets in Resources */,
 				F0A9652718931775007184D7 /* Main.storyboard in Resources */,
 				F041D4701894B63200F2B026 /* spark.png in Resources */,
@@ -467,6 +474,7 @@
 				F0301D111894E6EE00E92163 /* unit_3@2x.png in Resources */,
 				E14518FF1894C4D70067A42C /* treasure@2x.png in Resources */,
 				F0D43BEE1894A61200F1C733 /* battleship_up.atlas in Resources */,
+				640BC67018950C73006BAB76 /* city@2x.png in Resources */,
 				F0D43BEB1894A61200F1C733 /* battleship_down.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
