@@ -39,9 +39,13 @@
 }
 
 - (void)flip {
-    if (self.isFlipped) {
-        [self switchNode:self.unitCardNode withNode:self.backCardNode];
-    } else {
+    if (!self.isFlipped) {
+        [self switchNode:self.backCardNode withNode:self.unitCardNode];
+    }
+}
+
+- (void)attackedBy:(BTTUnit *)unit {
+    if (!self.isFlipped) {
         [self switchNode:self.backCardNode withNode:self.unitCardNode];
     }
 }

@@ -7,10 +7,12 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "BTTUnit.h"
 
 @interface BTTBattleCardNode : SKNode
 
 - (void)flip;
 - (void)restore;
+- (void)attackedBy:(BTTUnit *)unit;
 
 @end

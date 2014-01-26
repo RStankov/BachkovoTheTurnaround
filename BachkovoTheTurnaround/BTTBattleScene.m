@@ -56,6 +56,8 @@
     if (self.phase == 0) {
         [card flip];
     } else if (self.phase == 1) {
+        [card attackedBy:nil];
+    } else if (self.phase == 2) {
         [self.cardNodes makeObjectsPerformSelector:@selector(restore)];
     }
     
@@ -63,7 +65,7 @@
 }
 
 - (void)nextPhase {
-    self.phase = (self.phase + 1) % 2;
+    self.phase = (self.phase + 1) % 3;
 }
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {

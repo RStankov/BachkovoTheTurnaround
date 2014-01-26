@@ -47,7 +47,7 @@
 
 - (void)redraw {
     self.labelNode.text = [NSString stringWithFormat:@"%0.3ld", (long)self.unit.count];
-    self.unitNode.alpha = self.unit.count > 0 ? 1 : 0.5;
+    self.unitNode.alpha = self.unit.count > 0 ? 1 : 0.2;
 }
 
 @end

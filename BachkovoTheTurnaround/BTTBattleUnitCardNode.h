@@ -12,7 +12,6 @@
 @interface BTTBattleUnitCardNode : SKNode
 
 - (instancetype)initWithUnit:(BTTUnit *)unit;
-
 - (void)redraw;
 
 @end
