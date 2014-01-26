@@ -73,4 +73,8 @@
     return sprite;
 }
 
+- (void)interactWithPlayer:(BTTPlayer *)player {
+    NSLog(@"Interaction with player: %@", player);
+}
+
 @end

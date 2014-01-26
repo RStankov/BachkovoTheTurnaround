@@ -10,6 +10,7 @@
 #import "BTTMapInteractableObject.h"
 #import "BTTMapCrystal.h"
 #import "BTTMapTreasure.h"
+#import "BTTWorld.h"
 
 @interface BTTMap ()
 
@@ -201,6 +202,8 @@
     NSInteger idx = [self indexOfInteractibleObjectByIndexPath:indexPath];
 
     BTTMapInteractableObject *object = self.interactableObjects[idx];
+
+    [object interactWithPlayer:[BTTWorld player]];
 
     [BTTMapInteractableObject flashText:@"+100" overNode:object.spriteNode];
 

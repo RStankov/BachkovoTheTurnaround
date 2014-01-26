@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <SpriteKit/SpriteKit.h>
+#import "BTTPlayer.h"
 
 @interface BTTMapInteractableObject : NSObject
 
@@ -16,6 +17,7 @@
 - (NSIndexPath *)indexPath;
 - (SKSpriteNode *)spriteNode;
 - (SKSpriteNode *)generateSpriteNode;
+- (void)interactWithPlayer:(BTTPlayer *)player;
 
 + (void)flashText:(NSString *)string overNode:(SKSpriteNode *)node;
 

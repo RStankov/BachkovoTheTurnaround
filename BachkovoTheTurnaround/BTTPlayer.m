@@ -14,4 +14,8 @@
     return @[@LIGHT_MECH, @RECON_MECH];
 }
 
+- (NSString *)description {
+    return [NSString stringWithFormat:@"{Player - attack:%ld defence:%ld mobility:%ld credits:%ld}", self.attack, self.defence, self.mobility, self.credits];
+}
+
 @end
