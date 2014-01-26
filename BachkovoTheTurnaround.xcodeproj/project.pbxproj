@@ -17,6 +17,10 @@
 		648E29EA1893A69100499DC2 /* BTTCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 648E29E91893A69100499DC2 /* BTTCity.m */; };
 		648E29ED1893B01D00499DC2 /* BTTBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 648E29EC1893B01D00499DC2 /* BTTBuilding.m */; };
 		923200721893C94800E2F943 /* BTTMainBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 923200711893C94800E2F943 /* BTTMainBuilding.m */; };
+		E14518F61894C3130067A42C /* BTTMapCrystal.m in Sources */ = {isa = PBXBuildFile; fileRef = E14518F51894C3130067A42C /* BTTMapCrystal.m */; };
+		E14518FA1894C3C60067A42C /* red_crystal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E14518F81894C3C60067A42C /* red_crystal@2x.png */; };
+		E14518FD1894C4B80067A42C /* BTTMapTreasure.m in Sources */ = {isa = PBXBuildFile; fileRef = E14518FC1894C4B80067A42C /* BTTMapTreasure.m */; };
+		E14518FF1894C4D70067A42C /* treasure@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E14518FE1894C4D70067A42C /* treasure@2x.png */; };
 		E1915C7A1894A768005AF224 /* world_debug@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1915C781894A768005AF224 /* world_debug@2x.png */; };
 		E1915C7B1894A768005AF224 /* world@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1915C791894A768005AF224 /* world@2x.png */; };
 		E1A0B298189412E5006CA1BB /* BTTArmyBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A0B297189412E5006CA1BB /* BTTArmyBar.m */; };
@@ -84,6 +88,12 @@
 		923200701893C94800E2F943 /* BTTMainBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTMainBuilding.h; sourceTree = "<group>"; };
 		923200711893C94800E2F943 /* BTTMainBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTMainBuilding.m; sourceTree = "<group>"; };
 		92F3E4671893DCCB00C8F654 /* BTTBuilding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTTBuilding.h; sourceTree = "<group>"; };
+		E14518F41894C3130067A42C /* BTTMapCrystal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BTTMapCrystal.h; path = BachkovoTheTurnaround/BTTMapCrystal.h; sourceTree = "<group>"; };
+		E14518F51894C3130067A42C /* BTTMapCrystal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BTTMapCrystal.m; path = BachkovoTheTurnaround/BTTMapCrystal.m; sourceTree = "<group>"; };
+		E14518F81894C3C60067A42C /* red_crystal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red_crystal@2x.png"; sourceTree = "<group>"; };
+		E14518FB1894C4B80067A42C /* BTTMapTreasure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BTTMapTreasure.h; path = BachkovoTheTurnaround/BTTMapTreasure.h; sourceTree = "<group>"; };
+		E14518FC1894C4B80067A42C /* BTTMapTreasure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BTTMapTreasure.m; path = BachkovoTheTurnaround/BTTMapTreasure.m; sourceTree = "<group>"; };
+		E14518FE1894C4D70067A42C /* treasure@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "treasure@2x.png"; sourceTree = "<group>"; };
 		E1915C781894A768005AF224 /* world_debug@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "world_debug@2x.png"; sourceTree = "<group>"; };
 		E1915C791894A768005AF224 /* world@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "world@2x.png"; sourceTree = "<group>"; };
 		E1A0B296189412E5006CA1BB /* BTTArmyBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTArmyBar.h; sourceTree = "<group>"; };
@@ -182,6 +192,10 @@
 		F07919DE1893D3A100E2DE8E /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				E14518FE1894C4D70067A42C /* treasure@2x.png */,
+				E14518F81894C3C60067A42C /* red_crystal@2x.png */,
+				E14518FB1894C4B80067A42C /* BTTMapTreasure.h */,
+				E14518FC1894C4B80067A42C /* BTTMapTreasure.m */,
 				E1915C781894A768005AF224 /* world_debug@2x.png */,
 				E1915C791894A768005AF224 /* world@2x.png */,
 				F0D43BE61894A43E00F1C733 /* Battleship */,
@@ -195,6 +209,8 @@
 		F0A9650518931775007184D7 = {
 			isa = PBXGroup;
 			children = (
+				E14518F41894C3130067A42C /* BTTMapCrystal.h */,
+				E14518F51894C3130067A42C /* BTTMapCrystal.m */,
 				F0A9651918931775007184D7 /* BachkovoTheTurnaround */,
 				F0A9653D18931776007184D7 /* BachkovoTheTurnaroundTests */,
 				F0A9651018931775007184D7 /* Frameworks */,
@@ -405,7 +421,9 @@
 				F07919E21893D4F600E2DE8E /* square@2x.png in Resources */,
 				E1915C7A1894A768005AF224 /* world_debug@2x.png in Resources */,
 				E1915C7B1894A768005AF224 /* world@2x.png in Resources */,
+				E14518FA1894C3C60067A42C /* red_crystal@2x.png in Resources */,
 				F0D43BEC1894A61200F1C733 /* battleship_left.atlas in Resources */,
+				E14518FF1894C4D70067A42C /* treasure@2x.png in Resources */,
 				F0D43BEE1894A61200F1C733 /* battleship_up.atlas in Resources */,
 				F0D43BEB1894A61200F1C733 /* battleship_down.atlas in Resources */,
 			);
@@ -432,12 +450,14 @@
 				F059C46F1893CB2F0072B24A /* BTTMapViewController.m in Sources */,
 				F09F86A91893B53800F6EC30 /* BTTPlayer.m in Sources */,
 				F0A9652018931775007184D7 /* main.m in Sources */,
+				E14518FD1894C4B80067A42C /* BTTMapTreasure.m in Sources */,
 				F02B930E1894BE8600374A6B /* BTTMapInteractableObject.m in Sources */,
 				640B837F1893C2BB00FA9B65 /* BTTMechGarrisonBuilding.m in Sources */,
 				640B83881893C86B00FA9B65 /* BTTReconMech.m in Sources */,
 				F059C4661893B8B20072B24A /* BTTWorld.m in Sources */,
 				F09F86AC1893B6A100F6EC30 /* BTTBattleship.m in Sources */,
 				E1E4CE551893D03F0046217C /* BTTBattleScene.m in Sources */,
+				E14518F61894C3130067A42C /* BTTMapCrystal.m in Sources */,
 				640B83851893C85C00FA9B65 /* BTTLightMech.m in Sources */,
 				E1A0B298189412E5006CA1BB /* BTTArmyBar.m in Sources */,
 				640B83CB1893CE5800FA9B65 /* BTTCityViewController.m in Sources */,

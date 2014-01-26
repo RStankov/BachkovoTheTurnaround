@@ -8,6 +8,8 @@
 
 #import "BTTMap.h"
 #import "BTTMapInteractableObject.h"
+#import "BTTMapCrystal.h"
+#import "BTTMapTreasure.h"
 
 @interface BTTMap ()
 
@@ -69,7 +71,8 @@
         self.tileSize = 44;
 
         self.interactableObjects = @[
-                                     [[BTTMapInteractableObject alloc] initWithIndexPath:[NSIndexPath indexPathForItem:15 inSection:22]]
+                                     [[BTTMapCrystal alloc] initWithIndexPath:[NSIndexPath indexPathForItem:15 inSection:22]],
+                                     [[BTTMapTreasure alloc] initWithIndexPath:[NSIndexPath indexPathForItem:20 inSection:20]]
                                      ];
     }
 
