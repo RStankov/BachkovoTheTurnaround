@@ -36,12 +36,12 @@
         self.mapNode.position = CGPointZero;
 
         [self addChild:self.mapNode];
-
+/*
         [self.map enumerateSpriteNodes:^(NSIndexPath *indexPath, SKSpriteNode *spriteNode) {
             spriteNode.position = [self pointForIndexPath:indexPath];
             [self.mapNode addChild:spriteNode];
         }];
-
+*/
         self.playerNode = [BTTBattleshipSpriteNode new];
         self.playerNode.position = [self pointForIndexPath:[NSIndexPath indexPathForItem:11 inSection:25]];
 
@@ -68,6 +68,27 @@
     return [NSIndexPath indexPathForItem:x inSection:y];
 }
 
+- (void)highlight:(CGPoint) point color:(UIColor *)color {
+    NSString *emitterFileName = @"map_tile_tap";
+
+    NSString *emitterPath = [[NSBundle mainBundle] pathForResource:emitterFileName ofType:@"sks"];
+    SKEmitterNode *emitterNode = [NSKeyedUnarchiver unarchiveObjectWithFile:emitterPath];
+
+    emitterNode.particlePosition = point;
+    emitterNode.particlePositionRange = CGVectorMake(5, 5);
+    emitterNode.scale = 0;
+    emitterNode.particleColor = color;
+
+    [self.mapNode addChild:emitterNode];
+
+    [emitterNode runAction:[SKAction sequence:@[
+                                                [SKAction scaleTo:1 duration:0.1],
+                                                [SKAction waitForDuration:0.1],
+                                                [SKAction scaleTo:0 duration:0.1],
+                                                [SKAction removeFromParent]
+                                                ]]];
+}
+
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
     CGPoint point = [touch locationInNode:self.mapNode];
@@ -80,6 +101,12 @@
     NSMutableArray *points = [NSMutableArray array];
     for (NSIndexPath *idx in steps) {
         [points addObject:[NSValue valueWithCGPoint:[self pointForIndexPath:idx]]];
+    }
+
+    if (points.count > 0) {
+        [self highlight:[[points lastObject] CGPointValue] color:[UIColor yellowColor]];
+    } else {
+        [self highlight:[self pointForIndexPath:newIndex] color:[UIColor redColor]];
     }
 
     [self.playerNode moveTo:points];

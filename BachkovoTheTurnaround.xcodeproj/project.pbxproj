@@ -22,6 +22,8 @@
 		E1A0B298189412E5006CA1BB /* BTTArmyBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A0B297189412E5006CA1BB /* BTTArmyBar.m */; };
 		E1E4CE551893D03F0046217C /* BTTBattleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E4CE541893D03F0046217C /* BTTBattleScene.m */; };
 		F0280C3B18942CEB0094BBFA /* BTTPathFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = F0280C3A18942CEB0094BBFA /* BTTPathFinder.m */; };
+		F041D46F1894B63200F2B026 /* map_tile_tap.sks in Resources */ = {isa = PBXBuildFile; fileRef = F041D46D1894B63200F2B026 /* map_tile_tap.sks */; };
+		F041D4701894B63200F2B026 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = F041D46E1894B63200F2B026 /* spark.png */; };
 		F059C4661893B8B20072B24A /* BTTWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = F059C4651893B8B20072B24A /* BTTWorld.m */; };
 		F059C4691893BD010072B24A /* BTTMapScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F059C4681893BD010072B24A /* BTTMapScene.m */; };
 		F059C46C1893C7AD0072B24A /* BTTBattleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F059C46B1893C7AD0072B24A /* BTTBattleViewController.m */; };
@@ -44,8 +46,6 @@
 		F0A9653A18931776007184D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A9651518931775007184D7 /* UIKit.framework */; };
 		F0A9654218931776007184D7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0A9654018931776007184D7 /* InfoPlist.strings */; };
 		F0A9654418931776007184D7 /* BachkovoTheTurnaroundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F0A9654318931776007184D7 /* BachkovoTheTurnaroundTests.m */; };
-		F0D43BE41894780B00F1C733 /* world_debug@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0D43BE21894780B00F1C733 /* world_debug@2x.png */; };
-		F0D43BE51894780B00F1C733 /* world@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0D43BE31894780B00F1C733 /* world@2x.png */; };
 		F0D43BEB1894A61200F1C733 /* battleship_down.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F0D43BE71894A61200F1C733 /* battleship_down.atlas */; };
 		F0D43BEC1894A61200F1C733 /* battleship_left.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F0D43BE81894A61200F1C733 /* battleship_left.atlas */; };
 		F0D43BED1894A61200F1C733 /* battleship_right.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F0D43BE91894A61200F1C733 /* battleship_right.atlas */; };
@@ -91,6 +91,8 @@
 		E1E4CE541893D03F0046217C /* BTTBattleScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTBattleScene.m; sourceTree = "<group>"; };
 		F0280C3918942CEB0094BBFA /* BTTPathFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTPathFinder.h; sourceTree = "<group>"; };
 		F0280C3A18942CEB0094BBFA /* BTTPathFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTPathFinder.m; sourceTree = "<group>"; };
+		F041D46D1894B63200F2B026 /* map_tile_tap.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = map_tile_tap.sks; sourceTree = "<group>"; };
+		F041D46E1894B63200F2B026 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		F059C4641893B8B20072B24A /* BTTWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTWorld.h; sourceTree = "<group>"; };
 		F059C4651893B8B20072B24A /* BTTWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTWorld.m; sourceTree = "<group>"; };
 		F059C4671893BD010072B24A /* BTTMapScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTMapScene.h; sourceTree = "<group>"; };
@@ -124,8 +126,6 @@
 		F0A9653F18931776007184D7 /* BachkovoTheTurnaroundTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BachkovoTheTurnaroundTests-Info.plist"; sourceTree = "<group>"; };
 		F0A9654118931776007184D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F0A9654318931776007184D7 /* BachkovoTheTurnaroundTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BachkovoTheTurnaroundTests.m; sourceTree = "<group>"; };
-		F0D43BE21894780B00F1C733 /* world_debug@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "world_debug@2x.png"; sourceTree = "<group>"; };
-		F0D43BE31894780B00F1C733 /* world@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "world@2x.png"; sourceTree = "<group>"; };
 		F0D43BE71894A61200F1C733 /* battleship_down.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = battleship_down.atlas; sourceTree = "<group>"; };
 		F0D43BE81894A61200F1C733 /* battleship_left.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = battleship_left.atlas; sourceTree = "<group>"; };
 		F0D43BE91894A61200F1C733 /* battleship_right.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = battleship_right.atlas; sourceTree = "<group>"; };
@@ -183,6 +183,8 @@
 				E1915C791894A768005AF224 /* world@2x.png */,
 				F0D43BE61894A43E00F1C733 /* Battleship */,
 				F07919E11893D4F600E2DE8E /* square@2x.png */,
+				F041D46D1894B63200F2B026 /* map_tile_tap.sks */,
+				F041D46E1894B63200F2B026 /* spark.png */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -390,8 +392,10 @@
 			files = (
 				F0D43BED1894A61200F1C733 /* battleship_right.atlas in Resources */,
 				F0A9651E18931775007184D7 /* InfoPlist.strings in Resources */,
+				F041D46F1894B63200F2B026 /* map_tile_tap.sks in Resources */,
 				F0A9653118931775007184D7 /* Images.xcassets in Resources */,
 				F0A9652718931775007184D7 /* Main.storyboard in Resources */,
+				F041D4701894B63200F2B026 /* spark.png in Resources */,
 				640B83CE18940CE700FA9B65 /* download@2x.png in Resources */,
 				F07919E21893D4F600E2DE8E /* square@2x.png in Resources */,
 				E1915C7A1894A768005AF224 /* world_debug@2x.png in Resources */,
