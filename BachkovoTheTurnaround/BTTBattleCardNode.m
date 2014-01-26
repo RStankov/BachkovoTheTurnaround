@@ -80,6 +80,7 @@
 
     if (self.isUnit) {
         self.realUnit.count = MAX(0, self.realUnit.count - 1);
+        unit.count = MAX(0, unit.count - 1);
     }
 }
 

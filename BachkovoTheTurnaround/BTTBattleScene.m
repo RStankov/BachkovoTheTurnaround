@@ -81,14 +81,36 @@
     } else if (self.phase == 1) {
         [card attackedBy:[BTTWorld player].units.firstObject];
     } else if (self.phase == 2) {
+        if (![self anyUnitsLeft:self.enemyUnits]) {
+            NSLog(@"WIN");
+            [self.enemyCardNodes makeObjectsPerformSelector:@selector(flip)];
+            self.phase = 3;
+            return;
+        }
+        
+        if (![self anyUnitsLeft:BTTWorld.player.units]) {
+            NSLog(@"LOSE");
+            [self.enemyCardNodes makeObjectsPerformSelector:@selector(flip)];
+            self.phase = 3;
+            return;
+        }
+
         [self.enemyCardNodes makeObjectsPerformSelector:@selector(restore)];
     }
-    
-    [self nextPhase];
+ 
+    if (self.phase < 3) {
+        self.phase = (self.phase + 1) % 3;
+    }
 }
 
-- (void)nextPhase {
-    self.phase = (self.phase + 1) % 3;
+- (BOOL)anyUnitsLeft:(NSArray *)units {
+    for (BTTUnit *unit in units) {
+        if (unit.count > 0) {
+            return YES;
+        }
+    }
+    
+    return NO;
 }
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
