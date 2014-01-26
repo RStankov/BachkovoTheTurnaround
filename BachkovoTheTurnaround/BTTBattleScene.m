@@ -20,15 +20,14 @@
 
 - (id) initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
-        self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
-
-        SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"HelveticaLight"];
-
-        myLabel.text = @"Battle scene";
-        myLabel.fontSize = 10;
-        myLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) + 80);
-        [self addChild:myLabel];
-
+        self.anchorPoint = CGPointMake(0, 1);
+        
+        SKSpriteNode *background  = [SKSpriteNode spriteNodeWithImageNamed:@"battleground"];
+        background.anchorPoint = CGPointMake(0, 1);
+        
+        background.position = CGPointMake(0, 0);
+        
+        [self addChild:background];
 
         enemyArmyBar = [[BTTArmyBar alloc] initWithSlotsCount:6 units:@[]];
         enemyArmyBar.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height - enemyArmyBar.size.height / 2);

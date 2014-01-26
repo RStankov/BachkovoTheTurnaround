@@ -29,6 +29,7 @@
 		F02B930E1894BE8600374A6B /* BTTMapInteractableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F02B930D1894BE8600374A6B /* BTTMapInteractableObject.m */; };
 		F0301D031894E0BF00E92163 /* BTTMapBattle.m in Sources */ = {isa = PBXBuildFile; fileRef = F0301D021894E0BF00E92163 /* BTTMapBattle.m */; };
 		F0301D071894E22300E92163 /* enemy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0301D061894E22300E92163 /* enemy@2x.png */; };
+		F0301D0A1894E5B100E92163 /* battleground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0301D091894E5B100E92163 /* battleground@2x.png */; };
 		F041D46F1894B63200F2B026 /* map_tile_tap.sks in Resources */ = {isa = PBXBuildFile; fileRef = F041D46D1894B63200F2B026 /* map_tile_tap.sks */; };
 		F041D4701894B63200F2B026 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = F041D46E1894B63200F2B026 /* spark.png */; };
 		F059C4661893B8B20072B24A /* BTTWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = F059C4651893B8B20072B24A /* BTTWorld.m */; };
@@ -108,6 +109,7 @@
 		F0301D011894E0BF00E92163 /* BTTMapBattle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTMapBattle.h; sourceTree = "<group>"; };
 		F0301D021894E0BF00E92163 /* BTTMapBattle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTMapBattle.m; sourceTree = "<group>"; };
 		F0301D061894E22300E92163 /* enemy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "enemy@2x.png"; sourceTree = "<group>"; };
+		F0301D091894E5B100E92163 /* battleground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "battleground@2x.png"; sourceTree = "<group>"; };
 		F041D46D1894B63200F2B026 /* map_tile_tap.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = map_tile_tap.sks; sourceTree = "<group>"; };
 		F041D46E1894B63200F2B026 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		F059C4641893B8B20072B24A /* BTTWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTWorld.h; sourceTree = "<group>"; };
@@ -182,9 +184,18 @@
 			name = City;
 			sourceTree = "<group>";
 		};
+		F0301D081894E58800E92163 /* Battle */ = {
+			isa = PBXGroup;
+			children = (
+				F0301D091894E5B100E92163 /* battleground@2x.png */,
+			);
+			name = Battle;
+			sourceTree = "<group>";
+		};
 		F07919DD1893D39700E2DE8E /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				F0301D081894E58800E92163 /* Battle */,
 				640B83CC18940CD200FA9B65 /* City */,
 				F07919DE1893D3A100E2DE8E /* Map */,
 			);
@@ -420,6 +431,7 @@
 				F0A9653118931775007184D7 /* Images.xcassets in Resources */,
 				F0A9652718931775007184D7 /* Main.storyboard in Resources */,
 				F041D4701894B63200F2B026 /* spark.png in Resources */,
+				F0301D0A1894E5B100E92163 /* battleground@2x.png in Resources */,
 				640B83CE18940CE700FA9B65 /* download@2x.png in Resources */,
 				F0301D071894E22300E92163 /* enemy@2x.png in Resources */,
 				F07919E21893D4F600E2DE8E /* square@2x.png in Resources */,
