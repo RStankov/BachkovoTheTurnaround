@@ -11,7 +11,7 @@
 
 @interface BTTMapScene ()
 
-@property (nonatomic, strong) SKNode *mapNode;
+@property (nonatomic, strong) SKSpriteNode *mapNode;
 @property (nonatomic, strong) BTTMap *map;
 @property (nonatomic, strong) SKSpriteNode *playerNode;
 @property (nonatomic, strong) BTTPathFinder *pathFinder;
@@ -25,10 +25,14 @@
 
     if (self) {
         self.map = map;
+        self.anchorPoint = CGPointMake(0.0, 1.0);
         self.pathFinder = [[BTTPathFinder alloc] initWithDataSource:map];
-        self.anchorPoint = CGPointMake(0.5, 0.5);
 
-        self.mapNode = [[SKSpriteNode alloc] initWithImageNamed:@"WorldMap-40x30.jpg"];
+        self.mapNode = [[SKSpriteNode alloc] initWithImageNamed:@"world_debug"];
+        self.mapNode.anchorPoint = CGPointMake(0.0, 1.0);
+        self.mapNode.position = CGPointZero;
+
+        [self addChild:self.mapNode];
 
         for (NSInteger i = 0; i<map.verticalTilesCount; i++) {
             for (NSInteger j = 0; j<map.horizontalTileCount; j++) {
@@ -37,8 +41,6 @@
                 [self.mapNode addChild:sprite];
             }
         }
-
-        [self addChild:self.mapNode];
 
         self.playerNode = [[SKSpriteNode alloc] initWithImageNamed:@"square"];
         self.playerNode.position = [self pointForTop:4 left:5];
@@ -54,15 +56,18 @@
 - (void)didSimulatePhysics
 {
     CGPoint cameraPositionInScene = [self convertPoint:self.playerNode.position fromNode:self.mapNode];
-    self.mapNode.position = CGPointMake(self.mapNode.position.x - cameraPositionInScene.x, self.mapNode.position.y - cameraPositionInScene.y);
+    self.mapNode.position = CGPointMake(self.mapNode.position.x - cameraPositionInScene.x + self.size.width / 2, self.mapNode.position.y - cameraPositionInScene.y - self.size.height / 2);
 }
 
 - (CGPoint) pointForTop:(NSInteger)x left:(NSInteger)y {
-    return CGPointMake((0.5 + x) * self.map.tileSize, self.frame.size.height - (0.5 + y) * self.map.tileSize);
+    return CGPointMake((0.5 + x) * self.map.tileSize,  - (0.5 + y) * self.map.tileSize);
 }
 
 - (NSIndexPath *)indexPathForPoint:(CGPoint)point {
-   return [NSIndexPath indexPathForItem:floor(point.x / self.map.tileSize) inSection:floor((self.size.height - point.y) / self.map.tileSize)];
+    NSInteger x = floor(point.x/self.map.tileSize);
+    NSInteger y = floor(- point.y / self.map.tileSize);
+
+    return [NSIndexPath indexPathForItem:x inSection:y];
 }
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
