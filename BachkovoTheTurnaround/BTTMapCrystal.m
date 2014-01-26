@@ -32,7 +32,7 @@
 
 - (void)interactWithPlayer:(BTTPlayer *)player {
     player.credits += self.amount;
-    [BTTMapInteractableObject flashText:[NSString stringWithFormat:@"+%ld", self.amount] overNode:self.spriteNode];
+    [BTTMapInteractableObject flashText:[NSString stringWithFormat:@"+%ld", (long)self.amount] overNode:self.spriteNode];
     [super interactWithPlayer:player];
 }
 
