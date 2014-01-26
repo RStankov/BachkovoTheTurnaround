@@ -80,7 +80,7 @@
 
             SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"HelveticaLight"];
 
-            label.text = [NSString stringWithFormat:@"%0.2dx%0.2d", indexPath.item, indexPath.section];
+            label.text = [NSString stringWithFormat:@"%0.2ldx%0.2ld", (long)indexPath.item, (long)indexPath.section];
             label.fontSize = 10;
             label.position = CGPointMake(0, 0);
 
