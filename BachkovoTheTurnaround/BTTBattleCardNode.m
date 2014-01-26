@@ -39,11 +39,21 @@
 }
 
 - (void)flip {
-    if (self.backCardNode.xScale > 0) {
-        [self switchNode:self.backCardNode withNode:self.unitCardNode];
+    if (self.isFlipped) {
+        [self switchNode:self.unitCardNode withNode:self.backCardNode];
     } else {
+        [self switchNode:self.backCardNode withNode:self.unitCardNode];
+    }
+}
+
+- (void)restore {
+    if (self.isFlipped) {
         [self switchNode:self.unitCardNode withNode:self.backCardNode];
     }
+}
+
+- (BOOL)isFlipped {
+   return self.backCardNode.xScale <= 0;
 }
 
 - (void)switchNode:(SKSpriteNode *)fromNode withNode:(SKSpriteNode *)toNode {

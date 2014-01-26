@@ -11,5 +11,6 @@
 @interface BTTBattleCardNode : SKNode
 
 - (void)flip;
+- (void)restore;
 
 @end
