@@ -27,6 +27,8 @@
 		E1E4CE551893D03F0046217C /* BTTBattleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E4CE541893D03F0046217C /* BTTBattleScene.m */; };
 		F0280C3B18942CEB0094BBFA /* BTTPathFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = F0280C3A18942CEB0094BBFA /* BTTPathFinder.m */; };
 		F02B930E1894BE8600374A6B /* BTTMapInteractableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F02B930D1894BE8600374A6B /* BTTMapInteractableObject.m */; };
+		F0301D031894E0BF00E92163 /* BTTMapBattle.m in Sources */ = {isa = PBXBuildFile; fileRef = F0301D021894E0BF00E92163 /* BTTMapBattle.m */; };
+		F0301D071894E22300E92163 /* enemy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0301D061894E22300E92163 /* enemy@2x.png */; };
 		F041D46F1894B63200F2B026 /* map_tile_tap.sks in Resources */ = {isa = PBXBuildFile; fileRef = F041D46D1894B63200F2B026 /* map_tile_tap.sks */; };
 		F041D4701894B63200F2B026 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = F041D46E1894B63200F2B026 /* spark.png */; };
 		F059C4661893B8B20072B24A /* BTTWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = F059C4651893B8B20072B24A /* BTTWorld.m */; };
@@ -103,6 +105,9 @@
 		F0280C3A18942CEB0094BBFA /* BTTPathFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTPathFinder.m; sourceTree = "<group>"; };
 		F02B930C1894BE8600374A6B /* BTTMapInteractableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTMapInteractableObject.h; sourceTree = "<group>"; };
 		F02B930D1894BE8600374A6B /* BTTMapInteractableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTMapInteractableObject.m; sourceTree = "<group>"; };
+		F0301D011894E0BF00E92163 /* BTTMapBattle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTMapBattle.h; sourceTree = "<group>"; };
+		F0301D021894E0BF00E92163 /* BTTMapBattle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTMapBattle.m; sourceTree = "<group>"; };
+		F0301D061894E22300E92163 /* enemy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "enemy@2x.png"; sourceTree = "<group>"; };
 		F041D46D1894B63200F2B026 /* map_tile_tap.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = map_tile_tap.sks; sourceTree = "<group>"; };
 		F041D46E1894B63200F2B026 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		F059C4641893B8B20072B24A /* BTTWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTWorld.h; sourceTree = "<group>"; };
@@ -189,6 +194,7 @@
 		F07919DE1893D3A100E2DE8E /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				F0301D061894E22300E92163 /* enemy@2x.png */,
 				E14518FE1894C4D70067A42C /* treasure@2x.png */,
 				E14518F81894C3C60067A42C /* red_crystal@2x.png */,
 				E1915C781894A768005AF224 /* world_debug@2x.png */,
@@ -236,10 +242,6 @@
 		F0A9651918931775007184D7 /* BachkovoTheTurnaround */ = {
 			isa = PBXGroup;
 			children = (
-				E14518F41894C3130067A42C /* BTTMapCrystal.h */,
-				E14518F51894C3130067A42C /* BTTMapCrystal.m */,
-				E14518FB1894C4B80067A42C /* BTTMapTreasure.h */,
-				E14518FC1894C4B80067A42C /* BTTMapTreasure.m */,
 				F0A9652518931775007184D7 /* Main.storyboard */,
 				F0A9652218931775007184D7 /* BTTAppDelegate.h */,
 				F0A9652318931775007184D7 /* BTTAppDelegate.m */,
@@ -283,6 +285,12 @@
 				F0D43BF01894A90100F1C733 /* BTTBattleshipSpriteNode.m */,
 				F02B930C1894BE8600374A6B /* BTTMapInteractableObject.h */,
 				F02B930D1894BE8600374A6B /* BTTMapInteractableObject.m */,
+				E14518F41894C3130067A42C /* BTTMapCrystal.h */,
+				E14518F51894C3130067A42C /* BTTMapCrystal.m */,
+				E14518FB1894C4B80067A42C /* BTTMapTreasure.h */,
+				E14518FC1894C4B80067A42C /* BTTMapTreasure.m */,
+				F0301D011894E0BF00E92163 /* BTTMapBattle.h */,
+				F0301D021894E0BF00E92163 /* BTTMapBattle.m */,
 				F0A9653018931775007184D7 /* Images.xcassets */,
 				F0A9651A18931775007184D7 /* Supporting Files */,
 			);
@@ -413,6 +421,7 @@
 				F0A9652718931775007184D7 /* Main.storyboard in Resources */,
 				F041D4701894B63200F2B026 /* spark.png in Resources */,
 				640B83CE18940CE700FA9B65 /* download@2x.png in Resources */,
+				F0301D071894E22300E92163 /* enemy@2x.png in Resources */,
 				F07919E21893D4F600E2DE8E /* square@2x.png in Resources */,
 				E1915C7A1894A768005AF224 /* world_debug@2x.png in Resources */,
 				E1915C7B1894A768005AF224 /* world@2x.png in Resources */,
@@ -440,6 +449,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				640B83821893C6C900FA9B65 /* BTTUnit.m in Sources */,
+				F0301D031894E0BF00E92163 /* BTTMapBattle.m in Sources */,
 				F0D43BF11894A90100F1C733 /* BTTBattleshipSpriteNode.m in Sources */,
 				F0280C3B18942CEB0094BBFA /* BTTPathFinder.m in Sources */,
 				F059C46F1893CB2F0072B24A /* BTTMapViewController.m in Sources */,

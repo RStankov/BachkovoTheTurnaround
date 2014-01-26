@@ -9,6 +9,7 @@
 #import "BTTMap.h"
 #import "BTTMapInteractableObject.h"
 #import "BTTMapCrystal.h"
+#import "BTTMapBattle.h"
 #import "BTTMapTreasure.h"
 #import "BTTWorld.h"
 
@@ -74,6 +75,7 @@
         self.interactableObjects = [NSMutableArray array];
         [self.interactableObjects addObject:[[BTTMapCrystal alloc] initWithIndexPath:[NSIndexPath indexPathForItem:15 inSection:22] amount:200]];
         [self.interactableObjects addObject:[[BTTMapTreasure alloc] initWithIndexPath:[NSIndexPath indexPathForItem:20 inSection:20] amount:1000]];
+        [self.interactableObjects addObject:[[BTTMapBattle alloc] initWithIndexPath:[NSIndexPath indexPathForItem:20 inSection:21]]];
     }
 
     return self;
