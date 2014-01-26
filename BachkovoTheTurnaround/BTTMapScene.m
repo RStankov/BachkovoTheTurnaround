@@ -34,13 +34,10 @@
 
         [self addChild:self.mapNode];
 
-        for (NSInteger i = 0; i<map.verticalTilesCount; i++) {
-            for (NSInteger j = 0; j<map.horizontalTileCount; j++) {
-                SKSpriteNode *sprite = [map nodeForIndexPath:[NSIndexPath indexPathForItem:i inSection:j]];
-                sprite.position = [self pointForIndexPath:[NSIndexPath indexPathForItem:i inSection:j]];
-                [self.mapNode addChild:sprite];
-            }
-        }
+        [self.map enumerateSpriteNodes:^(NSIndexPath *indexPath, SKSpriteNode *spriteNode) {
+            spriteNode.position = [self pointForIndexPath:indexPath];
+            [self.mapNode addChild:spriteNode];
+        }];
 
         self.playerNode = [[SKSpriteNode alloc] initWithImageNamed:@"square"];
         self.playerNode.position = [self pointForIndexPath:[NSIndexPath indexPathForItem:11 inSection:25]];

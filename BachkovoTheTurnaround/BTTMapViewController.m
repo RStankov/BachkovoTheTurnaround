@@ -26,9 +26,6 @@
     skView.showsNodeCount = YES;
 
     BTTMap *map = [[BTTMap alloc] init];
-    map.tileSize = 44;
-    map.horizontalTileCount = 30;
-    map.verticalTilesCount = 40;
     
     // Create and configure the scene.
     BTTMapScene *scene = [[BTTMapScene alloc] initWithMap:map size:skView.bounds.size];

@@ -10,14 +10,14 @@
 #import <SpriteKit/SpriteKit.h>
 #import "BTTPathFinder.h"
 
+
+
+typedef void(^BTTPMapSpriteiNodeNandler)(NSIndexPath *indexPath, SKSpriteNode *spriteNode);
+
 @interface BTTMap : NSObject <BTTPathFinderDataSource>
 
-@property (nonatomic) NSInteger verticalTilesCount;
-@property (nonatomic) NSInteger horizontalTileCount;
 @property (nonatomic) NSInteger tileSize;
 
-- (CGSize)size;
-
-- (SKSpriteNode *)nodeForIndexPath:(NSIndexPath *)indexPath;
+- (void)enumerateSpriteNodes:(BTTPMapSpriteiNodeNandler)handler;
 
 @end

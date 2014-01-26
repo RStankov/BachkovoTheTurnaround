@@ -63,29 +63,36 @@
         @"0": [SKColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0],
     };
 
+    self.tileSize = 44;
+
     return self;
 }
 
-- (CGSize)size {
-    return CGSizeMake(self.horizontalTileCount * self.tileSize, self.verticalTilesCount * self.tileSize);
-}
+- (void)enumerateSpriteNodes:(BTTPMapSpriteiNodeNandler)handler {
+    NSInteger cols = ((NSArray *)self.realMap[0]).count;
+    NSInteger rows = self.realMap.count;
 
-- (SKSpriteNode *)nodeForIndexPath:(NSIndexPath *)indexPath {
-    SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"HelveticaLight"];
+    for (NSInteger i = 0; i<cols; i++) {
+        for (NSInteger j = 0; j < rows; j++) {
+            NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:j];
 
-    label.text = [NSString stringWithFormat:@"%0.2dx%0.2d", indexPath.item, indexPath.section];
-    label.fontSize = 10;
-    label.position = CGPointMake(0, 0);
+            SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"HelveticaLight"];
 
-    SKSpriteNode *sprite = [[SKSpriteNode alloc] initWithImageNamed:@"square"];
+            label.text = [NSString stringWithFormat:@"%0.2dx%0.2d", indexPath.item, indexPath.section];
+            label.fontSize = 10;
+            label.position = CGPointMake(0, 0);
 
-    sprite.color = self.colors[[self labelForIndexPath:indexPath]];
-    sprite.colorBlendFactor = 1.0;
-    sprite.alpha = 0.2;
+            SKSpriteNode *sprite = [[SKSpriteNode alloc] initWithImageNamed:@"square"];
 
-    [sprite addChild:label];
+            sprite.color = self.colors[[self labelForIndexPath:indexPath]];
+            sprite.colorBlendFactor = 1.0;
+            sprite.alpha = 0.2;
 
-    return sprite;
+            [sprite addChild:label];
+
+            handler(indexPath, sprite);
+        }
+    }
 }
 
 - (NSString *)labelForIndexPath:(NSIndexPath *)indexPath {
