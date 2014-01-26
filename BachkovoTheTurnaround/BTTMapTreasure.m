@@ -8,15 +8,31 @@
 
 #import "BTTMapTreasure.h"
 
+@interface BTTMapTreasure ()
+
+@property (nonatomic) NSInteger amount;
+
+@end
+
 @implementation BTTMapTreasure
+
+- (instancetype)initWithIndexPath:(NSIndexPath *)indexPath amount:(NSInteger)amount {
+    self = [self initWithIndexPath:indexPath];
+    
+    if (self) {
+        self.amount = amount;
+    }
+    
+    return self;
+}
 
 - (SKSpriteNode *)generateSpriteNode {
     return [SKSpriteNode spriteNodeWithImageNamed:@"treasure"];
 }
 
 - (void)interactWithPlayer:(BTTPlayer *)player {
-    player.credits += 1000;
-    [BTTMapInteractableObject flashText:@"+1000" overNode:self.spriteNode];
+    player.credits += self.amount;
+    [BTTMapInteractableObject flashText:[NSString stringWithFormat:@"+%ld", self.amount] overNode:self.spriteNode];
     [super interactWithPlayer:player];
 }
 

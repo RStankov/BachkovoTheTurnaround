@@ -10,4 +10,6 @@
 
 @interface BTTMapCrystal : BTTMapInteractableObject
 
+- (instancetype)initWithIndexPath:(NSIndexPath *)indexPath amount:(NSInteger)amount;
+
 @end

@@ -8,15 +8,31 @@
 
 #import "BTTMapCrystal.h"
 
+@interface BTTMapCrystal ()
+
+@property (nonatomic) NSInteger amount;
+
+@end
+
 @implementation BTTMapCrystal
+
+- (instancetype)initWithIndexPath:(NSIndexPath *)indexPath amount:(NSInteger)amount {
+    self = [self initWithIndexPath:indexPath];
+    
+    if (self) {
+        self.amount = amount;
+    }
+    
+    return self;
+}
 
 - (SKSpriteNode *)generateSpriteNode {
     return [[SKSpriteNode alloc] initWithImageNamed:@"red_crystal"];
 }
 
 - (void)interactWithPlayer:(BTTPlayer *)player {
-    player.credits += 200;
-    [BTTMapInteractableObject flashText:@"+200" overNode:self.spriteNode];
+    player.credits += self.amount;
+    [BTTMapInteractableObject flashText:[NSString stringWithFormat:@"+%ld", self.amount] overNode:self.spriteNode];
     [super interactWithPlayer:player];
 }
 

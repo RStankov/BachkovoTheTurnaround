@@ -72,8 +72,8 @@
         self.tileSize = 44;
 
         self.interactableObjects = [NSMutableArray array];
-        [self.interactableObjects addObject:[[BTTMapCrystal alloc] initWithIndexPath:[NSIndexPath indexPathForItem:15 inSection:22]]];
-        [self.interactableObjects addObject:[[BTTMapTreasure alloc] initWithIndexPath:[NSIndexPath indexPathForItem:20 inSection:20]]];
+        [self.interactableObjects addObject:[[BTTMapCrystal alloc] initWithIndexPath:[NSIndexPath indexPathForItem:15 inSection:22] amount:200]];
+        [self.interactableObjects addObject:[[BTTMapTreasure alloc] initWithIndexPath:[NSIndexPath indexPathForItem:20 inSection:20] amount:1000]];
     }
 
     return self;
