@@ -47,8 +47,6 @@
         return;
     }
 
-    [self removeActionForKey:@"movement"];
-
     NSMutableArray *array = [NSMutableArray array];
 
     for (NSValue *value in points) {
