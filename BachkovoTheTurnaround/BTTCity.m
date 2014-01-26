@@ -59,10 +59,10 @@
     //if fire button touched, bring the rain
     if ([node.name isEqualToString:@"exitCity"]) {
         NSLog(@"Exiting");
-        //SKTransition *reveal = [SKTransition revealWithDirection:SKTransitionDirectionDown duration:1.0];
+        SKTransition *reveal = [SKTransition revealWithDirection:SKTransitionDirectionDown duration:1.0];
         //BTTMapScene *mapScene = [self scene];
         //  Optionally, insert code to configure the new scene.
-        //[self.scene.view presentScene: mapScene transition: reveal];
+        [self.scene.view presentScene:self.parentScene transition: reveal];
         
     }
 }

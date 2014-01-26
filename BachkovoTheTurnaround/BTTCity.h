@@ -14,5 +14,7 @@
 
 - (void) heroVisit: (BTTPlayer *) character;
 
-@property(nonatomic, assign) NSMutableArray *buildings;
+@property (nonatomic, strong) NSMutableArray *buildings;
+@property (nonatomic, strong) SKScene *parentScene;
+
 @end
