@@ -121,65 +121,68 @@
 
 	// Top
 	NSIndexPath *p = [NSIndexPath indexPathForItem:indexPath.item inSection:indexPath.section - 1];
-	if ([self isValidTileCoord:p] && [self canVisitIndexPath:p]) {
+	if ([self canVisitIndexPath:p]) {
 		[tmp addObject:p];
 	}
 
 	// Left
 	p = [NSIndexPath indexPathForItem:indexPath.item - 1 inSection:indexPath.section];
-	if ([self isValidTileCoord:p] && [self canVisitIndexPath:p]) {
+	if ([self canVisitIndexPath:p]) {
 		[tmp addObject:p];
 	}
 
 	// Bottom
 	p = [NSIndexPath indexPathForItem:indexPath.item inSection:indexPath.section + 1];
-	if ([self isValidTileCoord:p] && [self canVisitIndexPath:p]) {
+	if ([self canVisitIndexPath:p]) {
 		[tmp addObject:p];
 	}
 
 	// Right
 	p = [NSIndexPath indexPathForItem:indexPath.item + 1 inSection:indexPath.section];
-	if ([self isValidTileCoord:p] && [self canVisitIndexPath:p]) {
+	if ([self canVisitIndexPath:p]) {
 		[tmp addObject:p];
 	}
 
 	return [NSArray arrayWithArray:tmp];
 }
 
-- (BOOL)isValidTileCoord:(NSIndexPath *)indexPath {
+-(BOOL)canVisitIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.item < 0) {
         return NO;
     }
-    
+
     if (indexPath.section < 0) {
         return NO;
     }
-    
+
     if (indexPath.section >= self.realMap.count) {
         return NO;
     }
-    
+
     if (indexPath.item >= ((NSArray *)self.realMap[indexPath.section]).count) {
         return NO;
     }
-    
-    return YES;
-}
 
--(BOOL)canVisitIndexPath:(NSIndexPath *)path {
-    NSString *label = [self labelForIndexPath:path];
-    return [label isEqualToString:@"1"];
+    if (![[self labelForIndexPath:indexPath] isEqualToString:@"1"]) {
+        return NO;
+    }
+    
+    if ([self indexOfInteractibleObjectByIndexPath:indexPath] != NSNotFound) {
+        return NO;
+    }
+
+    return YES;
 }
 
 - (NSUInteger)indexOfInteractibleObjectByIndexPath:(NSIndexPath *)indexPath {
     for (NSInteger i = 0, c = self.interactableObjects.count; i < c; i++) {
         BTTMapInteractableObject *object = self.interactableObjects[i];
         if ([object.indexPath isEqual:indexPath]) {
-            return YES;
+            return i;
         }
     }
 
-    return NO;
+    return NSNotFound;
 }
 
 - (BOOL)isHittingInteractableObjectAt:(NSIndexPath *)indexPath from:(NSIndexPath *)playerPositionIndexPath {
