@@ -8,13 +8,16 @@
 
 #import "BTTMapScene.h"
 #import "BTTPathFinder.h"
+#import "BTTBattleshipSpriteNode.h"
 
 @interface BTTMapScene ()
 
 @property (nonatomic, strong) SKSpriteNode *mapNode;
 @property (nonatomic, strong) BTTMap *map;
-@property (nonatomic, strong) SKSpriteNode *playerNode;
+@property (nonatomic, strong) BTTBattleshipSpriteNode *playerNode;
 @property (nonatomic, strong) BTTPathFinder *pathFinder;
+
+@property (nonatomic, strong) NSArray *battleshipLeftTextures;
 
 @end
 
@@ -39,10 +42,8 @@
             [self.mapNode addChild:spriteNode];
         }];
 
-        self.playerNode = [[SKSpriteNode alloc] initWithImageNamed:@"square"];
+        self.playerNode = [BTTBattleshipSpriteNode new];
         self.playerNode.position = [self pointForIndexPath:[NSIndexPath indexPathForItem:11 inSection:25]];
-        self.playerNode.color = [SKColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
-        self.playerNode.colorBlendFactor = 0.3;
 
         [self.mapNode addChild:self.playerNode];
     }

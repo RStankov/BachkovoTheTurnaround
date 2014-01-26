@@ -44,6 +44,13 @@
 		F0A9653A18931776007184D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A9651518931775007184D7 /* UIKit.framework */; };
 		F0A9654218931776007184D7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0A9654018931776007184D7 /* InfoPlist.strings */; };
 		F0A9654418931776007184D7 /* BachkovoTheTurnaroundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F0A9654318931776007184D7 /* BachkovoTheTurnaroundTests.m */; };
+		F0D43BE41894780B00F1C733 /* world_debug@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0D43BE21894780B00F1C733 /* world_debug@2x.png */; };
+		F0D43BE51894780B00F1C733 /* world@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0D43BE31894780B00F1C733 /* world@2x.png */; };
+		F0D43BEB1894A61200F1C733 /* battleship_down.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F0D43BE71894A61200F1C733 /* battleship_down.atlas */; };
+		F0D43BEC1894A61200F1C733 /* battleship_left.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F0D43BE81894A61200F1C733 /* battleship_left.atlas */; };
+		F0D43BED1894A61200F1C733 /* battleship_right.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F0D43BE91894A61200F1C733 /* battleship_right.atlas */; };
+		F0D43BEE1894A61200F1C733 /* battleship_up.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F0D43BEA1894A61200F1C733 /* battleship_up.atlas */; };
+		F0D43BF11894A90100F1C733 /* BTTBattleshipSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D43BF01894A90100F1C733 /* BTTBattleshipSpriteNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +124,14 @@
 		F0A9653F18931776007184D7 /* BachkovoTheTurnaroundTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BachkovoTheTurnaroundTests-Info.plist"; sourceTree = "<group>"; };
 		F0A9654118931776007184D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F0A9654318931776007184D7 /* BachkovoTheTurnaroundTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BachkovoTheTurnaroundTests.m; sourceTree = "<group>"; };
+		F0D43BE21894780B00F1C733 /* world_debug@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "world_debug@2x.png"; sourceTree = "<group>"; };
+		F0D43BE31894780B00F1C733 /* world@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "world@2x.png"; sourceTree = "<group>"; };
+		F0D43BE71894A61200F1C733 /* battleship_down.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = battleship_down.atlas; sourceTree = "<group>"; };
+		F0D43BE81894A61200F1C733 /* battleship_left.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = battleship_left.atlas; sourceTree = "<group>"; };
+		F0D43BE91894A61200F1C733 /* battleship_right.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = battleship_right.atlas; sourceTree = "<group>"; };
+		F0D43BEA1894A61200F1C733 /* battleship_up.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = battleship_up.atlas; sourceTree = "<group>"; };
+		F0D43BEF1894A90100F1C733 /* BTTBattleshipSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTBattleshipSpriteNode.h; sourceTree = "<group>"; };
+		F0D43BF01894A90100F1C733 /* BTTBattleshipSpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTBattleshipSpriteNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +181,7 @@
 			children = (
 				E1915C781894A768005AF224 /* world_debug@2x.png */,
 				E1915C791894A768005AF224 /* world@2x.png */,
+				F0D43BE61894A43E00F1C733 /* Battleship */,
 				F07919E11893D4F600E2DE8E /* square@2x.png */,
 			);
 			name = Map;
@@ -249,6 +265,8 @@
 				F0280C3A18942CEB0094BBFA /* BTTPathFinder.m */,
 				F0A9653018931775007184D7 /* Images.xcassets */,
 				F0A9651A18931775007184D7 /* Supporting Files */,
+				F0D43BEF1894A90100F1C733 /* BTTBattleshipSpriteNode.h */,
+				F0D43BF01894A90100F1C733 /* BTTBattleshipSpriteNode.m */,
 			);
 			path = BachkovoTheTurnaround;
 			sourceTree = "<group>";
@@ -280,6 +298,17 @@
 				F0A9654018931776007184D7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F0D43BE61894A43E00F1C733 /* Battleship */ = {
+			isa = PBXGroup;
+			children = (
+				F0D43BE71894A61200F1C733 /* battleship_down.atlas */,
+				F0D43BE81894A61200F1C733 /* battleship_left.atlas */,
+				F0D43BE91894A61200F1C733 /* battleship_right.atlas */,
+				F0D43BEA1894A61200F1C733 /* battleship_up.atlas */,
+			);
+			name = Battleship;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,6 +388,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0D43BED1894A61200F1C733 /* battleship_right.atlas in Resources */,
 				F0A9651E18931775007184D7 /* InfoPlist.strings in Resources */,
 				F0A9653118931775007184D7 /* Images.xcassets in Resources */,
 				F0A9652718931775007184D7 /* Main.storyboard in Resources */,
@@ -366,6 +396,9 @@
 				F07919E21893D4F600E2DE8E /* square@2x.png in Resources */,
 				E1915C7A1894A768005AF224 /* world_debug@2x.png in Resources */,
 				E1915C7B1894A768005AF224 /* world@2x.png in Resources */,
+				F0D43BEC1894A61200F1C733 /* battleship_left.atlas in Resources */,
+				F0D43BEE1894A61200F1C733 /* battleship_up.atlas in Resources */,
+				F0D43BEB1894A61200F1C733 /* battleship_down.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				640B83821893C6C900FA9B65 /* BTTUnit.m in Sources */,
+				F0D43BF11894A90100F1C733 /* BTTBattleshipSpriteNode.m in Sources */,
 				F0280C3B18942CEB0094BBFA /* BTTPathFinder.m in Sources */,
 				F059C46F1893CB2F0072B24A /* BTTMapViewController.m in Sources */,
 				F09F86A91893B53800F6EC30 /* BTTPlayer.m in Sources */,
