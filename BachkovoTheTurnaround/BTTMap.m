@@ -59,8 +59,8 @@
     }
 
     self.colors = @{
-        @"1": [SKColor colorWithRed:0.0 green:0.5 blue:0.0 alpha:0.9],
-        @"0": [SKColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.9],
+        @"1": [SKColor colorWithRed:0.0 green:0.5 blue:0.0 alpha:1.0],
+        @"0": [SKColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0],
     };
 
     return self;
@@ -73,16 +73,15 @@
 - (SKSpriteNode *)nodeForIndexPath:(NSIndexPath *)indexPath {
     SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"HelveticaLight"];
 
-    label.text = [self labelForIndexPath:indexPath];
+    label.text = [NSString stringWithFormat:@"%0.2dx%0.2d", indexPath.item, indexPath.section];
     label.fontSize = 10;
-    label.position = CGPointMake(0, 0i);
+    label.position = CGPointMake(0, 0);
 
     SKSpriteNode *sprite = [[SKSpriteNode alloc] initWithImageNamed:@"square"];
 
-//    sprite.color = [SKColor colorWithRed:(1.0 * indexPath.item)/30.0 green:(1.0 * (arc4random() % 74)) / 74 blue:(1.0*indexPath.section)/40.0 alpha:2.0];
-    sprite.color = self.colors[label.text];
-    sprite.colorBlendFactor = 0.9;
-    
+    sprite.color = self.colors[[self labelForIndexPath:indexPath]];
+    sprite.colorBlendFactor = 1.0;
+    sprite.alpha = 0.2;
 
     [sprite addChild:label];
 
