@@ -64,7 +64,7 @@
     if (self.phase == 0) {
         [card flip];
     } else if (self.phase == 1) {
-        [card attackedBy:nil];
+        [card attackedBy:[BTTWorld player].units.firstObject];
     } else if (self.phase == 2) {
         [self.ememyCardNodes makeObjectsPerformSelector:@selector(restore)];
     }

@@ -48,6 +48,8 @@
     if (!self.isFlipped) {
         [self switchNode:self.backCardNode withNode:self.unitCardNode];
     }
+
+    unit.count = MAX(0, unit.count - 1);
 }
 
 - (void)restore {
