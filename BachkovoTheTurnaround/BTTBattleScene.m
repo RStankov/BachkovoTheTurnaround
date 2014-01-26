@@ -77,7 +77,7 @@
     if (self.phase == 0) {
         [card flip];
     } else if (self.phase == 1) {
-        [card attackedBy:[BTTWorld player].units.firstObject];
+        [card attackedBy:[self firstAvailableUnitFrom:[BTTWorld player].units]];
     } else if (self.phase == 2) {
         if (![self anyUnitsLeft:self.enemyUnits]) {
             [self.enemyCardNodes makeObjectsPerformSelector:@selector(flip)];
@@ -102,6 +102,15 @@
     if (self.phase < 3) {
         self.phase = (self.phase + 1) % 3;
     }
+}
+
+- (BTTUnit *)firstAvailableUnitFrom:(NSArray *)units {
+    for (BTTUnit *unit in units) {
+        if (unit.count > 0) {
+            return unit;
+        }
+    }
+    return nil;
 }
 
 - (BOOL)anyUnitsLeft:(NSArray *)units {
