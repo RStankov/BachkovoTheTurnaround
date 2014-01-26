@@ -89,7 +89,8 @@
         }
         
         if (![self anyUnitsLeft:BTTWorld.player.units]) {
-            NSLog(@"LOSE");
+            [[[UIAlertView alloc] initWithTitle:@"Game Over" message:@"" delegate:nil cancelButtonTitle:nil otherButtonTitles:nil] show];
+
             [self.enemyCardNodes makeObjectsPerformSelector:@selector(flip)];
             self.phase = 3;
             return;
