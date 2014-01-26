@@ -31,7 +31,7 @@
         self.anchorPoint = CGPointMake(0.0, 1.0);
         self.pathFinder = [[BTTPathFinder alloc] initWithDataSource:map];
 
-        self.mapNode = [[SKSpriteNode alloc] initWithImageNamed:@"world_debug"];
+        self.mapNode = [[SKSpriteNode alloc] initWithImageNamed:@"world"];
         self.mapNode.anchorPoint = CGPointMake(0.0, 1.0);
         self.mapNode.position = CGPointZero;
 
