@@ -81,7 +81,7 @@
         return;
     }
 
-    [self.playerNode removeAllActions];
+    [self.playerNode removeActionForKey:@"movement"];
 
     NSMutableArray *array = [NSMutableArray array];
 
@@ -89,7 +89,7 @@
         [array addObject:[SKAction moveTo:[self pointForIndexPath:idx] duration:0.2]];
     }
 
-    [self.playerNode runAction:[SKAction sequence:array]];
+    [self.playerNode runAction:[SKAction sequence:array] withKey:@"movement"];
 }
 
 - (void) update:(CFTimeInterval)currentTime {
