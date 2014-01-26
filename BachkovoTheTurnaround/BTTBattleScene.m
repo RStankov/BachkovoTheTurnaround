@@ -82,9 +82,11 @@
         [card attackedBy:[BTTWorld player].units.firstObject];
     } else if (self.phase == 2) {
         if (![self anyUnitsLeft:self.enemyUnits]) {
-            NSLog(@"WIN");
             [self.enemyCardNodes makeObjectsPerformSelector:@selector(flip)];
             self.phase = 3;
+        
+            SKTransition *reveal = [SKTransition revealWithDirection:SKTransitionDirectionDown duration:1.0];
+            [self.scene.view presentScene:self.parentScene transition: reveal];
             return;
         }
         

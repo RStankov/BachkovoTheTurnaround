@@ -10,4 +10,6 @@
 
 @interface BTTBattleScene : SKScene
 
+@property (nonatomic, strong) SKScene *parentScene;
+
 @end
