@@ -42,6 +42,12 @@
             [self.mapNode addChild:spriteNode];
         }];
 */
+
+        [self.map enumerateInteractableSpriteNodes:^(NSIndexPath *indexPath, SKSpriteNode *spriteNode) {
+            spriteNode.position = [self pointForIndexPath:indexPath];
+            [self.mapNode addChild:spriteNode];
+        }];
+
         self.playerNode = [BTTBattleshipSpriteNode new];
         self.playerNode.position = [self pointForIndexPath:[NSIndexPath indexPathForItem:11 inSection:25]];
 

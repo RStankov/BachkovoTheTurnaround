@@ -97,6 +97,32 @@
     }
 }
 
+- (void)enumerateInteractableSpriteNodes:(BTTPMapSpriteiNodeNandler)handler {
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:15 inSection:22];
+
+    NSMutableArray *interactableObjects = [NSMutableArray array];
+
+    [interactableObjects addObject:indexPath];
+
+    for(NSIndexPath *indexPath in interactableObjects) {
+        SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"HelveticaLight"];
+
+        label.text = [NSString stringWithFormat:@"%0.2ldx%0.2ld", (long)indexPath.item, (long)indexPath.section];
+        label.fontSize = 10;
+        label.position = CGPointMake(0, 0);
+
+        SKSpriteNode *sprite = [[SKSpriteNode alloc] initWithImageNamed:@"square"];
+
+        sprite.color = self.colors[[self labelForIndexPath:indexPath]];
+        sprite.colorBlendFactor = 1.0;
+        sprite.alpha = 0.2;
+
+        [sprite addChild:label];
+
+        handler(indexPath, sprite);
+    }
+}
+
 - (NSString *)labelForIndexPath:(NSIndexPath *)indexPath {
     return (NSString *) ((NSArray *)self.realMap[indexPath.section])[indexPath.item];
 }

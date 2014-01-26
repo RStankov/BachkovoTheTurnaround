@@ -19,5 +19,6 @@ typedef void(^BTTPMapSpriteiNodeNandler)(NSIndexPath *indexPath, SKSpriteNode *s
 @property (nonatomic) NSInteger tileSize;
 
 - (void)enumerateSpriteNodes:(BTTPMapSpriteiNodeNandler)handler;
+- (void)enumerateInteractableSpriteNodes:(BTTPMapSpriteiNodeNandler)handler;
 
 @end
