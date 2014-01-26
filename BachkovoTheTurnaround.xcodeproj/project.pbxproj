@@ -36,7 +36,6 @@
 		F05B17A91893ED4A0046F0F8 /* BTTMap.m in Sources */ = {isa = PBXBuildFile; fileRef = F05B17A81893ED4A0046F0F8 /* BTTMap.m */; };
 		F07919E21893D4F600E2DE8E /* square@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F07919E11893D4F600E2DE8E /* square@2x.png */; };
 		F09F86A91893B53800F6EC30 /* BTTPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F09F86A81893B53800F6EC30 /* BTTPlayer.m */; };
-		F09F86AC1893B6A100F6EC30 /* BTTBattleship.m in Sources */ = {isa = PBXBuildFile; fileRef = F09F86AB1893B6A100F6EC30 /* BTTBattleship.m */; };
 		F0A9651218931775007184D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A9651118931775007184D7 /* Foundation.framework */; };
 		F0A9651418931775007184D7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A9651318931775007184D7 /* CoreGraphics.framework */; };
 		F0A9651618931775007184D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A9651518931775007184D7 /* UIKit.framework */; };
@@ -119,8 +118,6 @@
 		F07919E11893D4F600E2DE8E /* square@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "square@2x.png"; sourceTree = "<group>"; };
 		F09F86A71893B53800F6EC30 /* BTTPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTPlayer.h; sourceTree = "<group>"; };
 		F09F86A81893B53800F6EC30 /* BTTPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTPlayer.m; sourceTree = "<group>"; };
-		F09F86AA1893B6A100F6EC30 /* BTTBattleship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTBattleship.h; sourceTree = "<group>"; };
-		F09F86AB1893B6A100F6EC30 /* BTTBattleship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTBattleship.m; sourceTree = "<group>"; };
 		F0A9650E18931775007184D7 /* BachkovoTheTurnaround.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BachkovoTheTurnaround.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0A9651118931775007184D7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F0A9651318931775007184D7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -264,8 +261,6 @@
 				640B83841893C85C00FA9B65 /* BTTLightMech.m */,
 				640B83861893C86B00FA9B65 /* BTTReconMech.h */,
 				640B83871893C86B00FA9B65 /* BTTReconMech.m */,
-				F09F86AA1893B6A100F6EC30 /* BTTBattleship.h */,
-				F09F86AB1893B6A100F6EC30 /* BTTBattleship.m */,
 				F059C4641893B8B20072B24A /* BTTWorld.h */,
 				F059C4651893B8B20072B24A /* BTTWorld.m */,
 				F059C4671893BD010072B24A /* BTTMapScene.h */,
@@ -455,7 +450,6 @@
 				640B837F1893C2BB00FA9B65 /* BTTMechGarrisonBuilding.m in Sources */,
 				640B83881893C86B00FA9B65 /* BTTReconMech.m in Sources */,
 				F059C4661893B8B20072B24A /* BTTWorld.m in Sources */,
-				F09F86AC1893B6A100F6EC30 /* BTTBattleship.m in Sources */,
 				E1E4CE551893D03F0046217C /* BTTBattleScene.m in Sources */,
 				E14518F61894C3130067A42C /* BTTMapCrystal.m in Sources */,
 				640B83851893C85C00FA9B65 /* BTTLightMech.m in Sources */,
