@@ -17,8 +17,8 @@
 
     dispatch_once(&once, ^ {
         BTTUnit *unit1 = [BTTUnit createUnit1WithCount:10];
-        BTTUnit *unit2 = [BTTUnit createUnit1WithCount:10];
-        BTTUnit *unit3 = [BTTUnit createUnit1WithCount:10];
+        BTTUnit *unit2 = [BTTUnit createUnit2WithCount:10];
+        BTTUnit *unit3 = [BTTUnit createUnit3WithCount:10];
         
         player = [[BTTPlayer alloc] init];
         player.credits = 1000;
