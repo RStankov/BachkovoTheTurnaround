@@ -11,5 +11,5 @@
 @interface BTTMapCity : BTTMapInteractableObject
 
 - (instancetype) initWithIndexPath:(NSIndexPath *)indexPath amount:(NSInteger)amount;
-
+- (SKSpriteNode *)generateSpriteNode;
 @end

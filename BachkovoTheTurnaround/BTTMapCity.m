@@ -32,4 +32,8 @@
     //  Optionally, insert code to configure the new scene.
     [self.spriteNode.scene.view presentScene: cityScene transition: reveal];
 }
+
+- (SKSpriteNode *)generateSpriteNode {
+    return [[SKSpriteNode alloc] init];
+}
 @end
