@@ -103,7 +103,9 @@
     NSIndexPath *currentPath = [self indexPathForPoint:self.playerNode.position];
 
     if ([self.map isHittingInteractableObjectAt:newIndex from:currentPath]) {
-        NSLog(@"DO SOMETHING!");
+        [self.map hitIteractibleObjectAtIndexPath:newIndex];
+
+        return;
     }
 
     NSArray *steps = [self.pathFinder shortestPathFrom:currentPath to:newIndex];

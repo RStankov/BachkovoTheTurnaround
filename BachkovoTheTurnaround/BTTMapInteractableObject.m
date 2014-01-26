@@ -11,6 +11,7 @@
 @interface BTTMapInteractableObject ()
 
 @property (nonatomic, strong) NSIndexPath *position;
+@property (nonatomic, strong) SKSpriteNode *sprite;
 
 @end
 
@@ -21,6 +22,7 @@
     
     if (self) {
         self.position = indexPath;
+        self.sprite   = [self generateSpriteNode];
     }
 
     return self;
@@ -31,6 +33,10 @@
 }
 
 - (SKSpriteNode *)spriteNode {
+    return self.sprite;
+}
+
+- (SKSpriteNode *)generateSpriteNode {
     SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"HelveticaLight"];
     
     label.text = [NSString stringWithFormat:@"%0.2ldx%0.2ld", (long)self.indexPath.item, (long)self.indexPath.section];

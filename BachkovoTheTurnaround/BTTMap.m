@@ -15,7 +15,7 @@
 
 @property (nonatomic, strong) NSArray *realMap;
 @property (nonatomic, strong) NSDictionary *colors;
-@property (nonatomic, strong) NSArray *interactableObjects;
+@property (nonatomic, strong) NSMutableArray *interactableObjects;
 
 @end
 
@@ -70,10 +70,9 @@
         
         self.tileSize = 44;
 
-        self.interactableObjects = @[
-                                     [[BTTMapCrystal alloc] initWithIndexPath:[NSIndexPath indexPathForItem:15 inSection:22]],
-                                     [[BTTMapTreasure alloc] initWithIndexPath:[NSIndexPath indexPathForItem:20 inSection:20]]
-                                     ];
+        self.interactableObjects = [NSMutableArray array];
+        [self.interactableObjects addObject:[[BTTMapCrystal alloc] initWithIndexPath:[NSIndexPath indexPathForItem:15 inSection:22]]];
+        [self.interactableObjects addObject:[[BTTMapTreasure alloc] initWithIndexPath:[NSIndexPath indexPathForItem:20 inSection:20]]];
     }
 
     return self;
@@ -196,6 +195,18 @@
     NSInteger diffY = abs((int)(playerPositionIndexPath.section - indexPath.section));
 
     return diffX != diffY && diffX <= 1 && diffY <= 1;
+}
+
+- (void)hitIteractibleObjectAtIndexPath:(NSIndexPath *)indexPath {
+    NSInteger idx = [self indexOfInteractibleObjectByIndexPath:indexPath];
+    BTTMapInteractableObject *object = self.interactableObjects[idx];
+
+    [self.interactableObjects removeObjectAtIndex:idx];
+
+    [object.spriteNode runAction:[SKAction sequence:@[
+                                                      [SKAction scaleTo:0 duration:0.3],
+                                                      [SKAction removeFromParent],
+                                                      ]]];
 }
 
 @end

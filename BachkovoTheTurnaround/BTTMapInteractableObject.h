@@ -15,5 +15,6 @@
 
 - (NSIndexPath *)indexPath;
 - (SKSpriteNode *)spriteNode;
+- (SKSpriteNode *)generateSpriteNode;
 
 @end

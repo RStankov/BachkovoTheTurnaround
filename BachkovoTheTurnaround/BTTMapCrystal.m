@@ -10,7 +10,7 @@
 
 @implementation BTTMapCrystal
 
-- (SKSpriteNode *)spriteNode {
+- (SKSpriteNode *)generateSpriteNode {
     SKTexture *texture = [SKTexture textureWithImageNamed:@"red_crystal"];
     SKSpriteNode *node = [[SKSpriteNode alloc] initWithTexture:texture];
     return node;

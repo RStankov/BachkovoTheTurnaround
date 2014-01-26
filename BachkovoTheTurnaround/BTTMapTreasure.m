@@ -10,7 +10,7 @@
 
 @implementation BTTMapTreasure
 
-- (SKSpriteNode *)spriteNode {
+- (SKSpriteNode *)generateSpriteNode {
     SKTexture *texture = [SKTexture textureWithImageNamed:@"treasure"];
     SKSpriteNode *node = [[SKSpriteNode alloc] initWithTexture:texture];
     return node;
