@@ -205,14 +205,7 @@
 
     [object interactWithPlayer:[BTTWorld player]];
 
-    [BTTMapInteractableObject flashText:@"+100" overNode:object.spriteNode];
-
     [self.interactableObjects removeObjectAtIndex:idx];
-
-    [object.spriteNode runAction:[SKAction sequence:@[
-                                                      [SKAction scaleTo:0 duration:0.3],
-                                                      [SKAction removeFromParent],
-                                                      ]]];
 }
 
 @end

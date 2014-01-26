@@ -11,8 +11,13 @@
 @implementation BTTMapCrystal
 
 - (SKSpriteNode *)generateSpriteNode {
-    SKTexture *texture = [SKTexture textureWithImageNamed:@"red_crystal"];
-    SKSpriteNode *node = [[SKSpriteNode alloc] initWithTexture:texture];
-    return node;
+    return [[SKSpriteNode alloc] initWithImageNamed:@"red_crystal"];
 }
+
+- (void)interactWithPlayer:(BTTPlayer *)player {
+    player.credits += 200;
+    [BTTMapInteractableObject flashText:@"+200" overNode:self.spriteNode];
+    [super interactWithPlayer:player];
+}
+
 @end

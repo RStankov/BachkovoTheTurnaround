@@ -11,8 +11,13 @@
 @implementation BTTMapTreasure
 
 - (SKSpriteNode *)generateSpriteNode {
-    SKTexture *texture = [SKTexture textureWithImageNamed:@"treasure"];
-    SKSpriteNode *node = [[SKSpriteNode alloc] initWithTexture:texture];
-    return node;
+    return [SKSpriteNode spriteNodeWithImageNamed:@"treasure"];
 }
+
+- (void)interactWithPlayer:(BTTPlayer *)player {
+    player.credits += 1000;
+    [BTTMapInteractableObject flashText:@"+1000" overNode:self.spriteNode];
+    [super interactWithPlayer:player];
+}
+
 @end
