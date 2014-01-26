@@ -8,9 +8,10 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface BTTUnit : SKNode
+@interface BTTUnit : NSObject
 
-@property(nonatomic) NSInteger health;
+@property(nonatomic, strong) NSString *name;
+@property(nonatomic) NSInteger count;
 @property(nonatomic) NSInteger attack;
 @property(nonatomic) NSInteger defense;
 

@@ -8,6 +8,8 @@
 
 #import "BTTArmyBar.h"
 #import "BTTBattleScene.h"
+#import "BTTBattleCardNode.h"
+#import "BTTBattleUnitCardNode.h"
 
 @interface BTTBattleScene() {
     BTTArmyBar *enemyArmyBar;
@@ -28,39 +30,22 @@
         
         [self addChild:background];
         
+        for(NSInteger i=0; i<3; i++) {
+            BTTUnit *unit = [[BTTUnit alloc] init];
+            unit.name = [NSString stringWithFormat:@"%d", i + 1];
+            
+            BTTBattleUnitCardNode *card = [[BTTBattleUnitCardNode alloc] initWithUnit:unit];
+            card.position = CGPointMake(44 + 99 * i, -11 - 204.5);
+            [self addChild:card];
+        }
         
-        SKSpriteNode *card;
+        for(NSInteger i=0; i<5; i++) {
+            
+            BTTBattleCardNode *card = [[BTTBattleCardNode alloc] init];
+            card.position = CGPointMake(44 + 99 * i, -11);
+            [self addChild:card];
+        }
         
-        card = [SKSpriteNode spriteNodeWithImageNamed:@"unit_1"];
-        card.anchorPoint = CGPointMake(0, 1);
-        card.position = CGPointMake(44 + 99 * 0, -11);
-
-        [self addChild:card];
-        
-        card = [SKSpriteNode spriteNodeWithImageNamed:@"unit_2"];
-        card.anchorPoint = CGPointMake(0, 1);
-        card.position = CGPointMake(44 + 99 * 1, -11);
-
-        [self addChild:card];
-
-        card = [SKSpriteNode spriteNodeWithImageNamed:@"unit_3"];
-        card.anchorPoint = CGPointMake(0, 1);
-        card.position = CGPointMake(44 + 99 * 2, -11);
-
-        [self addChild:card];
-
-        card = [SKSpriteNode spriteNodeWithImageNamed:@"unit_hidden"];
-        card.anchorPoint = CGPointMake(0, 1);
-        card.position = CGPointMake(44 + 99 * 3, -11);
-
-        [self addChild:card];
-
-        card = [SKSpriteNode spriteNodeWithImageNamed:@"unit_1"];
-        card.anchorPoint = CGPointMake(0, 1);
-        card.position = CGPointMake(44 + 99 * 0, -11 - 204.5);
-
-        [self addChild:card];
-
         enemyArmyBar = [[BTTArmyBar alloc] initWithSlotsCount:6 units:@[]];
         enemyArmyBar.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height - enemyArmyBar.size.height / 2);
         [self addChild: enemyArmyBar];
