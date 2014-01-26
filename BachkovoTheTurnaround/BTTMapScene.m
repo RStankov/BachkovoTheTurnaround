@@ -37,13 +37,13 @@
         for (NSInteger i = 0; i<map.verticalTilesCount; i++) {
             for (NSInteger j = 0; j<map.horizontalTileCount; j++) {
                 SKSpriteNode *sprite = [map nodeForIndexPath:[NSIndexPath indexPathForItem:i inSection:j]];
-                sprite.position = [self pointForTop:i left:j];
+                sprite.position = [self pointForIndexPath:[NSIndexPath indexPathForItem:i inSection:j]];
                 [self.mapNode addChild:sprite];
             }
         }
 
         self.playerNode = [[SKSpriteNode alloc] initWithImageNamed:@"square"];
-        self.playerNode.position = [self pointForTop:11 left:25];
+        self.playerNode.position = [self pointForIndexPath:[NSIndexPath indexPathForItem:11 inSection:25]];
         self.playerNode.color = [SKColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
         self.playerNode.colorBlendFactor = 0.3;
 
@@ -59,8 +59,8 @@
     self.mapNode.position = CGPointMake(self.mapNode.position.x - cameraPositionInScene.x + self.size.width / 2, self.mapNode.position.y - cameraPositionInScene.y - self.size.height / 2);
 }
 
-- (CGPoint) pointForTop:(NSInteger)x left:(NSInteger)y {
-    return CGPointMake((0.5 + x) * self.map.tileSize,  - (0.5 + y) * self.map.tileSize);
+- (CGPoint) pointForIndexPath:(NSIndexPath *)indexPath {
+    return CGPointMake((0.5 + indexPath.item) * self.map.tileSize,  - (0.5 + indexPath.section) * self.map.tileSize);
 }
 
 - (NSIndexPath *)indexPathForPoint:(CGPoint)point {
@@ -88,7 +88,7 @@
     NSMutableArray *array = [NSMutableArray array];
 
     for (NSIndexPath *idx in steps) {
-        [array addObject:[SKAction moveTo:[self pointForTop:idx.item left:idx.section] duration:0.2]];
+        [array addObject:[SKAction moveTo:[self pointForIndexPath:idx] duration:0.2]];
     }
 
     [self.playerNode runAction:[SKAction sequence:array]];
