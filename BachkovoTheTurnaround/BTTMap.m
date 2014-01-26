@@ -171,8 +171,19 @@
     return [label isEqualToString:@"1"];
 }
 
+- (NSUInteger)indexOfInteractibleObjectByIndexPath:(NSIndexPath *)indexPath {
+    for (NSInteger i = 0, c = self.interactableObjects.count; i < c; i++) {
+        BTTMapInteractableObject *object = self.interactableObjects[i];
+        if ([object.indexPath isEqual:indexPath]) {
+            return YES;
+        }
+    }
+
+    return NO;
+}
+
 - (BOOL)isHittingInteractableObjectAt:(NSIndexPath *)indexPath from:(NSIndexPath *)playerPositionIndexPath {
-    NSUInteger idx = [self.interactableObjects indexOfObject:[[BTTMapInteractableObject alloc] initWithIndexPath:indexPath]];
+    NSUInteger idx = [self indexOfInteractibleObjectByIndexPath:indexPath];
 
     if (idx == NSNotFound) {
         return NO;
