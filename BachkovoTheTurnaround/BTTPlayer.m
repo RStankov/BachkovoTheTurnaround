@@ -10,18 +10,6 @@
 
 @implementation BTTPlayer
 
-
-- (instancetype)initWithName: (NSString *) name credits: (NSInteger)credits {
-    self = [self init];
-
-    if (self) {
-        _name    = name;
-        _credits = credits;
-    }
-
-    return self;
-}
-
 - (NSArray *)army {
     return @[@LIGHT_MECH, @RECON_MECH];
 }
