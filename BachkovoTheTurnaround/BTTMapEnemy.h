@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "BTTMapInteractableObject.h"
 
-@interface BTTMapBattle : BTTMapInteractableObject
+@interface BTTMapEnemy : BTTMapInteractableObject
 
 @end

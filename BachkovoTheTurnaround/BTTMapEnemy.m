@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Radoslav Stankov. All rights reserved.
 //
 
-#import "BTTMapBattle.h"
+#import "BTTMapEnemy.h"
 
-@implementation BTTMapBattle
+@implementation BTTMapEnemy
 
 - (SKSpriteNode *)generateSpriteNode {
     return [SKSpriteNode spriteNodeWithImageNamed:@"enemy"];
