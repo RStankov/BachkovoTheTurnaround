@@ -43,7 +43,7 @@
         }
 
         self.playerNode = [[SKSpriteNode alloc] initWithImageNamed:@"square"];
-        self.playerNode.position = [self pointForTop:4 left:5];
+        self.playerNode.position = [self pointForTop:11 left:25];
         self.playerNode.color = [SKColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
         self.playerNode.colorBlendFactor = 0.3;
 
