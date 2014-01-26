@@ -37,11 +37,12 @@
 
         [self addChild:self.mapNode];
 
-        //[self.map enumerateSpriteNodes:^(NSIndexPath *indexPath, SKSpriteNode *spriteNode) {
-        //    spriteNode.position = [self pointForIndexPath:indexPath];
-        //   [self.mapNode addChild:spriteNode];
-        //}];
-
+#ifdef BTTDEBUG
+        [self.map enumerateSpriteNodes:^(NSIndexPath *indexPath, SKSpriteNode *spriteNode) {
+            spriteNode.position = [self pointForIndexPath:indexPath];
+           [self.mapNode addChild:spriteNode];
+        }];
+#endif
 
         [self.map enumerateInteractableSpriteNodes:^(NSIndexPath *indexPath, SKSpriteNode *spriteNode) {
             spriteNode.position = [self pointForIndexPath:indexPath];
