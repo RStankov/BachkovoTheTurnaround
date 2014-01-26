@@ -7,6 +7,7 @@
 //
 
 #import "BTTMap.h"
+#import "BTTMapInteractableObject.h"
 
 @interface BTTMap ()
 
@@ -102,9 +103,10 @@
 
     NSMutableArray *interactableObjects = [NSMutableArray array];
 
-    [interactableObjects addObject:indexPath];
+    [interactableObjects addObject:[[BTTMapInteractableObject alloc] initWithIndexPath:indexPath]];
 
-    for(NSIndexPath *indexPath in interactableObjects) {
+    for(BTTMapInteractableObject *object in interactableObjects) {
+        NSIndexPath *indexPath = object.indexPath;
         SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"HelveticaLight"];
 
         label.text = [NSString stringWithFormat:@"%0.2ldx%0.2ld", (long)indexPath.item, (long)indexPath.section];
