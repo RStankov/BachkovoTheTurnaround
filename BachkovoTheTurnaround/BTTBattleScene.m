@@ -33,6 +33,7 @@
         for(NSInteger i=0; i<3; i++) {
             BTTUnit *unit = [[BTTUnit alloc] init];
             unit.name = [NSString stringWithFormat:@"%d", i + 1];
+            unit.count = 123;
             
             BTTBattleUnitCardNode *card = [[BTTBattleUnitCardNode alloc] initWithUnit:unit];
             card.position = CGPointMake(44 + 99 * i, -11 - 204.5);
@@ -40,7 +41,6 @@
         }
         
         for(NSInteger i=0; i<5; i++) {
-            
             BTTBattleCardNode *card = [[BTTBattleCardNode alloc] init];
             card.position = CGPointMake(44 + 99 * i, -11);
             [self addChild:card];

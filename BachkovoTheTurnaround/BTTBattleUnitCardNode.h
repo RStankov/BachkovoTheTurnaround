@@ -13,4 +13,6 @@
 
 - (instancetype)initWithUnit:(BTTUnit *)unit;
 
+- (void)redraw;
+
 @end
