@@ -16,5 +16,6 @@
 
 @property (nonatomic, strong) NSMutableArray *buildings;
 @property (nonatomic, strong) SKScene *parentScene;
+@property (nonatomic, strong) BTTPlayer *hero;
 
 @end

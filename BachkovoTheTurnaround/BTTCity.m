@@ -9,6 +9,7 @@
 #import "BTTCity.h"
 #import "BTTPlayer.h"
 #import "BTTMapScene.h"
+#import "BTTBattleUnitCardNode.h"
 
 @implementation BTTCity
 
@@ -31,19 +32,29 @@
             unit.position = CGPointMake(86 + 99 * i, -57);
             [self addChild:unit];
         }
+        NSInteger i = 0;
+        NSLog(@"%@", self.hero);
+        for(BTTUnit *unit in self.hero.units) {
+            NSLog(@"unit build");
+            BTTBattleUnitCardNode *card = [[BTTBattleUnitCardNode alloc] initWithUnit:unit];
+            card.position = CGPointMake(86 + 99 * i, - 204.5);
+            [self addChild:card];
+            i += 1;
+        }
     }
     
     return self;
 }
 
 - (void) heroVisit: (BTTPlayer *) character {
-    NSLog(@"%@", character.army);
+    self.hero = character;
+    NSLog(@"%@", self.hero);
 }
 
 - (SKSpriteNode *)exitCityButtonNode
 {
     SKSpriteNode *fireNode = [SKSpriteNode spriteNodeWithImageNamed:@"leave_city"];
-    fireNode.position = CGPointMake(482.5, -262.5);
+    fireNode.position = CGPointMake(482.5, -58);
     fireNode.name = @"exitCity";
     fireNode.zPosition = 1.0;
     [self addChild:fireNode];
