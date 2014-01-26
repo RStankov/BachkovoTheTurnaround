@@ -6,15 +6,11 @@
 //  Copyright (c) 2014 Radoslav Stankov. All rights reserved.
 //
 
-#import "BTTArmyBar.h"
 #import "BTTBattleScene.h"
 #import "BTTBattleCardNode.h"
 #import "BTTBattleUnitCardNode.h"
 
-@interface BTTBattleScene() {
-    BTTArmyBar *enemyArmyBar;
-    BTTArmyBar *ourArmyBar;
-}
+@interface BTTBattleScene()
 
 @end
 
@@ -45,15 +41,6 @@
             card.position = CGPointMake(44 + 99 * i, -11);
             [self addChild:card];
         }
-        
-        enemyArmyBar = [[BTTArmyBar alloc] initWithSlotsCount:6 units:@[]];
-        enemyArmyBar.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height - enemyArmyBar.size.height / 2);
-        [self addChild: enemyArmyBar];
-
-        ourArmyBar = [[BTTArmyBar alloc] initWithSlotsCount:6 units:@[]];
-        ourArmyBar.position = CGPointMake(CGRectGetMidX(self.frame), ourArmyBar.size.height / 2);
-        [self addChild: ourArmyBar];
-
     }
     return self;
 }
