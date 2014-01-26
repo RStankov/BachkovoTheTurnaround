@@ -25,12 +25,8 @@
         background.anchorPoint = CGPointMake(0, 1);
         background.position = CGPointMake(0, 0);
         
-        SKSpriteNode *leaveButton = [SKSpriteNode spriteNodeWithImageNamed:@"leave_city"];
-        leaveButton.position = CGPointMake(482.5, -262.5);
-        
         [self addChild:background];
-        [self addChild:leaveButton];
-        
+        [self exitCityButtonNode];
         for(NSInteger i=0; i<3; i++) {
             int r = arc4random_uniform(3);
             NSLog(@"%d", r);
@@ -55,10 +51,10 @@
     [self addChild:rendered];
 }
 
-- (SKSpriteNode *)fireButtonNode
+- (SKSpriteNode *)exitCityButtonNode
 {
     SKSpriteNode *fireNode = [SKSpriteNode spriteNodeWithImageNamed:@"leave_city"];
-    fireNode.position = CGPointMake(CGRectGetMaxX(self.frame), CGRectGetMidY(self.frame) + 50);
+    fireNode.position = CGPointMake(482.5, -262.5);
     fireNode.name = @"exitCity";
     fireNode.zPosition = 1.0;
     [self addChild:fireNode];
