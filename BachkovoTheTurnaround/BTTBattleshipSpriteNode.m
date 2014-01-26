@@ -42,4 +42,21 @@
     return self;
 }
 
+- (void)moveTo:(NSArray *)points {
+    if (points.count == 0) {
+        return;
+    }
+
+    [self removeActionForKey:@"movement"];
+
+    NSMutableArray *array = [NSMutableArray array];
+
+    for (NSValue *value in points) {
+        CGPoint point = [value CGPointValue];
+        [array addObject:[SKAction moveTo:point duration:0.2]];
+    }
+
+    [self runAction:[SKAction sequence:array] withKey:@"movement"];
+}
+
 @end

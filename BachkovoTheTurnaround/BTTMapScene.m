@@ -77,19 +77,12 @@
 
     NSArray *steps = [self.pathFinder shortestPathFrom:currentPath to:newIndex];
 
-    if (steps.count == 0) {
-        return;
-    }
-
-    [self.playerNode removeActionForKey:@"movement"];
-
-    NSMutableArray *array = [NSMutableArray array];
-
+    NSMutableArray *points = [NSMutableArray array];
     for (NSIndexPath *idx in steps) {
-        [array addObject:[SKAction moveTo:[self pointForIndexPath:idx] duration:0.2]];
+        [points addObject:[NSValue valueWithCGPoint:[self pointForIndexPath:idx]]];
     }
 
-    [self.playerNode runAction:[SKAction sequence:array] withKey:@"movement"];
+    [self.playerNode moveTo:points];
 }
 
 - (void) update:(CFTimeInterval)currentTime {

@@ -10,5 +10,6 @@
 
 @interface BTTBattleshipSpriteNode : SKSpriteNode
 
+- (void)moveTo:(NSArray *)points;
 
 @end
