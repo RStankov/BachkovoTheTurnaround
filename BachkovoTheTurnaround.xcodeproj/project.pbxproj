@@ -87,11 +87,11 @@
 		923200701893C94800E2F943 /* BTTMainBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTMainBuilding.h; sourceTree = "<group>"; };
 		923200711893C94800E2F943 /* BTTMainBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTMainBuilding.m; sourceTree = "<group>"; };
 		92F3E4671893DCCB00C8F654 /* BTTBuilding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTTBuilding.h; sourceTree = "<group>"; };
-		E14518F41894C3130067A42C /* BTTMapCrystal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BTTMapCrystal.h; path = BachkovoTheTurnaround/BTTMapCrystal.h; sourceTree = "<group>"; };
-		E14518F51894C3130067A42C /* BTTMapCrystal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BTTMapCrystal.m; path = BachkovoTheTurnaround/BTTMapCrystal.m; sourceTree = "<group>"; };
+		E14518F41894C3130067A42C /* BTTMapCrystal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTMapCrystal.h; sourceTree = "<group>"; };
+		E14518F51894C3130067A42C /* BTTMapCrystal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTMapCrystal.m; sourceTree = "<group>"; };
 		E14518F81894C3C60067A42C /* red_crystal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red_crystal@2x.png"; sourceTree = "<group>"; };
-		E14518FB1894C4B80067A42C /* BTTMapTreasure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BTTMapTreasure.h; path = BachkovoTheTurnaround/BTTMapTreasure.h; sourceTree = "<group>"; };
-		E14518FC1894C4B80067A42C /* BTTMapTreasure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BTTMapTreasure.m; path = BachkovoTheTurnaround/BTTMapTreasure.m; sourceTree = "<group>"; };
+		E14518FB1894C4B80067A42C /* BTTMapTreasure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTMapTreasure.h; sourceTree = "<group>"; };
+		E14518FC1894C4B80067A42C /* BTTMapTreasure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTMapTreasure.m; sourceTree = "<group>"; };
 		E14518FE1894C4D70067A42C /* treasure@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "treasure@2x.png"; sourceTree = "<group>"; };
 		E1915C781894A768005AF224 /* world_debug@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "world_debug@2x.png"; sourceTree = "<group>"; };
 		E1915C791894A768005AF224 /* world@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "world@2x.png"; sourceTree = "<group>"; };
@@ -191,8 +191,6 @@
 			children = (
 				E14518FE1894C4D70067A42C /* treasure@2x.png */,
 				E14518F81894C3C60067A42C /* red_crystal@2x.png */,
-				E14518FB1894C4B80067A42C /* BTTMapTreasure.h */,
-				E14518FC1894C4B80067A42C /* BTTMapTreasure.m */,
 				E1915C781894A768005AF224 /* world_debug@2x.png */,
 				E1915C791894A768005AF224 /* world@2x.png */,
 				F0D43BE61894A43E00F1C733 /* Battleship */,
@@ -206,8 +204,6 @@
 		F0A9650518931775007184D7 = {
 			isa = PBXGroup;
 			children = (
-				E14518F41894C3130067A42C /* BTTMapCrystal.h */,
-				E14518F51894C3130067A42C /* BTTMapCrystal.m */,
 				F0A9651918931775007184D7 /* BachkovoTheTurnaround */,
 				F0A9653D18931776007184D7 /* BachkovoTheTurnaroundTests */,
 				F0A9651018931775007184D7 /* Frameworks */,
@@ -240,6 +236,10 @@
 		F0A9651918931775007184D7 /* BachkovoTheTurnaround */ = {
 			isa = PBXGroup;
 			children = (
+				E14518F41894C3130067A42C /* BTTMapCrystal.h */,
+				E14518F51894C3130067A42C /* BTTMapCrystal.m */,
+				E14518FB1894C4B80067A42C /* BTTMapTreasure.h */,
+				E14518FC1894C4B80067A42C /* BTTMapTreasure.m */,
 				F0A9652518931775007184D7 /* Main.storyboard */,
 				F0A9652218931775007184D7 /* BTTAppDelegate.h */,
 				F0A9652318931775007184D7 /* BTTAppDelegate.m */,
@@ -279,12 +279,12 @@
 				E1A0B297189412E5006CA1BB /* BTTArmyBar.m */,
 				F0280C3918942CEB0094BBFA /* BTTPathFinder.h */,
 				F0280C3A18942CEB0094BBFA /* BTTPathFinder.m */,
-				F0A9653018931775007184D7 /* Images.xcassets */,
-				F0A9651A18931775007184D7 /* Supporting Files */,
 				F0D43BEF1894A90100F1C733 /* BTTBattleshipSpriteNode.h */,
 				F0D43BF01894A90100F1C733 /* BTTBattleshipSpriteNode.m */,
 				F02B930C1894BE8600374A6B /* BTTMapInteractableObject.h */,
 				F02B930D1894BE8600374A6B /* BTTMapInteractableObject.m */,
+				F0A9653018931775007184D7 /* Images.xcassets */,
+				F0A9651A18931775007184D7 /* Supporting Files */,
 			);
 			path = BachkovoTheTurnaround;
 			sourceTree = "<group>";
