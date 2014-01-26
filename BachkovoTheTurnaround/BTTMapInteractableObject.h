@@ -17,4 +17,6 @@
 - (SKSpriteNode *)spriteNode;
 - (SKSpriteNode *)generateSpriteNode;
 
++ (void)flashText:(NSString *)string overNode:(SKSpriteNode *)node;
+
 @end

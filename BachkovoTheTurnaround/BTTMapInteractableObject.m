@@ -17,6 +17,25 @@
 
 @implementation BTTMapInteractableObject
 
++ (void)flashText:(NSString *)string overNode:(SKSpriteNode *)node {
+    SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"HelveticaLight"];
+    label.text = string;
+    label.fontSize = 10;
+    label.position = node.position;
+    label.color = [UIColor yellowColor];
+
+    [node.parent addChild:label];
+    
+    [label runAction:[SKAction sequence:@[
+                                          [SKAction group:@[
+                                                            [SKAction scaleTo:20 duration:0.4],
+                                                            [SKAction rotateToAngle:40 duration:0.3],
+                                                            [SKAction fadeAlphaTo:0 duration:0.35]
+                                                            ]],
+                                          [SKAction removeFromParent],
+                                          ]]];
+}
+
 - (instancetype)initWithIndexPath:(NSIndexPath *)indexPath {
     self = [self init];
     

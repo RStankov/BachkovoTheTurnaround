@@ -199,7 +199,10 @@
 
 - (void)hitIteractibleObjectAtIndexPath:(NSIndexPath *)indexPath {
     NSInteger idx = [self indexOfInteractibleObjectByIndexPath:indexPath];
+
     BTTMapInteractableObject *object = self.interactableObjects[idx];
+
+    [BTTMapInteractableObject flashText:@"+100" overNode:object.spriteNode];
 
     [self.interactableObjects removeObjectAtIndex:idx];
 
