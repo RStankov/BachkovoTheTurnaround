@@ -105,22 +105,7 @@
 
 - (void)enumerateInteractableSpriteNodes:(BTTPMapSpriteiNodeNandler)handler {
     for(BTTMapInteractableObject *object in self.interactableObjects) {
-        NSIndexPath *indexPath = object.indexPath;
-        SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"HelveticaLight"];
-
-        label.text = [NSString stringWithFormat:@"%0.2ldx%0.2ld", (long)indexPath.item, (long)indexPath.section];
-        label.fontSize = 10;
-        label.position = CGPointMake(0, 0);
-
-        SKSpriteNode *sprite = [[SKSpriteNode alloc] initWithImageNamed:@"square"];
-
-        sprite.color = self.colors[[self labelForIndexPath:indexPath]];
-        sprite.colorBlendFactor = 1.0;
-        sprite.alpha = 0.2;
-
-        [sprite addChild:label];
-
-        handler(indexPath, sprite);
+        handler(object.indexPath, object.spriteNode);
     }
 }
 

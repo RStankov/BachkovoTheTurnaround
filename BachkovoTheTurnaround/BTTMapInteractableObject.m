@@ -30,4 +30,22 @@
     return self.position;
 }
 
+- (SKSpriteNode *)spriteNode {
+    SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"HelveticaLight"];
+    
+    label.text = [NSString stringWithFormat:@"%0.2ldx%0.2ld", (long)self.indexPath.item, (long)self.indexPath.section];
+    label.fontSize = 10;
+    label.position = CGPointMake(0, 0);
+    
+    SKSpriteNode *sprite = [[SKSpriteNode alloc] initWithImageNamed:@"square"];
+    
+    sprite.color = [SKColor colorWithRed:0.0 green:0.5 blue:0.0 alpha:1.0];
+    sprite.colorBlendFactor = 1.0;
+    sprite.alpha = 0.2;
+    
+    [sprite addChild:label];
+
+    return sprite;
+}
+
 @end

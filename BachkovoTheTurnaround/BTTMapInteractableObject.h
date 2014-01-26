@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <SpriteKit/SpriteKit.h>
 
 @interface BTTMapInteractableObject : NSObject
 
 - (instancetype)initWithIndexPath:(NSIndexPath *)indexPath;
 
 - (NSIndexPath *)indexPath;
+- (SKSpriteNode *)spriteNode;
 
 @end
