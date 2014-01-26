@@ -10,9 +10,13 @@
 #import <SpriteKit/SpriteKit.h>
 #import "BTTPlayer.h"
 
+@protocol BTTMapInteractableObjectDelegate;
+
 @interface BTTMapInteractableObject : NSObject
 
 - (instancetype)initWithIndexPath:(NSIndexPath *)indexPath;
+
+@property (nonatomic, weak) id<BTTMapInteractableObjectDelegate> delegate;
 
 - (NSIndexPath *)indexPath;
 - (SKSpriteNode *)spriteNode;
@@ -20,5 +24,11 @@
 - (void)interactWithPlayer:(BTTPlayer *)player;
 
 + (void)flashText:(NSString *)string overNode:(SKSpriteNode *)node;
+
+@end
+
+@protocol BTTMapInteractableObjectDelegate <NSObject>
+
+- (void)interactibleObjectGetUsed:(BTTMapInteractableObject *)object;
 
 @end

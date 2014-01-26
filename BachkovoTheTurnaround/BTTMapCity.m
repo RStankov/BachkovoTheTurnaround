@@ -26,7 +26,6 @@
 }
 
 - (void) interactWithPlayer:(BTTPlayer *)player {
-    [super interactWithPlayer:player];
     SKTransition *reveal = [SKTransition revealWithDirection:SKTransitionDirectionDown duration:1.0];
     BTTCity *cityScene = [[BTTCity alloc] initWithSize:self.spriteNode.scene.view.bounds.size];
     [cityScene heroVisit:player];

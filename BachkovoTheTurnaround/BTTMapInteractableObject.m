@@ -74,12 +74,12 @@
 }
 
 - (void)interactWithPlayer:(BTTPlayer *)player {
-    NSLog(@"Interaction with player: %@", player);
-
     [self.spriteNode runAction:[SKAction sequence:@[
                                                     [SKAction scaleTo:0 duration:0.3],
                                                     [SKAction removeFromParent],
                                                     ]]];
+
+    [self.delegate interactibleObjectGetUsed:self];
 }
 
 @end

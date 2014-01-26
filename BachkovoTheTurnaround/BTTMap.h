@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <SpriteKit/SpriteKit.h>
 #import "BTTPathFinder.h"
-
+#import "BTTMapInteractableObject.h"
 
 
 typedef void(^BTTPMapSpriteiNodeNandler)(NSIndexPath *indexPath, SKSpriteNode *spriteNode);
 
-@interface BTTMap : NSObject <BTTPathFinderDataSource>
+@interface BTTMap : NSObject <BTTPathFinderDataSource, BTTMapInteractableObjectDelegate>
 
 @property (nonatomic) NSInteger tileSize;
 
@@ -23,4 +23,5 @@ typedef void(^BTTPMapSpriteiNodeNandler)(NSIndexPath *indexPath, SKSpriteNode *s
 
 - (BOOL)isHittingInteractableObjectAt:(NSIndexPath *)indexPath from:(NSIndexPath *)playerPositionIndexPath;
 - (void)hitIteractibleObjectAtIndexPath:(NSIndexPath *)indexPath;
+
 @end
