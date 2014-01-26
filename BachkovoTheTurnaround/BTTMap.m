@@ -13,6 +13,7 @@
 
 @property (nonatomic, strong) NSArray *realMap;
 @property (nonatomic, strong) NSDictionary *colors;
+@property (nonatomic, strong) NSArray *interactableObjects;
 
 @end
 
@@ -59,14 +60,18 @@
           @[o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o],
           @[o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o],
         ];
+
+        self.colors = @{
+                        @"1": [SKColor colorWithRed:0.0 green:0.5 blue:0.0 alpha:1.0],
+                        @"0": [SKColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0],
+                        };
+        
+        self.tileSize = 44;
+
+        self.interactableObjects = @[
+                                     [[BTTMapInteractableObject alloc] initWithIndexPath:[NSIndexPath indexPathForItem:15 inSection:22]]
+                                     ];
     }
-
-    self.colors = @{
-        @"1": [SKColor colorWithRed:0.0 green:0.5 blue:0.0 alpha:1.0],
-        @"0": [SKColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0],
-    };
-
-    self.tileSize = 44;
 
     return self;
 }
@@ -99,13 +104,7 @@
 }
 
 - (void)enumerateInteractableSpriteNodes:(BTTPMapSpriteiNodeNandler)handler {
-    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:15 inSection:22];
-
-    NSMutableArray *interactableObjects = [NSMutableArray array];
-
-    [interactableObjects addObject:[[BTTMapInteractableObject alloc] initWithIndexPath:indexPath]];
-
-    for(BTTMapInteractableObject *object in interactableObjects) {
+    for(BTTMapInteractableObject *object in self.interactableObjects) {
         NSIndexPath *indexPath = object.indexPath;
         SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"HelveticaLight"];
 
