@@ -22,7 +22,9 @@
 
 @implementation BTTBattleScene
 
-- (id) initWithSize:(CGSize)size {
+-(instancetype)initWithEnemies:(NSArray *)enemies size:(CGSize) size {
+    self = [self initWithSize:size];
+    
     if (self = [super initWithSize:size]) {
         self.phase = 0;
 
@@ -49,11 +51,7 @@
         self.enemyCardNodes = [NSMutableArray array];
         
         
-        self.enemyUnits = @[
-                            [BTTUnit createUnit1WithCount:5],
-                            [BTTUnit createUnit2WithCount:5],
-                            [BTTUnit createUnit3WithCount:5],
-                            ];
+        self.enemyUnits = enemies;
 
         for(NSInteger i=0; i<5; i++) {
             BTTBattleCardNode *card = [[BTTBattleCardNode alloc] init];

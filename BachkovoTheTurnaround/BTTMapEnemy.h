@@ -11,4 +11,6 @@
 
 @interface BTTMapEnemy : BTTMapInteractableObject
 
+- (instancetype)initWithIndexPath:(NSIndexPath *)indexPath enemies:(NSArray *)enemies;
+
 @end

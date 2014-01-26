@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong) SKScene *parentScene;
 
+-(instancetype)initWithEnemies:(NSArray *)enemies size:(CGSize) size;
+
 @end

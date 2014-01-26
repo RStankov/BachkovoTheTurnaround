@@ -13,6 +13,7 @@
 #import "BTTMapTreasure.h"
 #import "BTTWorld.h"
 #import "BTTMapCity.h"
+#import "BTTUnit.h"
 
 @interface BTTMap ()
 
@@ -76,11 +77,15 @@
         self.interactableObjects = [NSMutableArray array];
         [self.interactableObjects addObject:[[BTTMapCrystal alloc] initWithIndexPath:[NSIndexPath indexPathForItem:15 inSection:22] amount:200]];
         [self.interactableObjects addObject:[[BTTMapTreasure alloc] initWithIndexPath:[NSIndexPath indexPathForItem:20 inSection:20] amount:1000]];
-        [self.interactableObjects addObject:[[BTTMapEnemy alloc] initWithIndexPath:[NSIndexPath indexPathForItem:20 inSection:21]]];
         [self.interactableObjects addObject:[[BTTMapCity alloc] initWithIndexPath:[NSIndexPath indexPathForItem:34 inSection:20]]];
         [self.interactableObjects addObject:[[BTTMapCity alloc] initWithIndexPath:[NSIndexPath indexPathForItem:33 inSection:20]]];
         [self.interactableObjects addObject:[[BTTMapCity alloc] initWithIndexPath:[NSIndexPath indexPathForItem:33 inSection:21]]];
         [self.interactableObjects addObject:[[BTTMapCity alloc] initWithIndexPath:[NSIndexPath indexPathForItem:34 inSection:21]]];
+        [self.interactableObjects addObject:[[BTTMapEnemy alloc] initWithIndexPath:[NSIndexPath indexPathForItem:20 inSection:21] enemies:@[
+                                                                                                                                            [BTTUnit createUnit1WithCount:5],
+                                                                                                                                            [BTTUnit createUnit2WithCount:5],
+                                                                                                                                            [BTTUnit createUnit3WithCount:5],
+                                                                                                                                            ]]];
     }
 
     return self;
