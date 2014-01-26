@@ -15,6 +15,7 @@
 @property (nonatomic) NSInteger attack;
 @property (nonatomic) NSInteger defence;
 @property (nonatomic) NSInteger mobility;
+@property (nonatomic) NSArray* units;
 
 #define LIGHT_MECH 1
 #define RECON_MECH 2

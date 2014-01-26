@@ -9,11 +9,13 @@
 #import "BTTBattleScene.h"
 #import "BTTBattleCardNode.h"
 #import "BTTBattleUnitCardNode.h"
+#import "BTTWorld.h"
 
 @interface BTTBattleScene()
 
 @property (nonatomic) NSInteger phase;
-@property (nonatomic) NSMutableArray *cardNodes;
+@property (nonatomic) NSMutableArray *ememyCardNodes;
+@property (nonatomic) NSMutableArray *playerCardNodes;
 
 @end
 
@@ -30,26 +32,32 @@
         background.position = CGPointMake(0, 0);
         
         [self addChild:background];
+       
+        self.playerCardNodes = [NSMutableArray array];
         
-        for(NSInteger i=0; i<3; i++) {
-            BTTUnit *unit = [[BTTUnit alloc] init];
-            unit.name = [NSString stringWithFormat:@"%d", i + 1];
-            unit.count = 0;
-            
+        NSInteger i = 0;
+        for (BTTUnit *unit in [BTTWorld player].units) {
             BTTBattleUnitCardNode *card = [[BTTBattleUnitCardNode alloc] initWithUnit:unit];
             card.position = CGPointMake(44 + 99 * i, -11 - 204.5);
             [self addChild:card];
+            [self.playerCardNodes addObject:card];
+            
+            i += 1;
         }
        
-        self.cardNodes = [NSMutableArray array];
+        self.ememyCardNodes = [NSMutableArray array];
         for(NSInteger i=0; i<5; i++) {
             BTTBattleCardNode *card = [[BTTBattleCardNode alloc] init];
             card.position = CGPointMake(44 + 99 * i, -11);
             [self addChild:card];
-            [self.cardNodes addObject:card];
+            [self.ememyCardNodes addObject:card];
         }
     }
     return self;
+}
+
+- (void)update:(NSTimeInterval)currentTime {
+    [self.playerCardNodes makeObjectsPerformSelector:@selector(redraw)];
 }
 
 - (void)cardWasChoosen:(BTTBattleCardNode *)card {
@@ -58,7 +66,7 @@
     } else if (self.phase == 1) {
         [card attackedBy:nil];
     } else if (self.phase == 2) {
-        [self.cardNodes makeObjectsPerformSelector:@selector(restore)];
+        [self.ememyCardNodes makeObjectsPerformSelector:@selector(restore)];
     }
     
     [self nextPhase];
