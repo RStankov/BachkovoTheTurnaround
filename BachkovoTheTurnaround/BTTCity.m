@@ -10,6 +10,8 @@
 #import "BTTPlayer.h"
 #import "BTTMapScene.h"
 #import "BTTBattleUnitCardNode.h"
+#import "BTTUnit.h"
+#import "BTTWorld.h"
 
 @implementation BTTCity
 
@@ -24,21 +26,21 @@
         [self addChild:background];
         [self exitCityButtonNode];
         for(NSInteger i=0; i<3; i++) {
-            int r = arc4random_uniform(3);
+            int r = MAX(1, arc4random_uniform(3));
             NSLog(@"%d", r);
             NSString *randomUnit = [NSString stringWithFormat:@"unit_%d", r];
             SKSpriteNode *unit = [SKSpriteNode spriteNodeWithImageNamed:randomUnit];
+            unit.anchorPoint = CGPointMake(0, 1);
         
-            unit.position = CGPointMake(86 + 99 * i, -57);
+            unit.position = CGPointMake(44 + 99 * i, -11);
             [self addChild:unit];
         }
         NSInteger i = 0;
-        NSLog(@"%@", self.hero);
-        for(BTTUnit *unit in self.hero.units) {
-            NSLog(@"unit build");
+        for (BTTUnit *unit in [BTTWorld player].units) {
             BTTBattleUnitCardNode *card = [[BTTBattleUnitCardNode alloc] initWithUnit:unit];
-            card.position = CGPointMake(86 + 99 * i, - 204.5);
+            card.position = CGPointMake(44 + 99 * i, -11 - 204.5);
             [self addChild:card];
+            
             i += 1;
         }
     }
