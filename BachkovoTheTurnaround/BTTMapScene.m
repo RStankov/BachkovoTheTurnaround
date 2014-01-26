@@ -36,12 +36,12 @@
         self.mapNode.position = CGPointZero;
 
         [self addChild:self.mapNode];
-/*
+
         [self.map enumerateSpriteNodes:^(NSIndexPath *indexPath, SKSpriteNode *spriteNode) {
             spriteNode.position = [self pointForIndexPath:indexPath];
             [self.mapNode addChild:spriteNode];
         }];
-*/
+
 
         [self.map enumerateInteractableSpriteNodes:^(NSIndexPath *indexPath, SKSpriteNode *spriteNode) {
             spriteNode.position = [self pointForIndexPath:indexPath];
