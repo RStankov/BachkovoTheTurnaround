@@ -6,12 +6,15 @@
 //  Copyright (c) 2014 Radoslav Stankov. All rights reserved.
 //
 
+@import AVFoundation;
+
 #import "BTTMapViewController.h"
 #import "BTTMapScene.h"
 #import "BTTMap.h"
 
 @interface BTTMapViewController ()
 
+@property (nonatomic) AVAudioPlayer * backgroundMusicPlayer;
 @property (nonatomic, strong) BTTMapScene *scene;
 
 @end
@@ -22,8 +25,6 @@
 {
     // Configure the view.
     SKView *skView = (SKView *)self.view;
-    //skView.showsFPS = YES;
-    //skView.showsNodeCount = YES;
 
     BTTMap *map = [[BTTMap alloc] init];
     
@@ -35,6 +36,18 @@
     
     // Present the scene.
     [skView presentScene:scene];
+    
+    [self startBackgroundMusic];
+    
+}
+
+- (void) startBackgroundMusic {
+    NSError *error;
+    NSURL *backgroundMusicURL = [[NSBundle mainBundle] URLForResource:@"space_organics" withExtension:@"aif"];
+    self.backgroundMusicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:backgroundMusicURL error:&error];
+    self.backgroundMusicPlayer.numberOfLoops = -1;
+    [self.backgroundMusicPlayer prepareToPlay];
+    [self.backgroundMusicPlayer play];
 }
 
 @end

@@ -14,6 +14,7 @@
 		640BC67118950C73006BAB76 /* leave_city@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 640BC66F18950C73006BAB76 /* leave_city@2x.png */; };
 		642C89621894390600ACA99C /* BTTPurchanseScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 642C89611894390600ACA99C /* BTTPurchanseScene.m */; };
 		648E29EA1893A69100499DC2 /* BTTCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 648E29E91893A69100499DC2 /* BTTCity.m */; };
+		92230F561895C1FF00FA1DEC /* space_organics.aif in Resources */ = {isa = PBXBuildFile; fileRef = 92230F551895C1FF00FA1DEC /* space_organics.aif */; };
 		E14518F61894C3130067A42C /* BTTMapCrystal.m in Sources */ = {isa = PBXBuildFile; fileRef = E14518F51894C3130067A42C /* BTTMapCrystal.m */; };
 		E14518FA1894C3C60067A42C /* red_crystal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E14518F81894C3C60067A42C /* red_crystal@2x.png */; };
 		E14518FD1894C4B80067A42C /* BTTMapTreasure.m in Sources */ = {isa = PBXBuildFile; fileRef = E14518FC1894C4B80067A42C /* BTTMapTreasure.m */; };
@@ -84,6 +85,7 @@
 		642C89611894390600ACA99C /* BTTPurchanseScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTPurchanseScene.m; sourceTree = "<group>"; };
 		648E29E81893A69100499DC2 /* BTTCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTCity.h; sourceTree = "<group>"; };
 		648E29E91893A69100499DC2 /* BTTCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTCity.m; sourceTree = "<group>"; };
+		92230F551895C1FF00FA1DEC /* space_organics.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = space_organics.aif; sourceTree = "<group>"; };
 		E14518F41894C3130067A42C /* BTTMapCrystal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTMapCrystal.h; sourceTree = "<group>"; };
 		E14518F51894C3130067A42C /* BTTMapCrystal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTMapCrystal.m; sourceTree = "<group>"; };
 		E14518F81894C3C60067A42C /* red_crystal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red_crystal@2x.png"; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				E14518F81894C3C60067A42C /* red_crystal@2x.png */,
 				E1915C781894A768005AF224 /* world_debug@2x.png */,
 				E1915C791894A768005AF224 /* world@2x.png */,
+				92230F551895C1FF00FA1DEC /* space_organics.aif */,
 				F0D43BE61894A43E00F1C733 /* Battleship */,
 				F07919E11893D4F600E2DE8E /* square@2x.png */,
 				F041D46D1894B63200F2B026 /* map_tile_tap.sks */,
@@ -437,6 +440,7 @@
 				E1915C7B1894A768005AF224 /* world@2x.png in Resources */,
 				F0301D121894E6EE00E92163 /* unit_hidden@2x.png in Resources */,
 				F0301D0F1894E6EE00E92163 /* unit_1@2x.png in Resources */,
+				92230F561895C1FF00FA1DEC /* space_organics.aif in Resources */,
 				F0206477189518260044BD04 /* unit_missing@2x.png in Resources */,
 				E14518FA1894C3C60067A42C /* red_crystal@2x.png in Resources */,
 				F0D43BEC1894A61200F1C733 /* battleship_left.atlas in Resources */,
