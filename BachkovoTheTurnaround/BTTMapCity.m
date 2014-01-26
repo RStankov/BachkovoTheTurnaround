@@ -7,6 +7,7 @@
 //
 
 #import "BTTMapCity.h"
+#import "BTTCity.h"
 
 @interface BTTMapCity ()
 
@@ -25,7 +26,10 @@
 }
 
 - (void) interactWithPlayer:(BTTPlayer *)player {
-    NSLog(@"City interaction with player");
     [super interactWithPlayer:player];
+    SKTransition *reveal = [SKTransition revealWithDirection:SKTransitionDirectionDown duration:1.0];
+    BTTCity *cityScene = [[BTTCity alloc] initWithSize: CGSizeMake(1024,768)];
+    //  Optionally, insert code to configure the new scene.
+    [self.spriteNode.scene.view presentScene: cityScene transition: reveal];
 }
 @end
