@@ -7,12 +7,7 @@
 //
 
 #import "BTTCity.h"
-#import "BTTBuilding.h"
-#import "BTTMainBuilding.h"
-#import "BTTMechGarrisonBuilding.h"
 #import "BTTPlayer.h"
-#import "BTTReconMech.h"
-#import "BTTLightMech.h"
 #import "BTTMapScene.h"
 
 @implementation BTTCity
@@ -43,12 +38,6 @@
 
 - (void) heroVisit: (BTTPlayer *) character {
     NSLog(@"%@", character.army);
-}
-
-- (void) addBuilding: (BTTBuilding *) building {
-    [self.buildings addObject:building];
-    SKNode * rendered = [building render:self];
-    [self addChild:rendered];
 }
 
 - (SKSpriteNode *)exitCityButtonNode

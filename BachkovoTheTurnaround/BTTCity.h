@@ -7,14 +7,12 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
-#import "BTTBuilding.h"
 #import "BTTPlayer.h"
 #import "BTTMapScene.h"
 
 @interface BTTCity : SKScene
 
 - (void) heroVisit: (BTTPlayer *) character;
-- (void) addBuilding: (BTTBuilding *) building;
 
 @property(nonatomic, assign) NSMutableArray *buildings;
 @end

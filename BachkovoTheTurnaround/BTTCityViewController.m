@@ -8,8 +8,6 @@
 
 #import "BTTCityViewController.h"
 #import "BTTCity.h"
-#import "BTTMainBuilding.h"
-#import "BTTMechGarrisonBuilding.h"
 
 @implementation BTTCityViewController
 
