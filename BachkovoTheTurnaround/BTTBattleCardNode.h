@@ -10,4 +10,6 @@
 
 @interface BTTBattleCardNode : SKNode
 
+- (void)flip;
+
 @end

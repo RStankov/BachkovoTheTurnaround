@@ -8,19 +8,60 @@
 
 #import "BTTBattleCardNode.h"
 
+@interface BTTBattleCardNode ()
+
+@property (nonatomic) BOOL isAnimationRunning;
+@property (nonatomic, strong) SKSpriteNode *unitCardNode;
+@property (nonatomic, strong) SKSpriteNode *backCardNode;
+
+@end
+
 @implementation BTTBattleCardNode
 
 - (instancetype)init {
     self = [super init];
 
     if (self) {
-        SKSpriteNode *back = [SKSpriteNode spriteNodeWithImageNamed:@"unit_hidden"];
-        back.anchorPoint = CGPointMake(0, 1);
-        back.position = CGPointMake(0, 0);
-        [self addChild:back];
+        self.backCardNode = [SKSpriteNode spriteNodeWithImageNamed:@"unit_hidden"];
+        self.backCardNode.anchorPoint = CGPointMake(0, 1);
+        self.backCardNode.position = CGPointMake(0, 0);
+
+        self.unitCardNode = [SKSpriteNode spriteNodeWithImageNamed:@"unit_1"];
+        self.unitCardNode.anchorPoint = CGPointMake(0, 1);
+        self.unitCardNode.position = CGPointMake(0, 0);
+        self.unitCardNode.xScale = 0;
+        
+        [self addChild:self.unitCardNode];
+        [self addChild:self.backCardNode];
     }
 
     return self;
+}
+
+- (void)flip {
+    if (self.backCardNode.xScale > 0) {
+        [self switchNode:self.backCardNode withNode:self.unitCardNode];
+    } else {
+        [self switchNode:self.unitCardNode withNode:self.backCardNode];
+    }
+}
+
+- (void)switchNode:(SKSpriteNode *)fromNode withNode:(SKSpriteNode *)toNode {
+    if (self.isAnimationRunning) {
+        return;
+    }
+
+    self.isAnimationRunning = YES;
+
+    [fromNode runAction:[SKAction group:@[
+                                          [SKAction moveToX:fromNode.frame.size.width duration: 0.5],
+                                          [SKAction scaleXTo:0 duration:0.5]
+                                          ]] completion:^{
+                                            fromNode.position = CGPointMake(0, 0);
+                                            self.isAnimationRunning = NO;
+                                          }];
+
+    [toNode runAction:[SKAction scaleXTo:1 duration:0.5]];
 }
 
 @end

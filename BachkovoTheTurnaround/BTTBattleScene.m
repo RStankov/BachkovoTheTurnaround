@@ -33,7 +33,7 @@
         for(NSInteger i=0; i<3; i++) {
             BTTUnit *unit = [[BTTUnit alloc] init];
             unit.name = [NSString stringWithFormat:@"%d", i + 1];
-            unit.count = 123;
+            unit.count = 0;
             
             BTTBattleUnitCardNode *card = [[BTTBattleUnitCardNode alloc] initWithUnit:unit];
             card.position = CGPointMake(44 + 99 * i, -11 - 204.5);
@@ -60,15 +60,14 @@
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
-
-    CGPoint loc = [touch locationInNode:self];
-    if([enemyArmyBar containsPoint:loc]) {
-        NSLog(@"attack enemy !!!");
-
-        SKNode *touchedCell = [enemyArmyBar nodeAtPoint: [self convertPoint:loc toNode:enemyArmyBar]];
-        NSLog(@"tapped on enemey - %@", touchedCell.name);
+    CGPoint point = [touch locationInNode:self];
+    
+    for(SKNode *node = [self nodeAtPoint:point]; node; node = node.parent) {
+        if ([node isKindOfClass:[BTTBattleCardNode class]]) {
+            BTTBattleCardNode *card = (BTTBattleCardNode *) node;
+            [card flip];
+        }
     }
-
 }
 
 @end
