@@ -171,4 +171,17 @@
     return [label isEqualToString:@"1"];
 }
 
+- (BOOL)isHittingInteractableObjectAt:(NSIndexPath *)indexPath from:(NSIndexPath *)playerPositionIndexPath {
+    NSUInteger idx = [self.interactableObjects indexOfObject:[[BTTMapInteractableObject alloc] initWithIndexPath:indexPath]];
+
+    if (idx == NSNotFound) {
+        return NO;
+    }
+
+    NSInteger diffX = abs((int)(playerPositionIndexPath.item - indexPath.item));
+    NSInteger diffY = abs((int)(playerPositionIndexPath.section - indexPath.section));
+
+    return diffX != diffY && diffX <= 1 && diffY <= 1;
+}
+
 @end

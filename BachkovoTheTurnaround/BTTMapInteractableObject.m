@@ -48,4 +48,8 @@
     return sprite;
 }
 
+- (BOOL)isEqual:(BTTMapInteractableObject *)object {
+    return [self.position isEqual:object.indexPath];
+}
+
 @end

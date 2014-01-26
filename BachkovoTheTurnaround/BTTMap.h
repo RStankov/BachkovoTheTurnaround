@@ -21,4 +21,6 @@ typedef void(^BTTPMapSpriteiNodeNandler)(NSIndexPath *indexPath, SKSpriteNode *s
 - (void)enumerateSpriteNodes:(BTTPMapSpriteiNodeNandler)handler;
 - (void)enumerateInteractableSpriteNodes:(BTTPMapSpriteiNodeNandler)handler;
 
+- (BOOL)isHittingInteractableObjectAt:(NSIndexPath *)indexPath from:(NSIndexPath *)playerPositionIndexPath;
+
 @end
