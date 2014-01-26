@@ -16,20 +16,9 @@
     static BTTPlayer *player;
 
     dispatch_once(&once, ^ {
-        BTTUnit *unit1 = [[BTTUnit alloc] init];
-        
-        unit1.name = @"1";
-        unit1.count  = 10;
-        
-        BTTUnit *unit2 = [[BTTUnit alloc] init];
-        
-        unit2.name = @"2";
-        unit2.count  = 10;
-
-        BTTUnit *unit3 = [[BTTUnit alloc] init];
-    
-        unit3.name = @"3";
-        unit3.count  = 10;
+        BTTUnit *unit1 = [BTTUnit createUnit1WithCount:10];
+        BTTUnit *unit2 = [BTTUnit createUnit1WithCount:10];
+        BTTUnit *unit3 = [BTTUnit createUnit1WithCount:10];
         
         player = [[BTTPlayer alloc] init];
         player.credits = 1000;

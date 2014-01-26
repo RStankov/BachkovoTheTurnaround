@@ -15,4 +15,8 @@
 @property(nonatomic) NSInteger attack;
 @property(nonatomic) NSInteger defense;
 
++ (instancetype)createUnit1WithCount:(NSInteger)count;
++ (instancetype)createUnit2WithCount:(NSInteger)count;
++ (instancetype)createUnit3WithCount:(NSInteger)count;
+
 @end

@@ -14,7 +14,8 @@
 @interface BTTBattleScene()
 
 @property (nonatomic) NSInteger phase;
-@property (nonatomic) NSMutableArray *ememyCardNodes;
+@property (nonatomic) NSMutableArray *enemyCardNodes;
+@property (nonatomic) NSArray *enemyUnits;
 @property (nonatomic) NSMutableArray *playerCardNodes;
 
 @end
@@ -45,12 +46,25 @@
             i += 1;
         }
        
-        self.ememyCardNodes = [NSMutableArray array];
+        self.enemyCardNodes = [NSMutableArray array];
+        
+        
+        self.enemyUnits = @[
+                            [BTTUnit createUnit1WithCount:5],
+                            [BTTUnit createUnit2WithCount:5],
+                            [BTTUnit createUnit3WithCount:5],
+                            ];
+
         for(NSInteger i=0; i<5; i++) {
             BTTBattleCardNode *card = [[BTTBattleCardNode alloc] init];
             card.position = CGPointMake(44 + 99 * i, -11);
+            
+            if (i < self.enemyUnits.count) {
+                card.unit = self.enemyUnits[i];
+            }
+            
             [self addChild:card];
-            [self.ememyCardNodes addObject:card];
+            [self.enemyCardNodes addObject:card];
         }
     }
     return self;
@@ -58,6 +72,7 @@
 
 - (void)update:(NSTimeInterval)currentTime {
     [self.playerCardNodes makeObjectsPerformSelector:@selector(redraw)];
+    [self.enemyCardNodes makeObjectsPerformSelector:@selector(redraw)];
 }
 
 - (void)cardWasChoosen:(BTTBattleCardNode *)card {
@@ -66,7 +81,7 @@
     } else if (self.phase == 1) {
         [card attackedBy:[BTTWorld player].units.firstObject];
     } else if (self.phase == 2) {
-        [self.ememyCardNodes makeObjectsPerformSelector:@selector(restore)];
+        [self.enemyCardNodes makeObjectsPerformSelector:@selector(restore)];
     }
     
     [self nextPhase];

@@ -27,6 +27,7 @@
 		E1915C7A1894A768005AF224 /* world_debug@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1915C781894A768005AF224 /* world_debug@2x.png */; };
 		E1915C7B1894A768005AF224 /* world@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1915C791894A768005AF224 /* world@2x.png */; };
 		E1E4CE551893D03F0046217C /* BTTBattleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E4CE541893D03F0046217C /* BTTBattleScene.m */; };
+		F0206477189518260044BD04 /* unit_missing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0206476189518260044BD04 /* unit_missing@2x.png */; };
 		F0280C3B18942CEB0094BBFA /* BTTPathFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = F0280C3A18942CEB0094BBFA /* BTTPathFinder.m */; };
 		F02B930E1894BE8600374A6B /* BTTMapInteractableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F02B930D1894BE8600374A6B /* BTTMapInteractableObject.m */; };
 		F0301D031894E0BF00E92163 /* BTTMapEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = F0301D021894E0BF00E92163 /* BTTMapEnemy.m */; };
@@ -112,6 +113,7 @@
 		E1915C791894A768005AF224 /* world@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "world@2x.png"; sourceTree = "<group>"; };
 		E1E4CE531893D03F0046217C /* BTTBattleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTBattleScene.h; sourceTree = "<group>"; };
 		E1E4CE541893D03F0046217C /* BTTBattleScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTBattleScene.m; sourceTree = "<group>"; };
+		F0206476189518260044BD04 /* unit_missing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unit_missing@2x.png"; sourceTree = "<group>"; };
 		F0280C3918942CEB0094BBFA /* BTTPathFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTPathFinder.h; sourceTree = "<group>"; };
 		F0280C3A18942CEB0094BBFA /* BTTPathFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTPathFinder.m; sourceTree = "<group>"; };
 		F02B930C1894BE8600374A6B /* BTTMapInteractableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTMapInteractableObject.h; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				F0301D0C1894E6EE00E92163 /* unit_2@2x.png */,
 				F0301D0D1894E6EE00E92163 /* unit_3@2x.png */,
 				F0301D0E1894E6EE00E92163 /* unit_hidden@2x.png */,
+				F0206476189518260044BD04 /* unit_missing@2x.png */,
 			);
 			name = Battle;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				E1915C7B1894A768005AF224 /* world@2x.png in Resources */,
 				F0301D121894E6EE00E92163 /* unit_hidden@2x.png in Resources */,
 				F0301D0F1894E6EE00E92163 /* unit_1@2x.png in Resources */,
+				F0206477189518260044BD04 /* unit_missing@2x.png in Resources */,
 				E14518FA1894C3C60067A42C /* red_crystal@2x.png in Resources */,
 				F0D43BEC1894A61200F1C733 /* battleship_left.atlas in Resources */,
 				F0301D111894E6EE00E92163 /* unit_3@2x.png in Resources */,

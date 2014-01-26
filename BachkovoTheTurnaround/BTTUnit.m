@@ -10,4 +10,30 @@
 
 @implementation BTTUnit
 
++ (instancetype)createUnit1WithCount:(NSInteger)count {
+    BTTUnit *unit = [[BTTUnit alloc] init];
+
+    unit.name = @"1";
+    unit.count  = count;
+
+    return unit;
+}
+
++ (instancetype)createUnit2WithCount:(NSInteger)count {
+    BTTUnit *unit = [[BTTUnit alloc] init];
+
+    unit.name = @"2";
+    unit.count  = count;
+
+    return unit;
+}
+
++ (instancetype)createUnit3WithCount:(NSInteger)count {
+    BTTUnit *unit = [[BTTUnit alloc] init];
+
+    unit.name = @"3";
+    unit.count  = count;
+
+    return unit;
+}
 @end

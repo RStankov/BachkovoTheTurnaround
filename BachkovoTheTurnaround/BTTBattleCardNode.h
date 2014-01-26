@@ -11,6 +11,9 @@
 
 @interface BTTBattleCardNode : SKNode
 
+- (void)setUnit:(BTTUnit *)unit;
+
+- (void)redraw;
 - (void)flip;
 - (void)restore;
 - (void)attackedBy:(BTTUnit *)unit;
