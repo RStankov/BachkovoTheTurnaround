@@ -7,27 +7,11 @@
 //
 
 #import "BTTAppDelegate.h"
-#import "BTTCityViewController.h"
-#import "BTTBattleViewController.h"
-#import "BTTMapViewController.h"
 
 @implementation BTTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  
-    UIViewController *cv = nil;
-    
-    if (NSProcessInfo.processInfo.environment[@"RUN_CITY"]) {
-        cv = [self.window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"CityVC"];
-    } else if (NSProcessInfo.processInfo.environment[@"RUN_BATTLE"]) {
-        cv = [self.window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"BattleVC"];
-    } else {
-        cv = [self.window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"MapVC"];
-    }
-
-    self.window.rootViewController = cv;
-    
     return YES;
 }
 							
