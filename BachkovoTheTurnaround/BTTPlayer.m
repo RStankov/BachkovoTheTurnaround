@@ -15,7 +15,7 @@
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"{Player - attack:%ld defence:%ld mobility:%ld credits:%ld}", self.attack, self.defence, self.mobility, self.credits];
+    return [NSString stringWithFormat:@"{Player - attack:%ld defence:%ld mobility:%ld credits:%ld}", (long)self.attack, (long)self.defence, (long)self.mobility, (long)self.credits];
 }
 
 @end

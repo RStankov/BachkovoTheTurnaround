@@ -45,7 +45,7 @@
 }
 
 - (NSString *)description {
-	return [NSString stringWithFormat:@"%@  pos=[%@]  g=%ld  h=%ld  f=%ld", [super description], self.indexPath, (NSInteger)self.gScore, (NSInteger)self.hScore, (NSInteger)[self fScore]];
+	return [NSString stringWithFormat:@"%@  pos=[%@]  g=%ld  h=%ld  f=%ld", [super description], self.indexPath, (long)self.gScore, (long)self.hScore, (long)[self fScore]];
 }
 
 @end
