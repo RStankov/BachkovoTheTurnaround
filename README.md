@@ -15,3 +15,7 @@ Coded by:
 Drawings and graphics by:
  
  * [Ivan Berov](http://www.behance.net/Berov)
+
+<hr />
+
+more info: [Bachkovo at Global Game Jam](http://globalgamejam.org/2014/games/bachkovo-turnaround)
