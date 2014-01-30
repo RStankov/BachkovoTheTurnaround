@@ -16,6 +16,10 @@ Drawings and graphics by:
 
  * [Ivan Berov](http://www.behance.net/Berov)
 
+Story and narrative by:
+
+ * Petar Stoyanov
+
 Screenshots:
 
 ![Screnshot](https://raw.github.com/RStankov/BachkovoTheTurnaround/master/Screenshots/shot_002.png)
@@ -27,5 +31,7 @@ Screenshots:
 
 <hr />
 
-more info: [Bachkovo at Global Game Jam](http://globalgamejam.org/2014/games/bachkovo-turnaround)
+License: [MIT License](https://github.com/RStankov/BachkovoTheTurnaround/blob/master/LICENSE.txt)
+
+More info: [Bachkovo at Global Game Jam](http://globalgamejam.org/2014/games/bachkovo-turnaround)
 
