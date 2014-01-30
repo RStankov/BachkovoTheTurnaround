@@ -11,11 +11,21 @@ Coded by:
  * [Stefan Slaveykov](https://github.com/wizardone)
  * [Genadi Samokovarov](https://github.com/gsamokovarov)
  * [Vitaliy Berov](https://github.com/vitalee)
- 
+
 Drawings and graphics by:
- 
+
  * [Ivan Berov](http://www.behance.net/Berov)
+
+Screenshots:
+
+![Screnshot](https://raw.github.com/RStankov/BachkovoTheTurnaround/master/Screenshots/shot_002.png)
+![Screnshot](https://raw.github.com/RStankov/BachkovoTheTurnaround/master/Screenshots/shot_003.png)
+![Screnshot](https://raw.github.com/RStankov/BachkovoTheTurnaround/master/Screenshots/shot_004.png)
+![Screnshot](https://raw.github.com/RStankov/BachkovoTheTurnaround/master/Screenshots/shot_005.png)
+![Screnshot](https://raw.github.com/RStankov/BachkovoTheTurnaround/master/Screenshots/shot_006.png)
+![Screnshot](https://raw.github.com/RStankov/BachkovoTheTurnaround/master/Screenshots/shot_007.png)
 
 <hr />
 
 more info: [Bachkovo at Global Game Jam](http://globalgamejam.org/2014/games/bachkovo-turnaround)
+
